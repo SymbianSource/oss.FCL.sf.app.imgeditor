@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN13CFilterBubble6CreateEv @ 1 NONAME
+	_ZTI13CFilterBubble @ 2 NONAME ; #<TI>#
+	_ZTV13CFilterBubble @ 3 NONAME ; #<VT>#
+

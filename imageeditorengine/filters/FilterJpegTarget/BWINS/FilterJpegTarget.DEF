@@ -1,0 +1,3 @@
+EXPORTS
+	?Create@CFilterJpegTarget@@SAHXZ @ 1 NONAME ; int CFilterJpegTarget::Create(void)
+

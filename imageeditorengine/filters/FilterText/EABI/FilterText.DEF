@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN11CFilterText6CreateEv @ 1 NONAME
+	_ZTI11CFilterText @ 2 NONAME ; #<TI>#
+	_ZTV11CFilterText @ 3 NONAME ; #<VT>#
+

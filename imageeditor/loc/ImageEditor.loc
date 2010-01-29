@@ -1,0 +1,772 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* This is a localisation file for Image Editor.
+*
+*/
+
+
+
+//=============================================================================
+// ERROR NOTES
+//=============================================================================
+
+// d:Processing image has been failed (apply effect)
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_error_processing "Error in processing image."
+
+// d:Loading image has been failed
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_error_loading	"Error in loading image."
+
+// d:Saving image has been failed
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_error_saving "Error in saving image."
+
+// d:Saving is failed on exit. User confirmation is needed to exit 
+// d:without saving.
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_exit_without_saving_confirmation "Save failed. Exit without saving?"
+
+// d:Internal engine error has been occured
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_error_engine "Internal engine error."
+
+// d:Internal error has been occured
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_error_internal "Internal error."
+
+// d:Internal error that requires application to exit has been occured
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_error_internal_non_recoverable "Internal error. Exiting Image Editor."
+
+// d:Note is shown if user has selected resize plugin from effect grid and image to be
+// d:resized has too small resolution (under the limits).
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_too_small_to_resize "Image is too small to be resized"
+
+//=============================================================================
+// OPTIONS MENU ITEMS
+//=============================================================================
+
+// d:Command in options menu
+// d:Command name for opening a color grid and choosing a new color
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_change_color "Change color"
+
+// d:Command in options menu
+// d:Command name for resizing text function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_resize "Resize text"
+
+// d:Command in options menu
+// d:Selects moving mode in text editing view
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_move "Move text"
+
+// d:Command in options menu
+// d:Selects rotate mode in text editing view
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_rotate "Rotate text"
+
+// d:Command in options menu
+// d:Command name for resizing clipart function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_resize_clipart "Resize clip-art"
+
+// d:Command in options menu
+// d:Command name for rotating clipart function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_rotate_clipart "Rotate clip-art"
+
+// d:Command in options menu
+// d:Command name for moving clipart function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_move_clipart "Move clip-art"
+
+// d:Command in options menu
+// d:Command name for resizing bubble function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_resize_bubble "Resize talk bubble"
+
+// d:Command in options menu
+// d:Command name for rotating bubble function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_rotate_bubble "Rotate talk bubble"
+
+// d:Command in options menu
+// d:Command name for moving bubble function. 
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_move_bubble "Move talk bubble"
+
+// d:Command in options menu
+// d:It used in a way similar to right softkey Cancel;
+// d:going back to the previous state without saving changes.
+// d:'effect' in this context means the image processing 
+// d:effect, i.e. Crop, Rotate left, Adjust brightness etc.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_cancel_effect "Cancel effect"
+
+// d:Command in options menu
+// d:Command to complete the red-dye reduction effect for an eye.
+// d:When the user has adjusted the selection box to cover the area 
+// d:containing the red eye, selecting this menu item completes the 
+// d:action, i.e. the image will be processed according to the currently
+// d:adjusted parameters.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_reduce_red "Reduce red"
+
+// d:Command in options menu
+// d:It is used to fix the location of the cursor on the screen
+// d:to start some action related to that point. For example, 
+// d:the user moves the cursor to a point which user wants to be 
+// d:the top-left corner of a selection rectangle and selects "Set".
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_set "Set"
+
+// d:Command in options menu
+// d:Undo operation
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_undo "Undo"
+
+// d:Command in options menu
+// d:Opens plug-in selection grid
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_apply_effect "Apply effect"
+
+// d:Command in options menu
+// d:Saves the edited image
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_save "Save"
+
+// d:Command in options menu
+// d:Command name for "full screen mode"
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_full_screen "Full screen"
+
+// d:Command in options menu
+// d:Command name for "normal screen mode"
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_normal_screen "Normal screen"
+
+// d:Command in options menu
+// d:returns from zooming state to normal "Fit to screen" state
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_fit_to_screen "Fit to screen"
+
+// d:Command in options menu
+// d:Available in menu if image has already zoomed in. Re-scales image display
+// d:to half of the current resolution on the screen.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_zoom_out "Zoom out"
+
+// d:Command in options menu
+// d:Re-scales image display
+// d:to double of the current resolution on the screen.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_zoom_in "Zoom in"
+
+// d:Command in the AIW provider's Options menu
+// d:Launches Image editor for editing image
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_options_edit "Edit"
+
+// d:Command in the AIW provider's Options submenu
+// d:Launches Image editor for editing image
+// l:list_single_popup_submenu_pane_t1
+// r:5.0
+//
+#define qtn_sie_options_sub_edit "Edit"
+
+//=============================================================================
+// TOOL TIPS
+//=============================================================================
+
+// d:A tooltip text
+// d:Text is shown on the screen next to the rotate icon when rotate function
+// d:has been selected. Text disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_rotate "Rotate"
+
+// d:A tooltip text 
+// d:Text is shown on the screen next to the resize icon when resize function
+// d:has been selected. Text disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_resize "Resize"
+
+// d:A tooltip text 
+// d:Text is shown on the screen next to the move icon when move function
+// d:has been selected in clip art, talk bubble or text editing view. 
+// d:Text disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_move "Move"
+
+// d:A tooltip text
+// d:Text is shown on the screen next to the outlined area when redeye 
+// d:reduction function has been selected and cursor is located. Text 
+// d:disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_redeye_outline "Outline eye"
+
+// d:A tooltip text shown on the screen next to the icon
+// d:Text is shown on the screen next to the locate eye cursor when redeye 
+// d:reduction function has been selected. 
+// d:Text disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_redeye_locate "Locate eye"
+
+// d:A tooltip text
+// d:Text is shown on the screen next to the crop icon when cropping mode has 
+// d:been selected and top left corner of the cropping box has already been set.
+// d:Text disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_crop_resize_area "Resize crop area"
+
+// d:A tooltip text
+// d:Text is shown on the screen next to the crop icon when cropping mode has 
+// d:been selected and top left corner of the cropping box hasn't been set.
+// d:Text disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_tooltip_crop_move_area "Move crop area"
+
+
+//=============================================================================
+// PLUGIN NAMES (Shown as tooltips in application)
+//=============================================================================
+
+// d:Name of the "Insert picture frame" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_frame "Insert frame"
+
+// d:Name of the "Insert talk bubble" effect.
+// d:With this tool, the user can place talk bubble images on top
+// d:of the edited image.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_bubble "Insert talk bubble"
+
+// d:Name of the "Insert clipart" effect.
+// d:With this tool, the user can place clipart images on top
+// d:of the edited image.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_clipart "Insert clip art"
+
+// d:Name of the "Negative" color transformation effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_negative "Negative"
+
+// d:Name of the "Insert text" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_text "Insert text"
+
+// d:Name of the "Resize" effect.
+// d:Resize decreases the image resolution, but doesn't affect on content
+// d:of the image.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_resize "Resize"
+
+// d:Name of the "Cropping" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_crop "Crop"
+
+// d:Name of the "Posterize" transformation effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_posterize "Posterize"
+
+// d:Name of the "Black and White" color transformation effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_bw "Black and white"
+
+// d:Name of the "Red Eye reduction" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_redeye "Red eye reduction"
+
+// d:Name of the "Adjust image contrast" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_contrast "Contrast"
+
+// d:Name of the "Adjust sharpness" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_sharpness "Sharpness"
+
+// d:Name of the "Adjust image brightness" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_brightness "Brightness"
+
+// d:Name of the "Sepia" color transformation effect.
+// d:The sepia is dark brown color, with a little red in its composition.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_sepia "Sepia"
+
+// d:Name of the "Rotate left" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_rotate_left "Rotate left"
+
+// d:Name of the "Rotate right" effect.
+// d:Text is shown as a tooltip and it disappears after default timeout.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_plugin_name_rotate_right "Rotate right"
+
+//=============================================================================
+// GRID HEADINGS
+//=============================================================================
+
+// d:Heading text for a popup grid where the user selects
+// d:the talk bubble to be inserted into the edited image.
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_heading_select_bubble "Select talk bubble:"
+
+// d:Heading text for a popup grid where the user selects
+// d:the clipart image to be inserted into the edited image.
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_heading_select_clipart "Select clip art:"
+
+// d:Heading text for a popup grid where the user selects
+// d:desired color to inserted text
+// l:heading_pane_t1
+// r:5.0
+//
+#define qtn_sie_select_color_promt "Select color:"
+
+
+
+//=============================================================================
+// IMAGE EDITOR SPECIFIC SOFTKEYS
+//=============================================================================
+
+// d:Softkey command
+// d:It is used to fix the location of the cursor on the screen
+// d:to start some action related to that point. 
+// l:control_pane_t1/opt7
+// r:5.0
+//
+#define qtn_sie_softkey_set "Set"
+
+// d:Softkey command
+// d:Completes the crop operation with the currently selected rectangle.
+// l:control_pane_t1/opt7
+// r:5.0
+//
+#define qtn_sie_softkey_crop "Crop"
+
+// d:Middle Softkey command
+// d:Command to complete the red-dye reduction effect for an eye.
+// l:control_pane_t3/opt7
+// r:5.0
+//
+#define qtn_sie_msk_reduce_red "Reduce red"
+
+// d:Middle Softkey command
+// d:It is used to fix the location of the cursor on the screen
+// d:to start some action related to that point. 
+// l:control_pane_t3/opt7
+// r:5.0
+//
+#define qtn_sie_msk_set "Set"
+
+// d:Middle Softkey command
+// d:It is used to fix the location of the cursor on the screen
+// d:to start some action related to that point. 
+// l:control_pane_t3/opt7
+// r:5.0
+//
+#define qtn_sie_msk_zoom_in "Zoom in"
+
+// d:Middle Softkey command
+// d:Opens plug-in selection grid
+// l:control_pane_t3/opt7
+// r:5.0
+//
+#define qtn_sie_msk_apply_effect "Apply effect"
+
+
+//=============================================================================
+// CROPPING
+//=============================================================================
+
+// d:Indicator of the current crop area
+// d:Where %U is the size of the selected cropping region (e.g. 800x600), if
+// d:manual aspect ratio was selected in the aspect ration selection list
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_crop_area "Crop %U"
+
+// d:Name for the 8 by 10 portrait image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_10x8 "8:10 portrait"
+
+// d:Name for the 8 by 10 image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_8x10 "8:10 landscape"
+
+// d:Name for the 5 by 7 portrait image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_7x5 "5:7 portrait"
+
+// d:Name for the 5 by 7 image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_5x7 "5:7 landscape"
+
+// d:Name for the 4 by 6 portrait image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_6x4 "4:6 portrait"
+
+// d:Name for the 4 by 6 image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_4x6 "4:6 landscape"
+
+// d:Menu item for the manual image aspect ratio.
+// d:i.e. not one of the fixed ration listed above.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_aspect_ratio_manual "Manual"
+
+// d:Name for the wallpaper image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_wallpaper "Wallpaper"
+
+// d:Name for the portrait wallpaper image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_wallpaper_prt "Wallpaper portrait"
+
+// d:Name for the landscape wallpaper image aspect ratio.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_crop_wallpaper_lnds "Wallpaper landscape"
+
+// d:Prompt text for crop aspect ratio selection
+// l:heading_pane_t1
+// r:5.0
+//
+#define qtn_sie_heading_aspect_ratio "Select aspect ratio:"
+
+
+//=============================================================================
+// ZOOMING
+//=============================================================================
+
+// d:Zooming ratio when image has been zoomed in 3 times 
+// d:Text is shown displayed on the screen 1.5 seconds.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_zoom_in8 "Zooming 400%"
+
+// d:Zooming ratio when image has been zoomed in twice
+// d:Text is shown displayed on the screen 1.5 seconds.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_zoom_in4 "Zooming 200%"
+
+// d:Zooming ratio when image has been zoomed in once 
+// d:Text is shown displayed on the screen 1.5 seconds.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_sie_zoom_in2 "Zooming 100%"
+
+
+//=============================================================================
+// NOTES
+//=============================================================================
+
+// d:Waiting note that is shown if loading a clipart grid takes 
+// d:more than 1 second
+// l:popup_note_wait_window
+// r:5.0
+//
+#define qtn_sie_pgn_searching_cliparts "Searching for Clip-art"
+
+// d:Waiting note that is shown if loading a bubble grid takes 
+// d:more than 1 second
+// l:popup_note_wait_window
+// r:5.0
+//
+#define qtn_sie_pgn_searching_bubbles "Searching for Bubble"
+
+// d:Note that is shown when user has changed the image resolution with 
+// d:resize plugin
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_resize_resolution_changed "Image resolution has been changed"
+
+
+//=============================================================================
+// SAVING QUERY
+//=============================================================================
+
+// d:List query heading text.
+// d:This list query is used when option "Save" has been selected.
+// l:heading_pane_t1
+// r:5.0
+//
+#define qtn_sie_heading_save "Save image:"
+
+// d:List query item in saving query.
+// d:Overwrites existing file.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_query_save_replace "Replace original"
+
+// d:List query item in saving query.
+// d:Creates a new file.
+// l:list_single_pane_t1_cp2
+// r:5.0
+//
+#define qtn_sie_query_save_new "Save with a new name"
+
+
+//=============================================================================
+// HORINZONTAL SLIDER TITLE TEXTS
+//=============================================================================
+
+// d:Text that is shown on resize ratio selection slider.
+// d:"Resize: " text is followed by selected resolution value 
+// d:e.g "1600x1200".
+// l:popup_imed_adjust2_window_t1/opt1
+// r:5.0
+//
+#define qtn_sie_slider_title_resize "Resize: %0Nx%1N"
+
+// d:Text that is shown on contrast adjustment slider title.
+// l:popup_imed_adjust2_window_t1/opt1
+// r:5.0
+//
+#define qtn_sie_slider_title_contrast "Contrast"
+
+// d:Text that is shown on brightness adjustment slider title.
+// l:popup_imed_adjust2_window_t1/opt1
+// r:5.0
+//
+#define qtn_sie_slider_title_brightness "Brightness"
+
+// d:Text that is shown on sharpness adjustment slider title.
+// l:popup_imed_adjust2_window_t1/opt1
+// r:5.0
+//
+#define qtn_sie_slider_title_sharpness "Sharpness"
+
+
+//=============================================================================
+// MISCANCELLOUS
+//=============================================================================
+
+// d:Navi pane text when "Frame" effect has been chosen.
+// d:%0N is the number of current frame.
+// d:%1N is the total number of available frames.
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_current_frame "Frame %0N/%1N"
+
+// d:Prompt text of a data query used to input the text,
+// d:which will be added to the image.
+// d:Query is launched when "Insert text" effect has been chosen.
+// l:popup_query_data_window
+// r:5.0
+//
+#define qtn_sie_heading_insert_text "Insert text:"
+
+// d:Heading text of the plugin selector popup grid.
+// l:heading_pane_t1
+// r:5.0
+//
+#define qtn_sie_heading_apply_effect "Apply effect:"
+
+// d:Confirmation query
+// d:When user selects "Exit" and image is modified 
+// d:user is prompted about saving the changes.
+// l:popup_note_window
+// r:5.0
+//
+#define qtn_sie_query_conf_save_changes "Save changes?"
+
+// d:Navi pane text in Image Editor main view
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_edit "Edit image" 
+
+// d:Navi pane text in Red Eye Reduction plugin
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_edit_redeye "Red eye reduction" 
+
+// d:Navi pane text in clip art plugin editing view
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_edit_clipart "Edit clip-art" 
+
+// d:Navi pane text in clip art plugin editing view
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_edit_bubble "Edit talk bubble"
+
+// d:Navi pane text in text plugin editing view
+// l:navi_text_pane_t1
+// r:5.0
+//
+#define qtn_sie_navi_edit_text "Edit text"
+// End of file
+

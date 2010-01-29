@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN12CFilterScale6CreateEv @ 1 NONAME
+	_ZTI12CFilterScale @ 2 NONAME ; #<TI>#
+	_ZTV12CFilterScale @ 3 NONAME ; #<VT>#
+

@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:
+* Talk bubble plugin bld.inf file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../../inc/definitions.def"
+
+//	project platforms
+PRJ_PLATFORMS
+DEFAULT
+
+//	project exports
+PRJ_EXPORTS
+
+// ROM description file
+../rom/ImageEditorBubblePlugin.iby CORE_APP_LAYER_IBY_EXPORT_PATH(ImageEditorBubblePlugin.iby)
+../rom/ImageEditorBubblePluginSettings.iby CORE_APP_LAYER_IBY_EXPORT_PATH(ImageEditorBubblePluginSettings.iby)
+
+//	mmp files
+PRJ_MMPFILES
+BubblePlugin.mmp
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+OPTION TARGETFILE bubble.mif
+OPTION HEADERFILE bubble.mbg
+OPTION SOURCES -c8 qgn_indi_imed_talkbb
+END
+
+//	test project mmp files
+PRJ_TESTMMPFILES
+
+
+// End of File

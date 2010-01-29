@@ -1,0 +1,124 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for Contrast plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "contrast_gen.loc"
+#include <ImageEditor.loc>
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+{
+    pluginuid           = UID_CONTRAST_PLUGIN;
+    uitype              = EPluginUiTypeSingleParam;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeMainEngine;
+    plugindisplayorder  = 2;
+    pluginname          = qtn_sie_plugin_name_contrast;
+    iconfile            = "contrast.mif";
+    filterfile          = "FilterContrast.dll";
+}
+
+RESOURCE PARAMNAMES r_plugin_pars
+{
+	parameters=
+	{
+	// Horizontal slider title
+	qtn_sie_slider_title_contrast
+	
+	};
+}
+ 
+RESOURCE PGNUIITEMS r_sk1_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdOk;
+			text=qtn_sie_pgn_sk1;
+		}
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk2_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdCancel;
+			text=qtn_sie_pgn_sk2;
+		}
+	};
+}
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_msk;
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+{
+	items=
+	{
+
+	};
+} 
+
+// End of File

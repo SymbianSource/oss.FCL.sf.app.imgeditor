@@ -1,0 +1,58 @@
+;
+; Copyright (c) 2010 Ixonos Plc.
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+; Initial Contributors:
+; Nokia Corporation - Initial contribution
+;
+; Contributors:
+; Ixonos Plc
+;
+; Description:
+;
+; Languages
+&EN
+
+; Header
+#{"Image Editor Engine"}, (0x1000008d), 1, 0, 0, TYPE=SA
+; Uid from ImageEditorUtils
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+;Engine dll's
+; -----------
+""-"z:\sys\bin\ImageEditorUtils.dll"
+;""-"z:\sys\bin\JpegRotator.dll"
+;""-"z:\sys\bin\JpegScaler.dll"
+""-"z:\sys\bin\SystemParameters.dll"
+""-"z:\sys\bin\EngineWrapper.dll"
+
+; Filters
+; -------
+""-"z:\sys\bin\FilterBrightness.dll"
+""-"z:\sys\bin\FilterBubble.dll"
+""-"z:\sys\bin\FilterBuffer.dll"
+""-"z:\sys\bin\FilterBubble.dll"
+""-"z:\sys\bin\FilterCartoon.dll"
+""-"z:\sys\bin\FilterClipart.dll"
+""-"z:\sys\bin\FilterContrast.dll"
+""-"z:\sys\bin\FilterCrop.dll"
+""-"z:\sys\bin\FilterFrame.dll"
+""-"z:\sys\bin\FilterGrayScale.dll"
+""-"z:\sys\bin\FilterIclSource.dll"
+""-"z:\sys\bin\FilterJpegSource.dll"
+""-"z:\sys\bin\FilterJpegTarget.dll"
+""-"z:\sys\bin\FilterNegate.dll"
+""-"z:\sys\bin\FilterRedEye.dll"
+""-"z:\sys\bin\FilterRotate.dll"
+""-"z:\sys\bin\FilterScale.dll"
+""-"z:\sys\bin\FilterSepia.dll"
+""-"z:\sys\bin\FilterSharpness.dll"
+""-"z:\sys\bin\FilterText.dll"

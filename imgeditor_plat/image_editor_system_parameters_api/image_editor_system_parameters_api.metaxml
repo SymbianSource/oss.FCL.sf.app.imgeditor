@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="d8638eed8914e5f5db9ca533a0c91040" dataversion="2.0">
+  <name>Image Editor System Parameters API</name>
+  <description>IE system parameters and settings</description>
+  <type>c++</type>
+  <collection>imageeditorengine</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

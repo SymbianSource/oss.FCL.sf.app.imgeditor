@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN15CFilterContrast6CreateEv @ 1 NONAME
+	_ZTI15CFilterContrast @ 2 NONAME ; #<TI>#
+	_ZTV15CFilterContrast @ 3 NONAME ; #<VT>#
+

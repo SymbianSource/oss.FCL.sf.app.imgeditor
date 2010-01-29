@@ -1,0 +1,9 @@
+EXPORTS
+	_ZN14CFilterCartoon6CreateEv @ 1 NONAME
+	_ZTI11COTreeQuant @ 2 NONAME ; #<TI>#
+	_ZTI14CFilterCartoon @ 3 NONAME ; #<TI>#
+	_ZTI5CNode @ 4 NONAME ; #<TI>#
+	_ZTV11COTreeQuant @ 5 NONAME ; #<VT>#
+	_ZTV14CFilterCartoon @ 6 NONAME ; #<VT>#
+	_ZTV5CNode @ 7 NONAME ; #<VT>#
+

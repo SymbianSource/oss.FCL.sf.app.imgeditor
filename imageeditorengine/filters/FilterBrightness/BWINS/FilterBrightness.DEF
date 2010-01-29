@@ -1,0 +1,3 @@
+EXPORTS
+	?Create@CFilterBrightness@@SAHXZ @ 1 NONAME ; int CFilterBrightness::Create(void)
+

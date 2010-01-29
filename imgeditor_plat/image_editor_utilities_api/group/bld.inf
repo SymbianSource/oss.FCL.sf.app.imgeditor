@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+* File that exports the files belonging to 
+* : Image Editor Utilities API.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/ResolutionUtil.h     MW_LAYER_PLATFORM_EXPORT_PATH(ResolutionUtil.h)
+../inc/plugininfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(plugininfo.h)
+../inc/ImageEditorUtils.h     MW_LAYER_PLATFORM_EXPORT_PATH(ImageEditorUtils.h)
+../inc/CallbackMethod.h     MW_LAYER_PLATFORM_EXPORT_PATH(callbackmethod.h)
+../inc/Callback.h     MW_LAYER_PLATFORM_EXPORT_PATH(Callback.h)
+../inc/BitField.h     MW_LAYER_PLATFORM_EXPORT_PATH(bitfield.h)

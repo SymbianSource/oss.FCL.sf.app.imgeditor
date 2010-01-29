@@ -1,0 +1,51 @@
+//
+// After modifying this file, reallyclean and build the whole project!
+//
+
+// Do not require frozen DEF files for framework modules
+// (i.e. all modules except plugins).
+// Instead specify 'exportunfrozen' in MMP files
+#define __EXPORT_UNFROZEN_FRAMEWORK__
+
+// Same as above, but for the plugin modules.
+#define __EXPORT_UNFROZEN_PLUGINS__
+
+
+// Enable logging facility in all modules. 
+// Enabling logs will do the both of the following:
+//
+// 1) Write the the logging information to RDebug::Print()
+//    (in UDEB builds only)
+// 2) Write the log to file using RFileLogger (both in UDEB and UREL)
+//    Create the folder C:\Logs\ImageEditor to enable the file logging.
+#define __IE_GLOBAL_DEBUGLOG__
+
+// Verbosity level of the debuglog output
+//#define __VERBOSE__
+//#define __VERBOSE_2__
+
+// Export the ROM description (.iby) files to epoc32\rom\include.
+// Not needed if we are not creating rom image.
+//#define __EXPORT_ROM_DESCRIPTION_FILES__
+
+// Use print provider
+#define __AIW_PRINT_PROVIDER_USED__
+
+// Enable fullscreen feature
+#undef __FULLSCREEN_AVAILABLE__
+
+// Cropping aspect ratio options
+// Enable showing both portrait and landscape in cropping aspect ratio
+// selection list. If disabled, only one wallpaper option is shown (always 
+// portrait)
+#undef __SHOW_TWO_WALLPAPER_ASPECT_RATIOS__
+
+// Enable showing optional aspect ratios in selection list
+#undef __SHOW_OPTIONAL_ASPECT_RATIOS__
+
+// Enable landscape feature
+#define __LANDSCAPE_SUPPORT__
+
+// Enable touch-only device Red Eye Reduction plugin action
+// If enabled, the set state is skipped and plugin loops only in resize state
+#undef __TOUCH_ONLY_DEVICE_RER_PLUGIN_ACTION__

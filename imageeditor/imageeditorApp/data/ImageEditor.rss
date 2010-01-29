@@ -1,0 +1,134 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for ImageEditorApp.
+*
+*/
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    IEDT
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.loc>
+#include <avkon.mbg>
+#include <appinfo.rh>
+
+#include "imageeditor.hrh"
+#include "imageeditor_gen.loc"
+
+#include <ImageEditor.loc>
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="imageeditor"; }
+
+
+//=============================================================================
+//  APPLICATION INFO
+//=============================================================================
+RESOURCE EIK_APP_INFO
+{
+//    cba = R_AVKON_SOFTKEYS_EMPTY;
+}
+
+//=============================================================================
+//  LOCALISABLE APPLICATION INFO
+//=============================================================================
+RESOURCE LOCALISABLE_APP_INFO r_image_editor_app_info
+{
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+    {
+    };    
+}
+
+
+//=============================================================================
+//
+//  ERROR NOTES
+//
+//=============================================================================
+
+RESOURCE TBUF128 r_error_not_enough_disk_space
+{
+    buf = qtn_memlo_memory_running_out;
+}
+
+RESOURCE TBUF128 r_error_not_enough_memory
+{
+    buf = qtn_memlo_ram_out_of_mem;
+}
+
+RESOURCE TBUF128 r_error_saving
+{
+    buf = qtn_sie_error_saving;
+}
+
+RESOURCE TBUF128 r_error_loading
+{
+    buf = qtn_sie_error_loading;
+}
+
+RESOURCE TBUF128 r_error_processing
+{
+    buf = qtn_sie_error_processing;
+}
+
+RESOURCE TBUF128 r_error_engine
+{
+    buf = qtn_sie_error_engine;
+}
+
+RESOURCE TBUF128 r_error_internal
+{
+    buf = qtn_sie_error_internal;
+}
+
+RESOURCE TBUF128 r_error_internal_non_recoverable
+{
+    buf = qtn_sie_error_internal_non_recoverable;
+}
+
+// qtn_sie_error_protected_file not defined anywhere
+// is this even needed or can it be taken away?
+RESOURCE TBUF128 r_error_protected_file
+{
+    buf = qtn_sie_error_protected_file;
+}

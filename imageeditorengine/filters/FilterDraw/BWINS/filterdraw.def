@@ -1,0 +1,3 @@
+EXPORTS
+	?Create@CFilterDraw@@SAHXZ @ 1 NONAME ; int CFilterDraw::Create(void)
+

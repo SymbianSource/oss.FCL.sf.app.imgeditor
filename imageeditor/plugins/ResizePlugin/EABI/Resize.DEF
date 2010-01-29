@@ -1,0 +1,7 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI24CImageEditorResizePlugin @ 2 NONAME ; #<TI>#
+	_ZTV24CImageEditorResizePlugin @ 3 NONAME ; #<VT>#
+	_ZTI14CResizeControl @ 4 NONAME ; #<TI>#
+	_ZTV14CResizeControl @ 5 NONAME ; #<VT>#
+

@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN13CFilterNegate6CreateEv @ 1 NONAME
+	_ZTI13CFilterNegate @ 2 NONAME ; #<TI>#
+	_ZTV13CFilterNegate @ 3 NONAME ; #<VT>#
+

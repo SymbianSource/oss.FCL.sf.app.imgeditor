@@ -1,0 +1,135 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for EditorProvider.
+*
+*/
+
+
+
+#include <Eikon.rh>
+#include <avkon.rh>
+#include <AvkonIcons.hrh>
+#include <avkon.rsg>
+#include <avkon.mbg>
+#include <Avkon.loc>
+#include <AiwCommon.hrh>
+
+#include "ImageEditorUids.hrh"
+#include "ImageEditorProvider.hrh"
+#include "editorprovider_gen.loc"
+
+#include <ImageEditor.loc>
+
+NAME EDPR
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE MENU_PANE r_editorprovider_menu
+{
+	items=
+	{
+        MENU_ITEM 
+		{ 
+			command = AIW_SUBMENU_TITLE; 
+			txt = qtn_sie_options_edit;  
+		},
+        MENU_ITEM 
+		{ 
+			command = EEditorProviderCmdIdEdit; 
+			txt = qtn_sie_options_edit;  
+		}
+	};
+}
+
+RESOURCE MENU_PANE r_jpeg_rotator_menu
+{
+	items=
+	{
+        MENU_ITEM
+		{
+			command = AIW_SUBMENU_TITLE;
+			txt = qtn_sie_options_rotate;
+		},
+        MENU_ITEM 
+		{ 
+			command = EEditorProviderCmdIdRotateLeft; 
+			txt = qtn_album_cmd_rotate_left;  
+		},
+        MENU_ITEM 
+		{ 
+			command = EEditorProviderCmdIdRotateRight; 
+			txt = qtn_album_cmd_rotate_right;  
+		}
+	};
+}
+
+//----------------------------------------------------
+//   
+//    r_provider_progress_dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_provider_progress_dialog
+{
+    flags = EAknWaitNoteFlags|EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items=
+    {
+        DLG_LINE
+        {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control= AVKON_NOTE
+            {
+                layout = EProgressLayout;
+                singular_label = qtn_gen_note_processing;
+            };
+        }
+    };
+}
+
+//----------------------------------------------------
+//   
+//    r_provider_wait_dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_provider_wait_dialog
+{
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items=
+    {
+        DLG_LINE
+        {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control= AVKON_NOTE
+            {
+                layout = EWaitLayout;
+                singular_label = qtn_gen_note_processing;
+                imagefile = AVKON_ICON_FILE;
+                imageid = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+            };
+        }
+    };
+}
+
+// End of file
+
+

@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+*
+*/
+
+
+//Disabled until wk21
+//#undef RD_S60_IMAGE_EDITOR
+
+#ifdef RD_S60_IMAGE_EDITOR
+
+#ifndef __IMAGE_EDITOR_RESOURCES_IBY__
+#define __IMAGE_EDITOR_RESOURCES_IBY__
+
+data=DATAZ_\private\101ffa91\plugins\BlackWhite.rsc		\private\101ffa91\plugins\BlackWhite.rsc
+data=DATAZ_\private\101ffa91\plugins\Brightness.rsc		\private\101ffa91\plugins\Brightness.rsc
+data=DATAZ_\private\101ffa91\plugins\Cartoonize.rsc		\private\101ffa91\plugins\Cartoonize.rsc
+data=DATAZ_\private\101ffa91\plugins\Clipart.rsc		\private\101ffa91\plugins\Clipart.rsc
+data=DATAZ_\private\101ffa91\plugins\Bubble.rsc		\private\101ffa91\plugins\Bubble.rsc
+data=DATAZ_\private\101ffa91\plugins\Contrast.rsc		\private\101ffa91\plugins\Contrast.rsc
+data=DATAZ_\private\101ffa91\plugins\Crop.rsc			\private\101ffa91\plugins\Crop.rsc
+data=DATAZ_\private\101ffa91\plugins\Frame.rsc			\private\101ffa91\plugins\Frame.rsc
+data=DATAZ_\private\101ffa91\plugins\Negative.rsc		\private\101ffa91\plugins\Negative.rsc
+data=DATAZ_\private\101ffa91\plugins\RedEyeReduction.rsc	\private\101ffa91\plugins\RedEyeReduction.rsc
+data=DATAZ_\private\101ffa91\plugins\Resize.rsc			\private\101ffa91\plugins\Resize.rsc
+data=DATAZ_\private\101ffa91\plugins\Rotateleft.rsc		\private\101ffa91\plugins\Rotateleft.rsc
+data=DATAZ_\private\101ffa91\plugins\Rotateright.rsc		\private\101ffa91\plugins\Rotateright.rsc
+data=DATAZ_\private\101ffa91\plugins\Sepia.rsc			\private\101ffa91\plugins\Sepia.rsc
+data=DATAZ_\private\101ffa91\plugins\Sharpness.rsc		\private\101ffa91\plugins\Sharpness.rsc
+data=DATAZ_\private\101ffa91\plugins\Text.rsc			\private\101ffa91\plugins\Text.rsc
+#ifdef RD_IE_DRAW_PLUGIN
+data=DATAZ_\private\101ffa91\plugins\draw.rsc			\private\101ffa91\plugins\draw.rsc
+#endif // RD_IE_DRAW_PLUGIN
+data=DATAZ_\RESOURCE_FILES_DIR\ImageEditorProviderInternal.rsc	RESOURCE_FILES_DIR\ImageEditorProviderInternal.rsc
+data=DATAZ_\APP_RESOURCE_DIR\ImageEditorPluginBase.rsc		APP_RESOURCE_DIR\ImageEditorPluginBase.rsc
+data=DATAZ_\APP_RESOURCE_DIR\ImageEditor.rsc			APP_RESOURCE_DIR\ImageEditor.rsc
+data=DATAZ_\APP_RESOURCE_DIR\ImageEditorUi.rsc			APP_RESOURCE_DIR\ImageEditorUi.rsc
+
+// sis stub
+//data=\epoc32\data\z\private\10003a3f\apps\ImageEditor_reg.rsc   private\10003A3F\import\apps\ImageEditor_reg.rsc
+//data=ZSYSTEM\install\ImageEditorStub.sis    System\Install\ImageEditorStub.sis
+
+#endif // __IMAGE_EDITOR_RESOURCES_IBY__
+#endif
+//  End of File  

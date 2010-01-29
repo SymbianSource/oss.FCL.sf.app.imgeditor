@@ -1,0 +1,5 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI28CImageEditorBlackWhitePlugin @ 2 NONAME ; #<TI>#
+	_ZTV28CImageEditorBlackWhitePlugin @ 3 NONAME ; #<VT>#
+

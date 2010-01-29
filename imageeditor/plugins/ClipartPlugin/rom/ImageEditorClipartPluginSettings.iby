@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+//Disabled until wk21
+//#undef RD_S60_IMAGE_EDITOR
+
+#ifdef RD_S60_IMAGE_EDITOR
+#ifndef __CLIPARTPLUGINSETTINGS_IBY__
+#define __CLIPARTPLUGINSETTINGS_IBY__
+
+// Clipart data
+data=DATAZ_\private\101ffa91\cliparts\Cliparts01.mbm      \private\101ffa91\cliparts\Cliparts01.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts02.mbm      \private\101ffa91\cliparts\Cliparts02.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts03.mbm      \private\101ffa91\cliparts\Cliparts03.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts04.mbm      \private\101ffa91\cliparts\Cliparts04.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts05.mbm      \private\101ffa91\cliparts\Cliparts05.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts06.mbm      \private\101ffa91\cliparts\Cliparts06.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts07.mbm      \private\101ffa91\cliparts\Cliparts07.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts08.mbm      \private\101ffa91\cliparts\Cliparts08.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts09.mbm      \private\101ffa91\cliparts\Cliparts09.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts10.mbm      \private\101ffa91\cliparts\Cliparts10.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts11.mbm      \private\101ffa91\cliparts\Cliparts11.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts12.mbm      \private\101ffa91\cliparts\Cliparts12.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts13.mbm      \private\101ffa91\cliparts\Cliparts13.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts14.mbm      \private\101ffa91\cliparts\Cliparts14.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts15.mbm      \private\101ffa91\cliparts\Cliparts15.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts16.mbm      \private\101ffa91\cliparts\Cliparts16.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts17.mbm      \private\101ffa91\cliparts\Cliparts17.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts18.mbm      \private\101ffa91\cliparts\Cliparts18.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts19.mbm      \private\101ffa91\cliparts\Cliparts19.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts20.mbm      \private\101ffa91\cliparts\Cliparts20.mbm
+data=DATAZ_\private\101ffa91\cliparts\Cliparts21.mbm      \private\101ffa91\cliparts\Cliparts21.mbm
+#endif // __CLIPARTPLUGINSETTINGS_IBY__
+#endif
+//  End of File  

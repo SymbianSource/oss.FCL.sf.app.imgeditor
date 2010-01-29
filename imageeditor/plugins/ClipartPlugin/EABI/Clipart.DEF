@@ -1,0 +1,15 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI14CClipartScaler @ 2 NONAME ; #<TI>#
+	_ZTI21CClipartSelectionGrid @ 3 NONAME ; #<TI>#
+	_ZTI23CClipartSelectionDialog @ 4 NONAME ; #<TI>#
+	_ZTI25CImageEditorClipartPlugin @ 5 NONAME ; #<TI>#
+	_ZTI26CImageEditorClipartControl @ 6 NONAME ; #<TI>#
+	_ZTI8CJPTimer @ 7 NONAME ; #<TI>#
+	_ZTV14CClipartScaler @ 8 NONAME ; #<VT>#
+	_ZTV21CClipartSelectionGrid @ 9 NONAME ; #<VT>#
+	_ZTV23CClipartSelectionDialog @ 10 NONAME ; #<VT>#
+	_ZTV25CImageEditorClipartPlugin @ 11 NONAME ; #<VT>#
+	_ZTV26CImageEditorClipartControl @ 12 NONAME ; #<VT>#
+	_ZTV8CJPTimer @ 13 NONAME ; #<VT>#
+

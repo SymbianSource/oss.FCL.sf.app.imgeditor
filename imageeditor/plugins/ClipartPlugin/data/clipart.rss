@@ -1,0 +1,316 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for Clipart plugin.
+*
+*/
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <avkon.loc>
+#include <avkon.hrh>
+#include <PathConfiguration.hrh>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "clipart.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "clipart_gen.loc"
+#include <ImageEditor.loc>
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+    {
+    pluginuid             = UID_CLIPART_PLUGIN;
+    uitype                = EPluginUiTypeCustomized;
+    plugintype            = EPluginFilterTypeABITO;
+    pluginscope           = EPluginScopeAdjustmentEngine;
+    plugindisplayorder    = 8;
+    pluginname            = qtn_sie_plugin_name_clipart;
+    iconfile              = "clipart.mif";
+    filterfile            = "FilterClipart.dll";
+    }
+
+RESOURCE PARAMNAMES r_plugin_pars
+    {
+    parameters=
+        {
+        // Select clipart
+        qtn_sie_heading_select_clipart,
+        
+        // Plugin main
+        qtn_sie_navi_edit_clipart,
+        
+        // Move clipart
+        qtn_sie_navi_edit_clipart,
+        
+        // Resize clipart        
+        qtn_sie_navi_edit_clipart,                          
+        
+        // Rotate clipart
+        qtn_sie_navi_edit_clipart
+        
+        };
+    }
+ 
+RESOURCE PGNUIITEMS r_sk1_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_sk1_ok;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdEmpty;
+            text=" ";
+            } 
+        };
+    }
+
+RESOURCE PGNUIITEMS r_sk2_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdDone;
+            text=qtn_sie_pgn_sk2_done;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdEmpty;
+            text=" ";
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {
+            id = EAknSoftkeyContextOptions;
+            text = text_softkey_option;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_sk1_ok;
+            },
+        PGNUIITEM 
+            {
+            id = EAknSoftkeyContextOptions;
+            text = text_softkey_option;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdEmpty;
+            text=" ";
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+    {
+    items=
+        {
+        // Move
+        PGNUIITEM 
+            {    
+            id=EClipartPgnMenuCmdMove;
+            text=qtn_sie_options_move_clipart;
+            },
+        // Resize
+        PGNUIITEM 
+            {    
+            id=EClipartPgnMenuCmdResize;
+            text=qtn_sie_options_resize_clipart;
+            },
+        // Rotate
+        PGNUIITEM 
+            {    
+            id=EClipartPgnMenuCmdRotate;
+            text=qtn_sie_options_rotate_clipart;
+            },
+        // Cancel
+        PGNUIITEM 
+            {    
+            id=EClipartPgnMenuCmdCancel;
+            text=qtn_sie_options_cancel_effect;
+            }
+        };
+    } 
+
+//=============================================================================
+//
+//    r_clipart_progress_note
+//    For progress note.
+//
+//=============================================================================
+//
+RESOURCE DIALOG r_clipart_progress_note
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = 11;
+            control = AVKON_NOTE
+                {
+                layout = EProgressLayout;
+                singular_label = qtn_sie_pgn_searching_cliparts;
+                };
+            }
+        };
+    }
+
+//=============================================================================
+//
+//    r_clipart_selection_dialog
+//    
+//
+//=============================================================================
+//
+RESOURCE DIALOG r_clipart_selection_dialog
+    {
+    flags = EEikDialogFlagCbaButtons | EEikDialogFlagWait | EEikDialogFlagFillAppClientRect;
+    buttons = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items = 
+    	{
+    	DLG_LINE
+			{
+	        type = EClipartCustomControlType ; 
+    	    id = EClipartSelectionGrid;
+        	control = GRID 
+         		{ 
+         		flags = EAknGridHorizontalOrientation|EAknGridFollowsItemsAndLoops;
+         		width = 0;
+         		height = 0;
+         		style = 0;         	
+         		};  
+       		}
+    	};
+    }
+
+
+// PATHS CANNOT EXCEED 256 CHARACTERS TOGETHER
+RESOURCE ARRAY r_clipart_dirs
+    {
+    items=
+        {
+        LBUF { txt = "c:\\private\101ffa91\\cliparts\\"; },
+        LBUF { txt = ""text_memory_card_root_path"private\101ffa91\\cliparts\\"; },
+        LBUF { txt = "z:\\private\101ffa91\\cliparts\\"; },
+        LBUF { txt = "c:\\data\\images\\cliparts\\"; },
+        LBUF { txt = ""text_memory_card_root_path"images\\cliparts\\"; }
+        };
+    }
+
+// Context specific MSK menu
+RESOURCE MENU_BAR r_clipart_context_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_clipart_context_menupane; 
+            txt = " "; 
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_clipart_context_menupane
+    {
+    items =
+        {
+        MENU_ITEM 
+            { 
+            command = EClipartPgnMenuCmdMove; 
+            txt = qtn_sie_options_move_clipart; 
+            },
+        MENU_ITEM 
+            { 
+            command = EClipartPgnMenuCmdResize; 
+            txt = qtn_sie_options_resize_clipart; 
+            },    
+        MENU_ITEM 
+            { 
+            command = EClipartPgnMenuCmdRotate; 
+            txt = qtn_sie_options_rotate_clipart; 
+            }
+        };
+    }
+
+RESOURCE TBUF r_tooltip_clipart_resize { buf = qtn_sie_tooltip_resize; } 
+RESOURCE TBUF r_tooltip_clipart_move { buf = qtn_sie_tooltip_move; } 
+RESOURCE TBUF r_tooltip_clipart_rotate { buf = qtn_sie_tooltip_rotate; } 
+
+
+// End of File

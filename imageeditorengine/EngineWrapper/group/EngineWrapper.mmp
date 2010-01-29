@@ -1,0 +1,92 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include "../../group/definitions.def"
+
+#define CAPS_UNUSED_ARG(x)
+
+MACRO           UNICODE
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined __VERBOSE_2_
+MACRO           VERBOSE_2
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+#endif
+
+
+MACRO           EXIF_SUPPORT
+
+
+TARGET          EngineWrapper.dll
+TARGETTYPE      dll
+UID             0x1000008d
+EPOCALLOWDLLDATA
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+SOURCE		ImageEditorEngineWrapper.cpp
+SOURCEPATH      ../../src
+SOURCE		CFilterStack.cpp
+
+SOURCE		CExifParser.cpp
+SOURCE		JpegSaveFactory.cpp
+SOURCE		CJpegSave.cpp
+
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../group
+USERINCLUDE     ../../SystemParameters/inc
+USERINCLUDE     ../../ImageEditorUtils/inc
+
+// Default system include paths for middleware layer modules.
+MW_LAYER_SYSTEMINCLUDE
+
+LANG            SC
+
+LIBRARY         euser.lib
+LIBRARY	        bafl.lib
+LIBRARY	        cone.lib
+LIBRARY	        estlib.lib
+LIBRARY	        avkon.lib
+LIBRARY	        fbscli.lib
+LIBRARY	        efsrv.lib
+
+LIBRARY         SystemParameters.lib
+LIBRARY		ImageEditorUtils.lib
+
+#if defined( __EXPORT_UNFROZEN_FRAMEWORK__ )
+EXPORTUNFROZEN
+#endif
+NOSTRICTDEF
+
+// End of File

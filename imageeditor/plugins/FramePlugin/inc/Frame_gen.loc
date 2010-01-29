@@ -1,0 +1,40 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:
+* String generalisations for Frame plugin.
+*
+*/
+
+
+
+#include <avkon.loc>
+#include "iepb_gen.loc"
+
+// SOFTKEY TEXTS
+
+#define qtn_sie_pgn_sk1_ok      qtn_sie_iepb_softkey_ok
+#define qtn_sie_pgn_sk2_cancel  qtn_sie_iepb_softkey_cancel
+#define qtn_sie_pgn_msk_ok      qtn_sie_iepb_softkey_ok
+
+
+
+
+
+
+
+
+
+
+

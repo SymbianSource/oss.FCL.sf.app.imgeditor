@@ -1,0 +1,9 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI22CImageEditorTextPlugin @ 2 NONAME ; #<TI>#
+	_ZTI23CImageEditorTextControl @ 3 NONAME ; #<TI>#
+	_ZTV22CImageEditorTextPlugin @ 4 NONAME ; #<VT>#
+	_ZTV23CImageEditorTextControl @ 5 NONAME ; #<VT>#
+	_ZTI8CJPTimer @ 6 NONAME ; #<TI>#
+	_ZTV8CJPTimer @ 7 NONAME ; #<VT>#
+

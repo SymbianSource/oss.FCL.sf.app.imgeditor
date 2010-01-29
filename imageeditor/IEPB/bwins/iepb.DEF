@@ -1,0 +1,14 @@
+EXPORTS
+	??0CImageEditorPluginBase@@QAE@XZ @ 1 NONAME ; CImageEditorPluginBase::CImageEditorPluginBase(void)
+	??1CImageEditorPluginBase@@UAE@XZ @ 2 NONAME ; CImageEditorPluginBase::~CImageEditorPluginBase(void)
+	?ConstructL@CImageEditorPluginBase@@QAEXABVTDesC16@@0@Z @ 3 NONAME ; void CImageEditorPluginBase::ConstructL(class TDesC16 const &, class TDesC16 const &)
+	?GetProperty@CImageEditorPluginBase@@UAEHHAAVTDes16@@@Z @ 4 NONAME ; int CImageEditorPluginBase::GetProperty(int, class TDes16 &)
+	?InitPluginL@CImageEditorPluginBase@@UAEHABVTRect@@PAVCCoeControl@@AAPAV3@@Z @ 5 NONAME ; int CImageEditorPluginBase::InitPluginL(class TRect const &, class CCoeControl *, class CCoeControl * &)
+	?NewL@CImageEditorPluginBase@@SAPAV1@ABVTDesC16@@0@Z @ 6 NONAME ; class CImageEditorPluginBase * CImageEditorPluginBase::NewL(class TDesC16 const &, class TDesC16 const &)
+	?ProcessImageL@CImageEditorPluginBase@@UAEXPAVCEditorImage@@@Z @ 7 NONAME ; void CImageEditorPluginBase::ProcessImageL(class CEditorImage *)
+	?ReleasePlugin@CImageEditorPluginBase@@UAEXXZ @ 8 NONAME ; void CImageEditorPluginBase::ReleasePlugin(void)
+	?ReservedImageEditorBaseMethod1@CImageEditorPluginBase@@UAEXXZ @ 9 NONAME ; void CImageEditorPluginBase::ReservedImageEditorBaseMethod1(void)
+	?ReservedImageEditorBaseMethod2@CImageEditorPluginBase@@UAEXXZ @ 10 NONAME ; void CImageEditorPluginBase::ReservedImageEditorBaseMethod2(void)
+	?SetProperty@CImageEditorPluginBase@@UAEHHAAVTDesC16@@@Z @ 11 NONAME ; int CImageEditorPluginBase::SetProperty(int, class TDesC16 &)
+	?ShowPopupNote@CImageEditorPluginBase@@UAEXXZ @ 12 NONAME ; void CImageEditorPluginBase::ShowPopupNote(void)
+

@@ -1,0 +1,3 @@
+EXPORTS
+	?Create@CFilterBuffer@@SAHXZ @ 1 NONAME ; int CFilterBuffer::Create(void)
+

@@ -1,0 +1,57 @@
+EXPORTS
+	??1CImageEditorImageHandler@@UAE@XZ @ 1 NONAME ; CImageEditorImageHandler::~CImageEditorImageHandler(void)
+	??1CImageEditorPluginManager@@UAE@XZ @ 2 NONAME ; CImageEditorPluginManager::~CImageEditorPluginManager(void)
+	??1CPluginLocator@@UAE@XZ @ 3 NONAME ; CPluginLocator::~CPluginLocator(void)
+	?AddFilterToEngineL@CImageEditorPluginManager@@QAEXXZ @ 4 NONAME ; void CImageEditorPluginManager::AddFilterToEngineL(void)
+	?CanUndo@CImageEditorPluginManager@@QAEHXZ @ 5 NONAME ; int CImageEditorPluginManager::CanUndo(void)
+	?CleanupConverters@CImageEditorImageHandler@@QAEXXZ @ 6 NONAME ; void CImageEditorImageHandler::CleanupConverters(void)
+	?ClosePlugin@CImageEditorPluginManager@@QAEXXZ @ 7 NONAME ; void CImageEditorPluginManager::ClosePlugin(void)
+	?ContinueLoading@CImageEditorImageHandler@@QAEXPAVTRequestStatus@@@Z @ 8 NONAME ; void CImageEditorImageHandler::ContinueLoading(class TRequestStatus *)
+	?CountPlugins@CPluginLocator@@QBEHXZ @ 9 NONAME ; int CPluginLocator::CountPlugins(void) const
+	?CreatePluginControlL@CImageEditorPluginManager@@QAEHABVTRect@@PAVCCoeControl@@AAPAV3@@Z @ 10 NONAME ; int CImageEditorPluginManager::CreatePluginControlL(class TRect const &, class CCoeControl *, class CCoeControl * &)
+	?DeleteImage@CImageEditorImageHandler@@QBEHABVTDesC16@@@Z @ 11 NONAME ; int CImageEditorImageHandler::DeleteImage(class TDesC16 const &) const
+	?FinishAsyncProcess@CImageEditorPluginManager@@QAEXXZ @ 12 NONAME ; void CImageEditorPluginManager::FinishAsyncProcess(void)
+	?FinishAsyncSaveL@CImageEditorPluginManager@@QAEXXZ @ 13 NONAME ; void CImageEditorPluginManager::FinishAsyncSaveL(void)
+	?GetFullImage@CImageEditorPluginManager@@QAEPAVCFbsBitmap@@XZ @ 14 NONAME ; class CFbsBitmap * CImageEditorPluginManager::GetFullImage(void)
+	?GetImageName@CImageEditorPluginManager@@QAEABVTDesC16@@XZ @ 15 NONAME ; class TDesC16 const & CImageEditorPluginManager::GetImageName(void)
+	?GetJpegQualityFactorL@CImageEditorImageHandler@@QAEHABVTDesC16@@@Z @ 16 NONAME ; int CImageEditorImageHandler::GetJpegQualityFactorL(class TDesC16 const &)
+	?GetPluginInfo@CPluginLocator@@QAEPAVCPluginInfo@@H@Z @ 17 NONAME ; class CPluginInfo * CPluginLocator::GetPluginInfo(int)
+	?GetPreviewImage@CImageEditorPluginManager@@QAEPAVCFbsBitmap@@XZ @ 18 NONAME ; class CFbsBitmap * CImageEditorPluginManager::GetPreviewImage(void)
+	?GetSystemParameters@CImageEditorPluginManager@@QBEABVCSystemParameters@@XZ @ 19 NONAME ; class CSystemParameters const & CImageEditorPluginManager::GetSystemParameters(void) const
+	?GetZoomMode@CImageEditorPluginManager@@QAE?AW4TZoomMode@@XZ @ 20 NONAME ; enum TZoomMode CImageEditorPluginManager::GetZoomMode(void)
+	?IsImageChanged@CImageEditorPluginManager@@QAEHXZ @ 21 NONAME ; int CImageEditorPluginManager::IsImageChanged(void)
+	?IsJpegIntact@CImageEditorImageHandler@@QAEHABVTDesC16@@@Z @ 22 NONAME ; int CImageEditorImageHandler::IsJpegIntact(class TDesC16 const &)
+	?IsLandscapeEnabledL@CImageEditorPluginManager@@QBEHXZ @ 23 NONAME ; int CImageEditorPluginManager::IsLandscapeEnabledL(void) const
+	?IsPluginLoaded@CImageEditorPluginManager@@QBEHXZ @ 24 NONAME ; int CImageEditorPluginManager::IsPluginLoaded(void) const
+	?IsRajpegImageL@CImageEditorImageHandler@@QBEHABVTDesC16@@@Z @ 25 NONAME ; int CImageEditorImageHandler::IsRajpegImageL(class TDesC16 const &) const
+	?LoadImageAsyncL@CImageEditorImageHandler@@QAEXABVTDesC16@@AAPAVCFbsBitmap@@PAVTRequestStatus@@@Z @ 26 NONAME ; void CImageEditorImageHandler::LoadImageAsyncL(class TDesC16 const &, class CFbsBitmap * &, class TRequestStatus *)
+	?LoadImageL@CImageEditorPluginManager@@QAEXH@Z @ 27 NONAME ; void CImageEditorPluginManager::LoadImageL(int)
+	?NewL@CImageEditorImageHandler@@SAPAV1@XZ @ 28 NONAME ; class CImageEditorImageHandler * CImageEditorImageHandler::NewL(void)
+	?NewL@CImageEditorPluginManager@@SAPAV1@XZ @ 29 NONAME ; class CImageEditorPluginManager * CImageEditorPluginManager::NewL(void)
+	?NewL@CPluginLocator@@SAPAV1@XZ @ 30 NONAME ; class CPluginLocator * CPluginLocator::NewL(void)
+	?OpenPluginL@CImageEditorPluginManager@@QAEXABVTDesC16@@@Z @ 31 NONAME ; void CImageEditorPluginManager::OpenPluginL(class TDesC16 const &)
+	?PanL@CImageEditorPluginManager@@QAEXHH@Z @ 32 NONAME ; void CImageEditorPluginManager::PanL(int, int)
+	?PanL@CImageEditorPluginManager@@QAEXW4TDirection@@@Z @ 33 NONAME ; void CImageEditorPluginManager::PanL(enum TDirection)
+	?PrepareAsyncProcessL@CImageEditorPluginManager@@QAEXAAH@Z @ 34 NONAME ; void CImageEditorPluginManager::PrepareAsyncProcessL(int &)
+	?PrepareAsyncSaveL@CImageEditorPluginManager@@QAEXHPBVTSize@@@Z @ 35 NONAME ; void CImageEditorPluginManager::PrepareAsyncSaveL(int, class TSize const *)
+	?ProcessBlockL@CImageEditorPluginManager@@QAEHXZ @ 36 NONAME ; int CImageEditorPluginManager::ProcessBlockL(void)
+	?ProcessImageL@CImageEditorPluginManager@@QAEXXZ @ 37 NONAME ; void CImageEditorPluginManager::ProcessImageL(void)
+	?PurgeUndoRedoHistory@CImageEditorPluginManager@@QAEXXZ @ 38 NONAME ; void CImageEditorPluginManager::PurgeUndoRedoHistory(void)
+	?RedoL@CImageEditorPluginManager@@QAEXXZ @ 39 NONAME ; void CImageEditorPluginManager::RedoL(void)
+	?RenameImage@CImageEditorImageHandler@@QBEHABVTDesC16@@0@Z @ 40 NONAME ; int CImageEditorImageHandler::RenameImage(class TDesC16 const &, class TDesC16 const &) const
+	?ResetEngineL@CImageEditorPluginManager@@QAEXXZ @ 41 NONAME ; void CImageEditorPluginManager::ResetEngineL(void)
+	?RestoreFilterL@CImageEditorPluginManager@@QBEXXZ @ 42 NONAME ; void CImageEditorPluginManager::RestoreFilterL(void) const
+	?RotateL@CImageEditorPluginManager@@QAEXW4TRotation@@@Z @ 43 NONAME ; void CImageEditorPluginManager::RotateL(enum TRotation)
+	?SaveAbortL@CImageEditorPluginManager@@QAEXXZ @ 44 NONAME ; void CImageEditorPluginManager::SaveAbortL(void)
+	?SaveBlockL@CImageEditorPluginManager@@QAEHXZ @ 45 NONAME ; int CImageEditorPluginManager::SaveBlockL(void)
+	?SaveImageAsyncL@CImageEditorImageHandler@@QAEXABVTDesC16@@ABVCFbsBitmap@@HPAVTRequestStatus@@@Z @ 46 NONAME ; void CImageEditorImageHandler::SaveImageAsyncL(class TDesC16 const &, class CFbsBitmap const &, int, class TRequestStatus *)
+	?SaveImageL@CImageEditorPluginManager@@QAEXHPBVTSize@@@Z @ 47 NONAME ; void CImageEditorPluginManager::SaveImageL(int, class TSize const *)
+	?ScanPluginsL@CPluginLocator@@QAEXXZ @ 48 NONAME ; void CPluginLocator::ScanPluginsL(void)
+	?SetFullImage@CImageEditorPluginManager@@QAEXPAVCFbsBitmap@@@Z @ 49 NONAME ; void CImageEditorPluginManager::SetFullImage(class CFbsBitmap *)
+	?SetImageName@CImageEditorPluginManager@@QAEXABVTDesC16@@@Z @ 50 NONAME ; void CImageEditorPluginManager::SetImageName(class TDesC16 const &)
+	?SetPreviewImage@CImageEditorPluginManager@@QAEXPAVCFbsBitmap@@@Z @ 51 NONAME ; void CImageEditorPluginManager::SetPreviewImage(class CFbsBitmap *)
+	?SetScreenSizeL@CImageEditorPluginManager@@QAEXXZ @ 52 NONAME ; void CImageEditorPluginManager::SetScreenSizeL(void)
+	?ShowPluginPopup@CImageEditorPluginManager@@QAEXXZ @ 53 NONAME ; void CImageEditorPluginManager::ShowPluginPopup(void)
+	?UndoL@CImageEditorPluginManager@@QAEXXZ @ 54 NONAME ; void CImageEditorPluginManager::UndoL(void)
+	?ZoomL@CImageEditorPluginManager@@QAEXW4TZoom@@@Z @ 55 NONAME ; void CImageEditorPluginManager::ZoomL(enum TZoom)
+

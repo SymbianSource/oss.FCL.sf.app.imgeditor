@@ -1,0 +1,103 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for BlackAndWhite Plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+
+#include "ImageEditorPluginBase.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "blackwhite_gen.loc"
+#include <ImageEditor.loc> 
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+{
+    pluginuid           = UID_BLACKWHITE_PLUGIN;
+    uitype              = EPluginUiTypeNone;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeMainEngine;
+    plugindisplayorder  = 13;
+    pluginname          = qtn_sie_plugin_name_bw;
+    iconfile            = "blackwhite.mif";
+    filterfile          = "FilterGrayScale.dll";
+}
+
+RESOURCE PARAMNAMES r_plugin_pars
+{
+	parameters=
+	{
+		// NO PARAMETERS
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk1_items
+{
+	items=
+	{
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk2_items
+{
+	items=
+	{
+	};
+}
+
+RESOURCE PGNUIITEMS r_msk_items
+{
+	items=
+	{
+	};
+}
+
+RESOURCE PGNUIITEMS r_menu_items
+{
+	items=
+	{
+	};
+}
+ 
+// End of File

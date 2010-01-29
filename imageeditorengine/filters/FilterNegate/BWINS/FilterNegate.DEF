@@ -1,0 +1,3 @@
+EXPORTS
+	?Create@CFilterNegate@@SAHXZ @ 1 NONAME ; int CFilterNegate::Create(void)
+

@@ -1,0 +1,5 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI23CImageEditorSepiaPlugin @ 2 NONAME ; #<TI>#
+	_ZTV23CImageEditorSepiaPlugin @ 3 NONAME ; #<VT>#
+

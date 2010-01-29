@@ -1,0 +1,6 @@
+EXPORTS
+	??1CJpegScaler@@UAE@XZ @ 1 NONAME ; CJpegScaler::~CJpegScaler(void)
+	?Cancel@CJpegScaler@@QAEXXZ @ 2 NONAME ; void CJpegScaler::Cancel(void)
+	?NewL@CJpegScaler@@SAPAV1@AAVRFs@@@Z @ 3 NONAME ; class CJpegScaler * CJpegScaler::NewL(class RFs &)
+	?Scale@CJpegScaler@@QAEXPAVTRequestStatus@@ABV?$TBuf@$0BAA@@@1ABVTSize@@@Z @ 4 NONAME ; void CJpegScaler::Scale(class TRequestStatus *, class TBuf<256> const &, class TBuf<256> const &, class TSize const &)
+

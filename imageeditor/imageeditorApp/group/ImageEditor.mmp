@@ -1,0 +1,162 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../inc/imageeditoruids.hrh"
+#include "../../inc/definitions.def"
+
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+#endif
+
+
+MACRO           EXIF_SUPPORT
+
+
+
+MACRO           AIW_SUPPORT
+
+
+#if defined( __LANDSCAPE_SUPPORT__ )
+MACRO           LANDSCAPE_SUPPORT
+#endif
+
+#if defined( __FILE_TIME_STAMP_UPDATE__ )
+MACRO           FILE_TIME_STAMP_UPDATE
+#endif
+
+#if defined( __LANDSCAPE_ONLY__ )
+MACRO           LANDSCAPE_ONLY
+#endif
+
+#if defined(__LANDSCAPE_ROTATE_HOTKEYS__)
+MACRO           LANDSCAPE_ROTATE_HOTKEYS
+#endif
+
+#if defined(__LANDSCAPE_PAN_HOTKEYS__)
+MACRO           LANDSCAPE_PAN_HOTKEYS
+#endif
+
+#if defined(__S60_31_VOLUME_KEYS__)
+MACRO           S60_31_VOLUME_KEYS
+LIBRARY         remconcoreapi.lib
+LIBRARY         remconinterfacebase.lib
+#endif
+
+#if defined( __FULLSCREEN_AVAILABLE__ )
+MACRO			FULLSCREEN_AVAILABLE
+#endif
+
+TARGET			ImageEditor.exe
+TARGETTYPE		exe
+EPOCSTACKSIZE 	0x5000
+EPOCHEAPSIZE	0x400 0x800000
+UID				0x100039CE UID_IMAGE_EDITOR
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_APPLICATION AllFiles
+
+SOURCEPATH      ../src
+SOURCE          ImageEditorApp.cpp
+SOURCE          ImageEditorAppUi.cpp
+SOURCE          ImageEditorDocument.cpp
+SOURCE          ImageEditorImageController.cpp
+SOURCE		CImageEditorVolumeKeyObserver.cpp
+#if defined(__S60_31_VOLUME_KEYS__)
+SOURCE          CMGXRemConTarget.cpp
+#endif
+
+USERINCLUDE			.
+USERINCLUDE			../inc
+USERINCLUDE			../../inc
+USERINCLUDE			../../group
+USERINCLUDE			../../ImageEditorUI/inc
+USERINCLUDE			../../ImageEditorManager/inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE			.
+
+START RESOURCE  ../data/ImageEditor.rss
+HEADER
+TARGETPATH      APP_RESOURCE_DIR
+LANGUAGE_IDS
+END
+
+START RESOURCE  ../data/ImageEditor_caption.rss
+HEADER			
+TARGETPATH      APP_RESOURCE_DIR
+LANGUAGE_IDS
+END 
+
+
+LIBRARY				euser.lib
+
+LIBRARY				apparc.lib
+LIBRARY				cone.lib
+LIBRARY				eikcore.lib
+LIBRARY				eikctl.lib
+LIBRARY		        	eikcoctl.lib
+LIBRARY             eikcdlg.lib
+LIBRARY				avkon.lib
+LIBRARY				fbscli.lib
+LIBRARY				bafl.lib
+LIBRARY				efsrv.lib
+LIBRARY				sendui.lib
+LIBRARY				hlplch.lib
+LIBRARY 			ws32.lib
+LIBRARY 			systemparameters.lib
+LIBRARY 			aknnotify.lib 
+
+LIBRARY				imageeditorui.lib
+LIBRARY				imageeditormanager.lib
+LIBRARY				imageeditorutils.lib
+LIBRARY				CommonDialogs.lib 
+LIBRARY				PlatformEnv.lib 
+LIBRARY             		featmgr.lib 
+LIBRARY				eiksrv.lib
+
+LIBRARY    		RemConCoreApi.lib
+LIBRARY    		RemConInterfaceBase.lib
+
+START RESOURCE  ../aif/ImageEditor_reg.rss
+DEPENDS imageeditor.rsg
+// Do not change the UID below.
+TARGETPATH      /private/10003a3f/apps
+END
+
+START BITMAP    ImageEditor_aif.mbm
+TARGETPATH      APP_RESOURCE_DIR
+SOURCEPATH      ../aif
+SOURCE          c8 context_pane_icon.bmp
+SOURCE          c8 context_pane_icon_mask.bmp
+SOURCE          c8 list_icon.bmp
+SOURCE          c8 list_icon_mask.bmp
+END
+
+// End of file

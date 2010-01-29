@@ -1,0 +1,7 @@
+EXPORTS
+	_ZN17CFilterJpegTarget6CreateEv @ 1 NONAME
+	_ZTI17CFilterJpegTarget @ 2 NONAME ; #<TI>#
+	_ZTI9CJpegSave @ 3 NONAME ; #<TI>#
+	_ZTV17CFilterJpegTarget @ 4 NONAME ; #<VT>#
+	_ZTV9CJpegSave @ 5 NONAME ; #<VT>#
+

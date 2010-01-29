@@ -1,0 +1,514 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Clipart plugin mmp file.
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+
+// to get icon & bmp locations
+#include <iconlocations.hrh>
+
+#include "../../../inc/definitions.def"
+#include "../../../inc/imageeditoruids.hrh"
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+#endif
+
+TARGET          Clipart.pgn
+TARGETTYPE      dll
+UID             UID_PLUGIN_INTERFACE UID_CLIPART_PLUGIN
+
+TARGETPATH SHARED_LIB_DIR
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../../../src
+SOURCE          JpTimer.cpp
+
+SOURCEPATH      ../src
+SOURCE	        ImageEditorClipartPlugin.cpp
+SOURCE	        ImageEditorClipartControl.cpp
+SOURCE          ClipartSelectionGrid.cpp
+SOURCE          ClipartScaler.cpp
+SOURCE		ClipartSelectionDialog.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   .
+
+START RESOURCE ../data/clipart.rss
+HEADER
+TARGETPATH /private/101ffa91/plugins
+LANGUAGE_IDS
+END
+
+LIBRARY	        cone.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         fbscli.lib
+LIBRARY	        avkon.lib
+LIBRARY	        bafl.lib
+LIBRARY	        eikcoctl.lib
+LIBRARY		eikdlg.lib 
+LIBRARY		eikcore.lib
+LIBRARY         egul.lib
+LIBRARY         eikctl.lib
+LIBRARY         CommonEngine.lib 
+LIBRARY         BitmapTransforms.lib
+LIBRARY         estor.lib
+
+LIBRARY	        imageeditorui.lib
+LIBRARY	        imageeditorutils.lib
+LIBRARY         iepb.lib
+LIBRARY         pb.lib
+LIBRARY         systemparameters.lib
+LIBRARY         platformenv.lib
+LIBRARY         AknLayout2Scalable.lib
+LIBRARY         aknlayout2.lib
+LIBRARY         cdlengine.lib
+LIBRARY		aknskins.lib 
+LIBRARY		aknskinsrv.lib
+LIBRARY		aknswallpaperutils.lib 
+
+#ifdef RD_TACTILE_FEEDBACK
+LIBRARY     	touchfeedback.lib
+#endif /* RD_TACTILE_FEEDBACK  */
+
+// Initial clipart package
+START BITMAP cliparts01.mbm
+TARGETPATH      /private/101ffa91/cliparts
+
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_01.bmp
+SOURCE       	8	qgn_prop_imed_clipart_01_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_02.bmp
+SOURCE       	8	qgn_prop_imed_clipart_02_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_03.bmp
+SOURCE       	8	qgn_prop_imed_clipart_03_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_04.bmp
+SOURCE       	8	qgn_prop_imed_clipart_04_mask_soft.bmp
+
+END
+// Initial clipart package
+START BITMAP cliparts02.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_05.bmp
+SOURCE       	8	qgn_prop_imed_clipart_05_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_06.bmp
+SOURCE       	8	qgn_prop_imed_clipart_06_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_07.bmp
+SOURCE       	8	qgn_prop_imed_clipart_07_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_08.bmp
+SOURCE       	8	qgn_prop_imed_clipart_08_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_09.bmp
+SOURCE       	8	qgn_prop_imed_clipart_09_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts03.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_10.bmp
+SOURCE       	8	qgn_prop_imed_clipart_10_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_11.bmp
+SOURCE       	8	qgn_prop_imed_clipart_11_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_12.bmp
+SOURCE       	8	qgn_prop_imed_clipart_12_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_13.bmp
+SOURCE       	8	qgn_prop_imed_clipart_13_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_14.bmp
+SOURCE       	8	qgn_prop_imed_clipart_14_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts04.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_15.bmp
+SOURCE       	8	qgn_prop_imed_clipart_15_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_16.bmp
+SOURCE       	8	qgn_prop_imed_clipart_16_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_17.bmp
+SOURCE       	8	qgn_prop_imed_clipart_17_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_18.bmp
+SOURCE       	8	qgn_prop_imed_clipart_18_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_19.bmp
+SOURCE       	8	qgn_prop_imed_clipart_19_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts05.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_20.bmp
+SOURCE       	8	qgn_prop_imed_clipart_20_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_21.bmp
+SOURCE       	8	qgn_prop_imed_clipart_21_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_22.bmp
+SOURCE       	8	qgn_prop_imed_clipart_22_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_23.bmp
+SOURCE       	8	qgn_prop_imed_clipart_23_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_24.bmp
+SOURCE       	8	qgn_prop_imed_clipart_24_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts06.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_25.bmp
+SOURCE       	8	qgn_prop_imed_clipart_25_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_26.bmp
+SOURCE       	8	qgn_prop_imed_clipart_26_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_27.bmp
+SOURCE       	8	qgn_prop_imed_clipart_27_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_28.bmp
+SOURCE       	8	qgn_prop_imed_clipart_28_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_29.bmp
+SOURCE       	8	qgn_prop_imed_clipart_29_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts07.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_30.bmp
+SOURCE       	8	qgn_prop_imed_clipart_30_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_31.bmp
+SOURCE       	8	qgn_prop_imed_clipart_31_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_32.bmp
+SOURCE       	8	qgn_prop_imed_clipart_32_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_33.bmp
+SOURCE       	8	qgn_prop_imed_clipart_33_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_34.bmp
+SOURCE       	8	qgn_prop_imed_clipart_34_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts08.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_35.bmp
+SOURCE       	8	qgn_prop_imed_clipart_35_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_36.bmp
+SOURCE       	8	qgn_prop_imed_clipart_36_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_37.bmp
+SOURCE       	8	qgn_prop_imed_clipart_37_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_38.bmp
+SOURCE       	8	qgn_prop_imed_clipart_38_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_39.bmp
+SOURCE       	8	qgn_prop_imed_clipart_39_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts09.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_40.bmp
+SOURCE       	8	qgn_prop_imed_clipart_40_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_41.bmp
+SOURCE       	8	qgn_prop_imed_clipart_41_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_42.bmp
+SOURCE       	8	qgn_prop_imed_clipart_42_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_43.bmp
+SOURCE       	8	qgn_prop_imed_clipart_43_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_44.bmp
+SOURCE       	8	qgn_prop_imed_clipart_44_mask_soft.bmp
+
+
+
+
+END
+
+// Initial clipart package
+START BITMAP cliparts10.mbm
+TARGETPATH      /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_45.bmp
+SOURCE       	8	qgn_prop_imed_clipart_45_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_46.bmp
+SOURCE       	8	qgn_prop_imed_clipart_46_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_47.bmp
+SOURCE       	8	qgn_prop_imed_clipart_47_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_48.bmp
+SOURCE       	8	qgn_prop_imed_clipart_48_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_49.bmp
+SOURCE       	8	qgn_prop_imed_clipart_49_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts11.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_50.bmp
+SOURCE       	8	qgn_prop_imed_clipart_50_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_51.bmp
+SOURCE       	8	qgn_prop_imed_clipart_51_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_52.bmp
+SOURCE       	8	qgn_prop_imed_clipart_52_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_53.bmp
+SOURCE       	8	qgn_prop_imed_clipart_53_mask_soft.bmp
+
+END
+
+
+// Initial clipart package
+START BITMAP cliparts12.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_54.bmp
+SOURCE       	8	qgn_prop_imed_clipart_54_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_55.bmp
+SOURCE       	8	qgn_prop_imed_clipart_55_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_56.bmp
+SOURCE       	8	qgn_prop_imed_clipart_56_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_57.bmp
+SOURCE       	8	qgn_prop_imed_clipart_57_mask_soft.bmp
+
+END
+
+
+// Initial clipart package
+START BITMAP cliparts13.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_58.bmp
+SOURCE       	8	qgn_prop_imed_clipart_58_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_59.bmp
+SOURCE       	8	qgn_prop_imed_clipart_59_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_60.bmp
+SOURCE       	8	qgn_prop_imed_clipart_60_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_61.bmp
+SOURCE       	8	qgn_prop_imed_clipart_61_mask_soft.bmp
+
+END
+
+
+// Initial clipart package
+START BITMAP cliparts14.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_62.bmp
+SOURCE       	8	qgn_prop_imed_clipart_62_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_63.bmp
+SOURCE       	8	qgn_prop_imed_clipart_63_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_64.bmp
+SOURCE       	8	qgn_prop_imed_clipart_64_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_65.bmp
+SOURCE       	8	qgn_prop_imed_clipart_65_mask_soft.bmp
+
+END
+
+
+// Initial clipart package
+START BITMAP cliparts15.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_66.bmp
+SOURCE       	8	qgn_prop_imed_clipart_66_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_67.bmp
+SOURCE       	8	qgn_prop_imed_clipart_67_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_68.bmp
+SOURCE       	8	qgn_prop_imed_clipart_68_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_69.bmp
+SOURCE       	8	qgn_prop_imed_clipart_69_mask_soft.bmp
+
+END
+
+
+// Initial clipart package
+START BITMAP cliparts16.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_70.bmp
+SOURCE       	8	qgn_prop_imed_clipart_70_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_71.bmp
+SOURCE       	8	qgn_prop_imed_clipart_71_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_72.bmp
+SOURCE       	8	qgn_prop_imed_clipart_72_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_73.bmp
+SOURCE       	8	qgn_prop_imed_clipart_73_mask_soft.bmp
+
+END
+
+
+// Initial clipart package
+START BITMAP cliparts17.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_74.bmp
+SOURCE       	8	qgn_prop_imed_clipart_74_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_75.bmp
+SOURCE       	8	qgn_prop_imed_clipart_75_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_76.bmp
+SOURCE       	8	qgn_prop_imed_clipart_76_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_77.bmp
+SOURCE       	8	qgn_prop_imed_clipart_77_mask_soft.bmp
+
+END
+
+//#if defined(__EXPORT_UNFROZEN_PLUGINS__)
+//EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+
+// Initial clipart package
+START BITMAP cliparts18.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_78.bmp
+SOURCE       	8	qgn_prop_imed_clipart_78_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_79.bmp
+SOURCE       	8	qgn_prop_imed_clipart_79_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_80.bmp
+SOURCE       	8	qgn_prop_imed_clipart_80_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_81.bmp
+SOURCE       	8	qgn_prop_imed_clipart_81_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts19.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_82.bmp
+SOURCE       	8	qgn_prop_imed_clipart_82_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_83.bmp
+SOURCE       	8	qgn_prop_imed_clipart_83_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_84.bmp
+SOURCE       	8	qgn_prop_imed_clipart_84_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_85.bmp
+SOURCE       	8	qgn_prop_imed_clipart_85_mask_soft.bmp
+
+END
+
+// Initial clipart package
+START BITMAP cliparts20.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_86.bmp
+SOURCE       	8	qgn_prop_imed_clipart_86_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_87.bmp
+SOURCE       	8	qgn_prop_imed_clipart_87_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_88.bmp
+SOURCE       	8	qgn_prop_imed_clipart_88_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_89.bmp
+SOURCE       	8	qgn_prop_imed_clipart_89_mask_soft.bmp
+
+END 
+
+// Initial clipart package
+START BITMAP cliparts21.mbm
+TARGETPATH   /private/101ffa91/cliparts
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_clipart_90.bmp
+SOURCE       	8	qgn_prop_imed_clipart_90_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_91.bmp
+SOURCE       	8	qgn_prop_imed_clipart_91_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_clipart_92.bmp
+SOURCE       	8	qgn_prop_imed_clipart_92_mask_soft.bmp
+
+END
+// End of File

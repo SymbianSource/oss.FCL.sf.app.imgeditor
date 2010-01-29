@@ -1,0 +1,167 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Bubble plugin mmp file.
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+// to get icon & bmp locations
+#include <iconlocations.hrh>
+
+#include "../../../inc/definitions.def"
+#include "../../../inc/imageeditoruids.hrh"
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+#endif
+
+TARGET          Bubble.pgn
+TARGETTYPE      dll
+UID             UID_PLUGIN_INTERFACE UID_BUBBLE_PLUGIN
+
+TARGETPATH SHARED_LIB_DIR
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../../../src
+SOURCE          JpTimer.cpp
+
+SOURCEPATH      ../src
+SOURCE	        ImageEditorBubblePlugin.cpp
+SOURCE	        ImageEditorBubbleControl.cpp
+SOURCE          BubbleSelectionGrid.cpp
+SOURCE          BubbleScaler.cpp
+SOURCE		BubbleSelectionDialog.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   .
+
+START RESOURCE ../data/Bubble.rss
+HEADER
+TARGETPATH /private/101ffa91/plugins
+LANGUAGE_IDS
+END
+
+LIBRARY	        cone.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         fbscli.lib
+LIBRARY	        avkon.lib
+LIBRARY	        bafl.lib
+LIBRARY	        eikcoctl.lib
+LIBRARY		eikdlg.lib 
+LIBRARY		eikcore.lib
+LIBRARY         egul.lib
+LIBRARY         eikctl.lib
+LIBRARY         CommonEngine.lib 
+LIBRARY         BitmapTransforms.lib
+LIBRARY         estor.lib
+
+LIBRARY	        imageeditorui.lib
+LIBRARY	        imageeditorutils.lib
+LIBRARY         iepb.lib
+LIBRARY         pb.lib
+LIBRARY         systemparameters.lib
+LIBRARY         platformenv.lib
+LIBRARY         AknLayout2Scalable.lib
+LIBRARY         aknlayout2.lib
+LIBRARY         cdlengine.lib
+
+LIBRARY		aknskins.lib 
+LIBRARY		aknskinsrv.lib
+LIBRARY		aknswallpaperutils.lib 
+
+#ifdef RD_TACTILE_FEEDBACK
+LIBRARY     	touchfeedback.lib
+#endif /* RD_TACTILE_FEEDBACK  */
+
+
+// Initial Bubble package
+START BITMAP Bubbles01.mbm
+TARGETPATH      /private/101ffa91/Bubbles
+
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_indi_imed_talkbb_01.bmp
+SOURCE       	8	qgn_indi_imed_talkbb_01_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_talkbb_02.bmp
+SOURCE       	8	qgn_indi_imed_talkbb_02_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_talkbb_03.bmp
+SOURCE       	8	qgn_indi_imed_talkbb_03_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_talkbb_04.bmp
+SOURCE       	8	qgn_indi_imed_talkbb_04_mask_soft.bmp
+
+END
+// Initial Bubble package
+START BITMAP Bubbles02.mbm
+TARGETPATH      /private/101ffa91/Bubbles
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_indi_imed_talkbb_05.bmp
+SOURCE       	8	qgn_indi_imed_talkbb_05_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_talkbb_06.bmp
+SOURCE       	8	qgn_indi_imed_talkbb_06_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_thinkbb_01.bmp
+SOURCE       	8	qgn_indi_imed_thinkbb_01_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_thinkbb_02.bmp
+SOURCE       	8	qgn_indi_imed_thinkbb_02_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_thinkbb_03.bmp
+SOURCE       	8	qgn_indi_imed_thinkbb_03_mask_soft.bmp
+
+END
+
+// Initial Bubble package
+START BITMAP Bubbles03.mbm
+TARGETPATH      /private/101ffa91/Bubbles
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_indi_imed_thinkbb_04.bmp
+SOURCE       	8	qgn_indi_imed_thinkbb_04_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_thinkbb_05.bmp
+SOURCE       	8	qgn_indi_imed_thinkbb_05_mask_soft.bmp
+SOURCE       	c24	qgn_indi_imed_thinkbb_06.bmp
+SOURCE       	8	qgn_indi_imed_thinkbb_06_mask_soft.bmp
+
+END
+
+//#if defined(__EXPORT_UNFROZEN_PLUGINS__)
+//EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+// End of File

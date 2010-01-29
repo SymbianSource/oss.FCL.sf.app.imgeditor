@@ -1,0 +1,7 @@
+EXPORTS
+	_ZN16CFilterIclSource6CreateEv @ 1 NONAME
+	_ZTI12CImageLoader @ 2 NONAME ; #<TI>#
+	_ZTI16CFilterIclSource @ 3 NONAME ; #<TI>#
+	_ZTV12CImageLoader @ 4 NONAME ; #<VT>#
+	_ZTV16CFilterIclSource @ 5 NONAME ; #<VT>#
+

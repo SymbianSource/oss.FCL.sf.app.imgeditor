@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../inc/definitions.def"
+
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+#endif
+
+TARGET          ImageEditorManager.dll
+TARGETTYPE      dll
+UID             0x1000008d
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+SOURCE			ImageEditorPluginLocator.cpp
+SOURCE			ImageEditorPluginScanner.cpp
+SOURCE			ImageEditorPluginStorage.cpp
+SOURCE			ImageEditorPluginManager.cpp
+SOURCE			ImageEditorImageHandler.cpp
+
+SOURCE			PluginLoader.cpp
+SOURCE			EditorImage.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   .
+
+LANG            SC
+
+LIBRARY         avkon.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY	        cone.lib
+LIBRARY	        imageconversion.lib
+LIBRARY	        bafl.lib
+LIBRARY	        fbscli.lib
+LIBRARY	        charconv.lib
+LIBRARY	        estor.lib 
+LIBRARY	        aknicon.lib
+
+LIBRARY	        imageeditorutils.lib
+LIBRARY	        enginewrapper.lib
+
+//#if defined( __EXPORT_UNFROZEN_FRAMEWORK__ )
+//EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+// End of File

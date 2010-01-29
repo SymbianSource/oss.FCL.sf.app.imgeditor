@@ -1,0 +1,20 @@
+EXPORTS
+	_ZN11CJpegScaler4NewLER3RFs @ 1 NONAME
+	_ZN11CJpegScaler5ScaleEP14TRequestStatusRK4TBufILi256EES5_RK5TSize @ 2 NONAME
+	_ZN11CJpegScaler6CancelEv @ 3 NONAME
+	_ZN11CJpegScalerD0Ev @ 4 NONAME
+	_ZN11CJpegScalerD1Ev @ 5 NONAME
+	_ZN11CJpegScalerD2Ev @ 6 NONAME
+	_ZTI10CJpegScale @ 7 NONAME ; #<TI>#
+	_ZTI11CExifParser @ 8 NONAME ; #<TI>#
+	_ZTI11CJpegScaler @ 9 NONAME ; #<TI>#
+	_ZTI15CJpegScalerImpl @ 10 NONAME ; #<TI>#
+	_ZTI5CJpeg @ 11 NONAME ; #<TI>#
+	_ZTI9CJpegSave @ 12 NONAME ; #<TI>#
+	_ZTV10CJpegScale @ 13 NONAME ; #<VT>#
+	_ZTV11CExifParser @ 14 NONAME ; #<VT>#
+	_ZTV11CJpegScaler @ 15 NONAME ; #<VT>#
+	_ZTV15CJpegScalerImpl @ 16 NONAME ; #<VT>#
+	_ZTV5CJpeg @ 17 NONAME ; #<VT>#
+	_ZTV9CJpegSave @ 18 NONAME ; #<VT>#
+

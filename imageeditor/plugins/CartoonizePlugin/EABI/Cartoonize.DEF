@@ -1,0 +1,5 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI28CImageEditorCartoonizePlugin @ 2 NONAME ; #<TI>#
+	_ZTV28CImageEditorCartoonizePlugin @ 3 NONAME ; #<VT>#
+

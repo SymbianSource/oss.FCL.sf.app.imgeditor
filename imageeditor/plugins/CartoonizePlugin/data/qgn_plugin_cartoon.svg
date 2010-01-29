@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 12.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" id="Layer_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="60" height="60" viewBox="0 0 60 60"
+	 overflow="visible" enable-background="new 0 0 60 60" xml:space="preserve">
+<rect x="-0.001" fill="#FFFFFF" fill-opacity="0.6" width="60" height="60"/>
+<g>
+	
+		<ellipse transform="matrix(-0.9718 0.2358 -0.2358 -0.9718 43.8698 53.317)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.3738" cx="18.747" cy="29.281" rx="10.788" ry="16.182"/>
+	
+		<ellipse transform="matrix(0.9718 0.2358 -0.2358 0.9718 8.0631 -8.8635)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.3738" cx="41.092" cy="29.282" rx="10.788" ry="16.182"/>
+	<path d="M28.149,32.562c0.861,5.838-1.877,11.086-6.119,11.713c-4.241,0.625-8.381-3.604-9.244-9.443
+		c-0.862-5.839,1.877-11.084,6.116-11.709C23.147,22.495,27.286,26.721,28.149,32.562z"/>
+	<circle fill="#FFFFFF" cx="22.838" cy="30.789" r="2.046"/>
+	<path d="M47.259,34.48c-0.524,5.885-4.413,10.342-8.684,9.961s-7.31-5.457-6.783-11.338c0.522-5.882,4.413-10.339,8.685-9.958
+		C44.749,23.526,47.785,28.603,47.259,34.48z"/>
+	<circle fill="#FFFFFF" cx="42.314" cy="30.729" r="2.046"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="0.9354" d="M27.022,33.755c0.309,4.688-2.286,8.679-5.791,8.908
+		c-3.506,0.231-6.598-3.388-6.905-8.076c-0.309-4.688,2.283-8.675,5.791-8.907C23.622,25.451,26.713,29.064,27.022,33.755z"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="0.9355" d="M32.852,33.6c-0.258,4.686,2.383,8.705,5.894,8.979
+		s6.562-3.31,6.815-7.992c0.258-4.687-2.381-8.708-5.892-8.979C36.161,25.334,33.109,28.91,32.852,33.6z"/>
+	<path fill="none" stroke="#000000" stroke-width="2.8354" stroke-linecap="round" stroke-linejoin="round" d="M45.91,12.338
+		c-6.422-1.57-13.516,4.975-15.911,14.632c-2.394-9.657-9.485-16.202-15.908-14.632c-6.458,1.579-9.789,10.766-7.439,20.52
+		c2.354,9.752,9.496,16.383,15.958,14.805c3.557-0.869,6.159-4.053,7.39-8.365c1.234,4.312,3.836,7.496,7.395,8.365
+		C43.855,49.24,51,42.609,53.352,32.857C55.699,23.104,52.368,13.917,45.91,12.338z"/>
+</g>
+</svg>

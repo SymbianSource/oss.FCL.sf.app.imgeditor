@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../inc/definitions.def"
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+TARGET          iepb.dll
+TARGETTYPE      dll
+UID             0x1000008d
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+SOURCE          iepb.cpp
+SOURCE          iepbint.cpp
+SOURCE	        iepbres.cpp
+
+USERINCLUDE     . 
+USERINCLUDE     ../inc
+USERINCLUDE     ../../PB/inc
+USERINCLUDE     ../../inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   . 
+
+START RESOURCE  ../data/imageeditorpluginbase.rss
+HEADER
+TARGETPATH      APP_RESOURCE_DIR
+LANGUAGE_IDS
+END
+
+
+LIBRARY	        avkon.lib // CompleteWithAppPath
+LIBRARY	        cone.lib
+LIBRARY         euser.lib
+LIBRARY	        bafl.lib
+LIBRARY	        charconv.lib
+LIBRARY	        commonengine.lib
+
+LIBRARY         pb.lib 
+
+//#if defined( __EXPORT_UNFROZEN_FRAMEWORK__ )
+//EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+// End of File

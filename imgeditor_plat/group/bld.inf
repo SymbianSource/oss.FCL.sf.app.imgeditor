@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+* Includes all the Domain API specific bld.inf files, which 
+* export files.
+*
+*/
+
+
+
+#include "../image_editor_debug_utilities_api/group/bld.inf"
+#include "../image_editor_utilities_api/group/bld.inf"
+#include "../image_editor_definitions_api/group/bld.inf"
+#include "../image_editor_system_parameters_api/group/bld.inf"
+#include "../image_processing_engine_api/group/bld.inf"

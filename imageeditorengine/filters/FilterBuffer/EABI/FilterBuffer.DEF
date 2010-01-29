@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN13CFilterBuffer6CreateEv @ 1 NONAME
+	_ZTI13CFilterBuffer @ 2 NONAME ; #<TI>#
+	_ZTV13CFilterBuffer @ 3 NONAME ; #<VT>#
+

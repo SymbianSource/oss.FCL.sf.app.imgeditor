@@ -1,0 +1,34 @@
+//
+// After modifying this file, reallyclean and build the whole project!
+//
+
+// Do not require frozen DEF files for framework modules
+// (i.e. all modules except plugins).
+// Instead specify 'exportunfrozen' in MMP files
+//#define __EXPORT_UNFROZEN_FRAMEWORK__
+
+// Same as above, but for the plugin modules.
+//#define __EXPORT_UNFROZEN_PLUGINS__
+
+// Platform security flag
+//#define __PLATFORM_SECURITY__
+//#ifdef __PLATFORM_SECURITY__
+//#include "..\inc\platform_security_defs.hrh"
+//#endif
+
+// Enable logging facility in all modules. 
+// Enabling logs will do the both of the following:
+//
+// 1) Write the the logging information to RDebug::Print()
+//    (in UDEB builds only)
+// 2) Write the log to file using RFileLogger (both in UDEB and UREL)
+//    Create the folder C:\Logs\ImageEditor to enable the file logging.
+#define __IE_GLOBAL_DEBUGLOG__
+
+// Verbosity level of the debuglog output
+//#define __VERBOSE__
+//#define __VERBOSE_2__
+
+// Export the ROM description (.iby) files to epoc32\rom\include.
+// Not needed if we are not creating rom image.
+//#define __EXPORT_ROM_DESCRIPTION_FILES__

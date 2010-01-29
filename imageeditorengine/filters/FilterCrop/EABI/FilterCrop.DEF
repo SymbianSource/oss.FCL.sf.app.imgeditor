@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN11CFilterCrop6CreateEv @ 1 NONAME
+	_ZTI11CFilterCrop @ 2 NONAME ; #<TI>#
+	_ZTV11CFilterCrop @ 3 NONAME ; #<VT>#
+

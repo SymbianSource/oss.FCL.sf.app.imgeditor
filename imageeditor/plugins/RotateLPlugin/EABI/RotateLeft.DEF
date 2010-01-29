@@ -1,0 +1,5 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI28CImageEditorRotateLeftPlugin @ 2 NONAME ; #<TI>#
+	_ZTV28CImageEditorRotateLeftPlugin @ 3 NONAME ; #<VT>#
+

@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+*
+*/
+
+
+
+#ifndef IMAGEEDITORPLUGINBASE_RH
+#define IMAGEEDITORPLUGINBASE_RH
+
+STRUCT PGNINFO
+{
+	LONG	pluginuid=0;
+	LONG	uitype=0;
+	LONG	plugintype=0;
+	LONG	pluginscope=0;
+	LONG	plugindisplayorder=0;
+	LTEXT	pluginname="";
+	LTEXT	iconfile="";    
+	LTEXT	filterfile="";    
+}
+
+STRUCT PARAMNAMES
+{
+	LTEXT	parameters[];
+}
+
+STRUCT PGNUIITEM
+{
+    LONG	id=0;
+	LTEXT	text="";    
+}
+
+STRUCT PGNUIITEMS
+{
+	STRUCT	items[];    
+}
+
+#endif

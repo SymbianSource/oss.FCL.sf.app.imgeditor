@@ -1,0 +1,63 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../../group/definitions.def"
+
+
+//	project platforms
+PRJ_PLATFORMS
+DEFAULT
+
+//	mmp files
+PRJ_MMPFILES
+EngineWrapper.mmp
+
+//	test project mmp files
+PRJ_TESTMMPFILES
+
+//	project exports
+PRJ_EXPORTS
+
+// ROM description files
+../rom/ImageEditorEngineWrapper.iby     CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorEngineWrapper.iby)
+../rom/ImageEditorFilterBrightness.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterBrightness.iby)
+../rom/ImageEditorFilterBubble.iby      CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterBubble.iby)
+../rom/ImageEditorFilterBuffer.iby      CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterBuffer.iby)
+../rom/ImageEditorFilterCartoon.iby     CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterCartoon.iby)
+../rom/ImageEditorFilterClipart.iby     CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterClipart.iby)
+../rom/ImageEditorFilterContrast.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterContrast.iby)
+../rom/ImageEditorFilterCrop.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterCrop.iby)
+../rom/ImageEditorFilterFrame.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterFrame.iby)
+../rom/ImageEditorFilterGrayScale.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterGrayScale.iby)
+../rom/ImageEditorFilterJpegSource.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterJpegSource.iby)
+../rom/ImageEditorFilterIclSource.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterIclSource.iby)
+../rom/ImageEditorFilterJpegTarget.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterJpegTarget.iby)
+../rom/ImageEditorFilterNegate.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterNegate.iby)
+../rom/ImageEditorFilterRedEye.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterRedEye.iby)
+../rom/ImageEditorFilterRotate.iby      CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterRotate.iby)
+../rom/ImageEditorFilterScale.iby       CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterScale.iby)
+../rom/ImageEditorFilterSepia.iby       CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterSepia.iby)
+../rom/ImageEditorFilterSharpness.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterSharpness.iby)
+../rom/ImageEditorFilterText.iby        CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorFilterText.iby)
+../rom/imageeditorfilterdraw.iby        CORE_MW_LAYER_IBY_EXPORT_PATH(imageeditorfilterdraw.iby)
+
+// End of File
+
+

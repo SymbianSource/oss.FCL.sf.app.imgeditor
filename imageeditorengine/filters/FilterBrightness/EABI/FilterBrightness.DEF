@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN17CFilterBrightness6CreateEv @ 1 NONAME
+	_ZTI17CFilterBrightness @ 2 NONAME ; #<TI>#
+	_ZTV17CFilterBrightness @ 3 NONAME ; #<VT>#
+

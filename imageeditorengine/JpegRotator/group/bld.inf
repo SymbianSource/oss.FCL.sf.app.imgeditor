@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+//	project platforms
+PRJ_PLATFORMS
+DEFAULT 
+
+//	project exports
+PRJ_EXPORTS
+../inc/JpegRotator.h	/epoc32/include/JpegRotator.h
+../rom/ImageEditorJpegRotator.iby	    CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorJpegRotator.iby)
+
+//	mmp files
+PRJ_MMPFILES
+JpegRotator.mmp
+
+//	test project mmp files
+PRJ_TESTMMPFILES
+../internal/tsrc/group/JpegRotatorTest.mmp
+../internal/tsrc/group/RotatorTest.mmp
+
+PRJ_TESTEXPORTS
+#if defined (__EXPORT_ROM_DESCRIPTION_FILES__)
+../rom/ImageEditorJpegRotator_test.iby     CORE_MW_LAYER_IBY_EXPORT_PATH(ImageEditorJpegRotator_test.iby)
+#endif

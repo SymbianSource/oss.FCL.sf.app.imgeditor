@@ -1,0 +1,109 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definition file for RotateLeft plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "rotateleft_gen.loc"
+#include <ImageEditor.loc>
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+{
+    pluginuid           = UID_ROTATEL_PLUGIN;
+    uitype              = EPluginUiTypeNone;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeMainEngine;
+    plugindisplayorder  = 16;
+    pluginname          = qtn_sie_plugin_name_rotate_left; 	                                                    //to be removed?
+    iconfile            = "rotateleft.mif";
+    filterfile          = "FilterRotate.dll";
+}
+
+RESOURCE PARAMNAMES r_plugin_pars
+{
+	parameters=
+	{
+		// NO PARAMETERS
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk1_items
+{
+	items=
+	{
+
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk2_items
+{
+	items=
+	{
+
+	};
+}
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+        {
+        };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+{
+	items=
+	{
+
+	};
+}
+ 
+// End of File

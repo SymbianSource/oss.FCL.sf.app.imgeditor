@@ -1,0 +1,82 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for ImageEditorProvider.
+*
+*/
+
+
+#include <AiwCommon.hrh>
+#include <RegistryInfoV2.rh> 
+#include "ImageEditorUids.hrh"
+#include "ImageEditorProvider.hrh"
+
+RESOURCE REGISTRY_INFO r_theinfo
+{
+	resource_format_version = RESOURCE_FORMAT_VERSION_2;
+	dll_uid = UID_AIW_ECOM_DLL;
+	interfaces = 
+	{
+		INTERFACE_INFO
+		{
+			// Interface UID of resolvers
+			interface_uid = KAiwClassMenu;
+			implementations = 
+			{
+			    IMPLEMENTATION_INFO
+			    {
+					implementation_uid = KAiwCmdRotate;
+					version_no = 1;
+					display_name = "Rotator Menu Provider";
+					default_data = "image/jpeg";
+					opaque_data = KAiwCmdRotateStr;
+				},
+				IMPLEMENTATION_INFO
+				{
+					implementation_uid = UID_AIW_ECOM_IMPL;
+					version_no = 1;
+					display_name = "Edit Menu Provider";
+					default_data = "image/*";
+					opaque_data = KAiwCmdEditStr;
+				}
+			};
+		},
+		INTERFACE_INFO	
+		{
+			// Interface UID of resolvers
+		    interface_uid = KAiwClassBase;
+			implementations = 
+			{
+				IMPLEMENTATION_INFO
+				{
+					implementation_uid = UID_AIW_ECOM_IMPL;
+					version_no = 1;
+					display_name = "Editor Base Provider";
+					default_data = "image/*";
+					opaque_data = KAiwCmdEditStr;
+				},
+				IMPLEMENTATION_INFO
+				{
+					implementation_uid = KAiwCmdRotate;
+					version_no = 1;
+					display_name = "Rotator Base Provider";
+					default_data = "image/jpeg";
+					opaque_data = KAiwCmdRotateStr;
+				}
+			};
+		}
+	};
+}
+										 

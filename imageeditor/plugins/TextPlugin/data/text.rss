@@ -1,0 +1,249 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definition file for Text plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "text.hrh"
+#include "text_gen.loc"
+#include <ImageEditor.loc>
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+    {
+    pluginuid           = UID_TEXT_PLUGIN;
+    uitype              = EPluginUiTypeCustomized;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeAdjustmentEngine;
+    plugindisplayorder  = 9;
+    pluginname          = qtn_sie_plugin_name_text;
+    iconfile            = "text.mif";
+    filterfile          = "FilterText.dll";
+    }
+
+RESOURCE PARAMNAMES r_plugin_pars
+    {
+    parameters=
+        {
+        // Insert text
+        qtn_sie_heading_insert_text,
+        
+        // Plugin main
+        qtn_sie_navi_edit_text,
+
+        // Move text
+        qtn_sie_navi_edit_text,
+        
+        // Resize text
+        qtn_sie_navi_edit_text,
+        
+        // Rotate text
+        qtn_sie_navi_edit_text
+        
+        };
+    }
+ 
+RESOURCE PGNUIITEMS r_sk1_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_sk1_ok;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_sk2_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdDone;
+            text=qtn_sie_pgn_sk2_done;
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {
+            id = EAknSoftkeyContextOptions;
+            text = text_softkey_option;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_sk1_ok;
+            },
+        PGNUIITEM 
+            {
+            id = EAknSoftkeyContextOptions;
+            text = text_softkey_option;
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+    {
+    items=
+        {
+        // Move
+        PGNUIITEM 
+            {    
+            id=ETextPgnMenuCmdMove;
+            text=qtn_sie_options_move;
+            },
+        // Resize
+        PGNUIITEM 
+            {    
+            id=ETextPgnMenuCmdResize;
+            text=qtn_sie_options_resize;
+            },
+        // Rotate
+        PGNUIITEM 
+            {    
+            id=ETextPgnMenuCmdRotate;
+            text=qtn_sie_options_rotate;
+            },
+        // Color
+        PGNUIITEM 
+            {    
+            id=ETextPgnMenuCmdColor;
+            text=qtn_sie_options_change_color;
+            },
+        // Font
+//        PGNUIITEM 
+//        {    
+//            id=ETextPgnMenuCmdFont;
+//            text=qtn_sie_pgn_menu_font;
+//        },
+        // Cancel
+        PGNUIITEM 
+            {    
+            id=ETextPgnMenuCmdCancel;
+            text=qtn_sie_options_cancel_effect;
+            }
+        };
+    } 
+
+// Context specific MSK menu
+RESOURCE MENU_BAR r_text_context_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_text_context_menupane; 
+            txt = " "; 
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_text_context_menupane
+    {
+    items =
+        {
+        MENU_ITEM 
+            { 
+            command = ETextPgnMenuCmdMove; 
+            txt = qtn_sie_options_move; 
+            },
+        MENU_ITEM 
+            { 
+            command = ETextPgnMenuCmdResize; 
+            txt = qtn_sie_options_resize; 
+            },
+        MENU_ITEM 
+            { 
+            command = ETextPgnMenuCmdRotate; 
+            txt = qtn_sie_options_rotate; 
+            },    
+        MENU_ITEM 
+            { 
+            command = ETextPgnMenuCmdColor; 
+            txt = qtn_sie_options_change_color; 
+            }    
+        };
+    }
+        
+    
+// Tooltip texts
+RESOURCE TBUF r_tooltip_text_resize { buf = qtn_sie_tooltip_resize; } 
+RESOURCE TBUF r_tooltip_text_move { buf = qtn_sie_tooltip_move; } 
+RESOURCE TBUF r_tooltip_text_rotate { buf = qtn_sie_tooltip_rotate; } 
+
+
+// End of File

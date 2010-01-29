@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+
+#include "../../../group/definitions.def"
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+TARGET  		FilterScale.dll
+TARGETTYPE  		dll
+UID  			0x1000008d 0
+
+TARGETPATH 		SHARED_LIB_DIR
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+		
+SOURCEPATH 		../Src
+SOURCE			CFilterScale.cpp
+
+USERINCLUDE		../Inc 
+USERINCLUDE		../../../Inc 
+
+// Default system include paths for middleware layer modules.
+MW_LAYER_SYSTEMINCLUDE
+
+
+LANG            	SC
+
+LIBRARY 		euser.lib
+LIBRARY 		efsrv.lib
+LIBRARY 		fbscli.lib
+
+OPTION ARMCC -O3 -Otime
+
+#if defined(__EXPORT_UNFROZEN_PLUGINS__)
+EXPORTUNFROZEN
+#endif
+NOSTRICTDEF

@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN12CFilterFrame6CreateEv @ 1 NONAME
+	_ZTI12CFilterFrame @ 2 NONAME ; #<TI>#
+	_ZTV12CFilterFrame @ 3 NONAME ; #<VT>#
+

@@ -1,0 +1,23 @@
+EXPORTS
+	_ZN22CImageEditorPluginBase10ConstructLERK7TDesC16S2_ @ 1 NONAME
+	_ZN22CImageEditorPluginBase11GetPropertyEiR6TDes16 @ 2 NONAME
+	_ZN22CImageEditorPluginBase11InitPluginLERK5TRectP11CCoeControlRS4_ @ 3 NONAME
+	_ZN22CImageEditorPluginBase11SetPropertyEiR7TDesC16 @ 4 NONAME
+	_ZN22CImageEditorPluginBase13ProcessImageLEP12CEditorImage @ 5 NONAME
+	_ZN22CImageEditorPluginBase13ReleasePluginEv @ 6 NONAME
+	_ZN22CImageEditorPluginBase13ShowPopupNoteEv @ 7 NONAME
+	_ZN22CImageEditorPluginBase30ReservedImageEditorBaseMethod1Ev @ 8 NONAME
+	_ZN22CImageEditorPluginBase30ReservedImageEditorBaseMethod2Ev @ 9 NONAME
+	_ZN22CImageEditorPluginBase4NewLERK7TDesC16S2_ @ 10 NONAME
+	_ZN22CImageEditorPluginBaseC1Ev @ 11 NONAME
+	_ZN22CImageEditorPluginBaseC2Ev @ 12 NONAME
+	_ZN22CImageEditorPluginBaseD0Ev @ 13 NONAME
+	_ZN22CImageEditorPluginBaseD1Ev @ 14 NONAME
+	_ZN22CImageEditorPluginBaseD2Ev @ 15 NONAME
+	_ZTI15CPluginResource @ 16 NONAME ; #<TI>#
+	_ZTI22CImageEditorPluginBase @ 17 NONAME ; #<TI>#
+	_ZTI25CImageEditorPluginBaseInt @ 18 NONAME ; #<TI>#
+	_ZTV15CPluginResource @ 19 NONAME ; #<VT>#
+	_ZTV22CImageEditorPluginBase @ 20 NONAME ; #<VT>#
+	_ZTV25CImageEditorPluginBaseInt @ 21 NONAME ; #<VT>#
+

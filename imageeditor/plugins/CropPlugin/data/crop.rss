@@ -1,0 +1,230 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for Crop plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <ImageEditor.loc>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "Crop.rh"
+#include "crop_gen.loc"
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+{
+    pluginuid           = UID_CROP_PLUGIN;
+    uitype              = EPluginUiTypeCustomized;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeMainEngine;
+    plugindisplayorder  = 5;
+    pluginname          = qtn_sie_plugin_name_crop;
+    iconfile            = "crop.mif";
+    filterfile          = "FilterCrop.dll";
+}
+
+RESOURCE PARAMNAMES r_plugin_pars
+{
+	parameters=
+	{
+        //	Select aspect ratio
+		qtn_sie_heading_aspect_ratio,
+
+        // Move crop rectangle navi pane text        
+		" ",	
+
+        // Crop area size
+        qtn_sie_navi_crop_area,
+
+		//	Manual
+		qtn_sie_crop_aspect_ratio_manual
+
+	};
+}
+ 
+RESOURCE PGNUIITEMS r_sk1_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdSet;
+			text=qtn_sie_pgn_sk1_set;
+		},
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdDone;
+			text=qtn_sie_softkey_crop;
+		},
+        PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdSet;
+			text=qtn_sie_pgn_sk1_set;
+		},
+        PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdEmpty;
+			text=" ";
+		}
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk2_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdCancel;
+			text=qtn_sie_pgn_sk2_cancel;
+		},
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdBack;
+			text=qtn_sie_pgn_sk2_back;
+		},
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdBack;
+			text=qtn_sie_pgn_sk2_back;
+		},
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdCancel;
+			text=qtn_sie_pgn_sk2_cancel;
+		}		
+	};
+}
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+	    {
+		PGNUIITEM 
+	    	{	
+			id=EPgnSoftkeyIdSet;
+			text=qtn_sie_pgn_sk1_set;
+	    	},
+		PGNUIITEM 
+		    {	
+			id=EPgnSoftkeyIdDone;
+			text=qtn_sie_softkey_crop;
+		    },
+        PGNUIITEM 
+		    {	
+			id=EPgnSoftkeyIdSet;
+			text=qtn_sie_pgn_sk1_set;
+		    },
+        PGNUIITEM 
+		    {	
+			id=EPgnSoftkeyIdEmpty;
+			text=" ";
+		    }
+	    };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+{
+	items=
+	{
+
+	};
+} 
+
+RESOURCE CROPMODES r_crop_modes
+{
+	items=
+	{
+		CROPMODE
+		{	
+			text=qtn_sie_crop_aspect_ratio_4x6;
+			w=6;
+			h=4;
+		},
+		CROPMODE
+		{	
+			text=qtn_sie_crop_aspect_ratio_6x4;
+			w=4;
+			h=6;
+		},
+		CROPMODE
+		{	
+			text=qtn_sie_crop_aspect_ratio_5x7;
+			w=7;
+			h=5;
+		},
+		CROPMODE
+		{	
+			text=qtn_sie_crop_aspect_ratio_7x5;
+			w=5;
+			h=7;
+		},
+		CROPMODE
+		{	
+			text=qtn_sie_crop_aspect_ratio_8x10;
+			w=10;
+			h=8;
+		},
+		CROPMODE
+		{	
+			text=qtn_sie_crop_aspect_ratio_10x8;
+			w=8;
+			h=10;
+		}
+	};
+}
+
+//Wallpaper aspect ratio texts
+RESOURCE TBUF r_crop_aspect_ratio_wallpaper { buf = qtn_sie_crop_wallpaper; }
+RESOURCE TBUF r_crop_aspect_ratio_wallpaper_prt { buf = qtn_sie_crop_wallpaper_prt; }
+RESOURCE TBUF r_crop_aspect_ratio_wallpaper_lnds { buf = qtn_sie_crop_wallpaper_lnds; }
+
+RESOURCE TBUF r_tooltip_crop_resize_area { buf = qtn_sie_tooltip_crop_resize_area; } 
+RESOURCE TBUF r_tooltip_crop_move_area { buf = qtn_sie_tooltip_crop_move_area; } 
+
+// End of File

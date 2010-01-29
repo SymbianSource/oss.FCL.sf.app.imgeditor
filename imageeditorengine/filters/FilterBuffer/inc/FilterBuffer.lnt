@@ -1,0 +1,8 @@
+// Lint options for FilterBuffer component
+
+// Include paths
+-i..\inc
+-i..\..\Common\inc
+
+// Source files to be inspected
+..\src\CFilterBuffer.cpp

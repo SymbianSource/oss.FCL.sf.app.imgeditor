@@ -1,0 +1,7 @@
+EXPORTS
+	_ZN17CFilterJpegSource6CreateEv @ 1 NONAME
+	_ZTI17CFilterJpegSource @ 2 NONAME ; #<TI>#
+	_ZTI5CJpeg @ 3 NONAME ; #<TI>#
+	_ZTV17CFilterJpegSource @ 4 NONAME ; #<VT>#
+	_ZTV5CJpeg @ 5 NONAME ; #<VT>#
+

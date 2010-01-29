@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN16CFilterSharpness6CreateEv @ 1 NONAME
+	_ZTI16CFilterSharpness @ 2 NONAME ; #<TI>#
+	_ZTV16CFilterSharpness @ 3 NONAME ; #<VT>#
+

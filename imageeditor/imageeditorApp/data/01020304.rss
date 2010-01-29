@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+#include <RegistryInfo.rh>
+#include "ImageEditorUids.hrh"
+
+
+RESOURCE REGISTRY_INFO the_info
+	{
+	dll_uid = 0x01010101; 
+	interfaces =
+		{
+		INTERFACE_INFO
+			{
+			interface_uid=0x101f8c96; // const TUid KUidFileEmbeddedApplicationInterfaceUid={0x101f8c96};
+			implementations=
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid=UID_IMAGE_EDITOR;
+					version_no=1;
+					display_name="ImageEditor";
+					default_data="";
+					opaque_data="";
+					}
+				};
+			}
+		};
+	}
+
+
+// End of File

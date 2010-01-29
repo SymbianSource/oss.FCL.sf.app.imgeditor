@@ -1,0 +1,75 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+*
+*/
+
+
+
+#ifndef IMAGEEDITORUIDS_HRH
+#define IMAGEEDITORUIDS_HRH
+
+// IImage Editor app UID
+#define UID_IMAGE_EDITOR            0x101FFA91
+
+// Image Editor ECOM plugin UID (for platform security)
+#define UID_IMAGE_EDITOR_PLUGIN     0x01020304
+
+// Plug-In Interface 
+#define UID_PLUGIN_INTERFACE        0x101FFAA0
+
+// Plugins
+#define UID_BRIGHTNESS_PLUGIN       0x00000001
+#define UID_CONTRAST_PLUGIN         0x00000002
+#define UID_CROP_PLUGIN             0x00000003
+#define UID_ROTATEL_PLUGIN          0x00000004
+#define UID_ROTATER_PLUGIN          0x00000005
+#define UID_RESIZE_PLUGIN           0x00000006
+#define UID_CARTOONIZE_PLUGIN       0x00000008
+#define UID_BLACKWHITE_PLUGIN       0x00000009
+#define UID_SEPIA_PLUGIN            0x0000000A
+#define UID_NEGATIVE_PLUGIN         0x0000000B
+#define UID_CLIPART_PLUGIN          0x0000000C
+#define UID_TEXT_PLUGIN             0x0000000D
+#define UID_FRAME_PLUGIN            0x0000000E
+#define UID_SHARPNESS_PLUGIN        0x0000000F
+#define UID_REDEYEREDUCTION_PLUGIN  0x00000010
+#define UID_OILIFY_PLUGIN           0x00000011
+#define UID_BUBBLE_PLUGIN           0x00000012
+#define UID_DRAW_PLUGIN             0x00000013
+
+
+// Image Editor Provider AIW ECom DLL UID
+#define UID_AIW_ECOM_DLL            0x101FFA9E
+
+// Image Editor Provider AIW interface UID (is this used?)
+#define UID_AIW_SERV_PROVIDER       0x101FFA9F
+
+// Image Editor Provider ECom implementation UID
+#define UID_AIW_ECOM_IMPL           0x0000002A
+
+// UID for CResolutionUtil (CCoeStatic)
+#define UID_RESOLUTION_UTIL         UID_IMAGE_EDITOR
+
+
+// UID for the JPEG rotator DLL
+#define UID_JPEG_ROTATOR            0xA00002F8
+
+// UID for the JPEG scaler DLL
+#define UID_JPEG_SCALER             0xA00002F9
+
+#endif
+
+// End of File

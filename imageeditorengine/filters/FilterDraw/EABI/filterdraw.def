@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN11CFilterDraw6CreateEv @ 1 NONAME
+	_ZTI11CFilterDraw @ 2 NONAME ; #<TI>#
+	_ZTV11CFilterDraw @ 3 NONAME ; #<VT>#
+

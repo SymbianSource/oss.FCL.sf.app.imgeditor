@@ -1,0 +1,7 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI22CImageEditorCropPlugin @ 2 NONAME ; #<TI>#
+	_ZTI23CImageEditorCropControl @ 3 NONAME ; #<TI>#
+	_ZTV22CImageEditorCropPlugin @ 4 NONAME ; #<VT>#
+	_ZTV23CImageEditorCropControl @ 5 NONAME ; #<VT>#
+

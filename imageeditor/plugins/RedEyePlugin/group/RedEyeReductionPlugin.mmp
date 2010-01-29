@@ -1,0 +1,90 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+#include "../../../inc/definitions.def"
+#include "../../../inc/imageeditoruids.hrh"
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+LIBRARY         efsrv.lib
+#endif
+
+TARGET          RedEyeReduction.pgn
+TARGETTYPE      dll
+UID             UID_PLUGIN_INTERFACE UID_REDEYEREDUCTION_PLUGIN
+
+TARGETPATH      SHARED_LIB_DIR
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+SOURCE		ImageEditorRedEyeReductionPlugin.cpp
+SOURCE		ImageEditorRedEyeReductionControl.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   .
+
+START RESOURCE	../data/redeyereduction.rss
+HEADER
+TARGETPATH      /private/101ffa91/plugins
+LANGUAGE_IDS
+END
+
+
+LIBRARY	        bafl.lib
+LIBRARY	        cone.lib
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib 
+
+LIBRARY	        imageeditorui.lib
+LIBRARY	        imageeditorutils.lib
+LIBRARY         iepb.lib
+LIBRARY         pb.lib
+LIBRARY         systemparameters.lib
+LIBRARY         avkon.lib 
+LIBRARY         CommonEngine.lib 
+
+#ifdef RD_TACTILE_FEEDBACK
+LIBRARY     	touchfeedback.lib
+#endif /* RD_TACTILE_FEEDBACK  */
+
+
+//#if defined(__EXPORT_UNFROZEN_PLUGINS__)
+//EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+
+// End of File

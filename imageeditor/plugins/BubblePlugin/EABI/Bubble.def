@@ -1,0 +1,15 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI13CBubbleScaler @ 2 NONAME ; #<TI>#
+	_ZTI20CBubbleSelectionGrid @ 3 NONAME ; #<TI>#
+	_ZTI22CBubbleSelectionDialog @ 4 NONAME ; #<TI>#
+	_ZTI24CImageEditorBubblePlugin @ 5 NONAME ; #<TI>#
+	_ZTI25CImageEditorBubbleControl @ 6 NONAME ; #<TI>#
+	_ZTI8CJPTimer @ 7 NONAME ; #<TI>#
+	_ZTV13CBubbleScaler @ 8 NONAME ; #<VT>#
+	_ZTV20CBubbleSelectionGrid @ 9 NONAME ; #<VT>#
+	_ZTV22CBubbleSelectionDialog @ 10 NONAME ; #<VT>#
+	_ZTV24CImageEditorBubblePlugin @ 11 NONAME ; #<VT>#
+	_ZTV25CImageEditorBubbleControl @ 12 NONAME ; #<VT>#
+	_ZTV8CJPTimer @ 13 NONAME ; #<VT>#
+

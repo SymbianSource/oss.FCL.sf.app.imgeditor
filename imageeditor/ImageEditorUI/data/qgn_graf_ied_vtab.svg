@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="24" viewBox="0 0 13 24">
+<g>
+<g>
+<rect fill="none" width="13" height="24"/>
+<g>
+<radialGradient id="XMLID_4_" cx="6.5" cy="12" r="7.754" fx="6.5" fy="12" gradientUnits="userSpaceOnUse">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="0.2103" style="stop-color:#F4FAFF"/>
+<stop offset="0.5789" style="stop-color:#D7ECFF"/>
+<stop offset="0.8202" style="stop-color:#C0E1FF"/>
+<stop offset="1" style="stop-color:#C0E1FF"/>
+</radialGradient>
+<path fill="url(#XMLID_4_)" d="M6.5,22C4.016,22,2,20.049,2,17.587V6.461C2,3.998,4.016,2,6.5,2l0,0       C8.986,2,11,3.998,11,6.461v11.126C11,20.049,8.986,22,6.5,22L6.5,22z"/>
+<path fill="#003184" d="M1,6.461v11.126C1,20.598,3.467,23,6.5,23c3.031,0,5.5-2.402,5.5-5.413V6.461       C12,3.45,9.531,1,6.5,1C3.467,1,1,3.45,1,6.461z M2,17.587V6.461C2,4.002,4.018,2,6.5,2C8.98,2,11,4.002,11,6.461v11.126       C11,20.047,8.98,22,6.5,22C4.018,22,2,20.047,2,17.587z"/>
+<linearGradient id="XMLID_5_" gradientUnits="userSpaceOnUse" x1="1.2202" y1="12.4404" x2="11.7596" y2="16.2765">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="0.2928" style="stop-color:#DDEFFF"/>
+<stop offset="0.8202" style="stop-color:#97CFFF"/>
+<stop offset="1" style="stop-color:#97CFFF"/>
+</linearGradient>
+<path fill="url(#XMLID_5_)" d="M10,17.578C10,19.494,8.434,21,6.5,21S3,19.494,3,17.578v-7.279H2v7.288       C2,20.049,4.016,22,6.5,22c2.486,0,4.5-1.951,4.5-4.413V8.063h-1V17.578z"/>
+<g>
+<linearGradient id="XMLID_6_" gradientUnits="userSpaceOnUse" x1="1.875" y1="6.0205" x2="11.8739" y2="9.6598">
+<stop offset="0" style="stop-color:#FFFFFF"/>
+<stop offset="0.3229" style="stop-color:#DDEFFF"/>
+<stop offset="0.9045" style="stop-color:#97CFFF"/>
+<stop offset="1" style="stop-color:#97CFFF"/>
+</linearGradient>
+<path fill="url(#XMLID_6_)" d="M6.5,2C4.016,2,2,3.998,2,6.461v5.602h1V6.875c0-1.916,1.566-3.422,3.5-3.422        S10,4.959,10,6.875v5.188h1V6.461C11,3.998,8.986,2,6.5,2z"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

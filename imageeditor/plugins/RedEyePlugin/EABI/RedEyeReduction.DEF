@@ -1,0 +1,7 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI33CImageEditorRedEyeReductionPlugin @ 2 NONAME ; #<TI>#
+	_ZTI34CImageEditorRedEyeReductionControl @ 3 NONAME ; #<TI>#
+	_ZTV33CImageEditorRedEyeReductionPlugin @ 4 NONAME ; #<VT>#
+	_ZTV34CImageEditorRedEyeReductionControl @ 5 NONAME ; #<VT>#
+

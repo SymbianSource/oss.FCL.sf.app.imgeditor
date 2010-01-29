@@ -1,0 +1,571 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:
+* Resource definitions for ImageEditorUi.
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    UICO
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <data_caging_paths_strings.hrh>
+#include "definitions.def"
+
+#ifdef __AIW_PRINT_PROVIDER_USED__
+	#include <AiwCommon.rh>
+#endif
+
+#ifdef __OEM_SDK__
+    #include <AvkonIcons.hrh>
+#endif
+
+#include "ImageEditorUI.rh"
+#include "ImageEditorUI.hrh"
+#include "ImageEditorUI_gen.loc"
+
+#include <ImageEditor.loc>
+
+//  CONSTANTS  
+
+//  MACROS  
+
+//  RESOURCE DEFINITIONS 
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="uicontrol"; }
+
+//=============================================================================
+//
+//  DEFINITION FOR AVKON IMAGE FILE
+//
+//=============================================================================
+#ifndef AVKON_ICON_FILE
+    #define AVKON_ICON_FILE "z:\\resource\\apps\\avkon2.mbm"
+#endif
+
+//=============================================================================
+//
+//  MAIN VIEW
+//
+//=============================================================================
+
+RESOURCE AVKON_VIEW r_imageeditorui_view
+{
+    menubar = r_imageeditorui_menubar;  
+    
+    // changed to empty bacause plugin grid is opened in app start
+    //cba = R_AVKON_SOFTKEYS_EMPTY;    
+    cba = r_imageeditorui_sk_options_back_apply; // MSK_PHASE_2
+}
+
+
+//=============================================================================
+//
+//  MAIN VIEW MENUBAR
+//
+//=============================================================================
+RESOURCE MENU_BAR r_imageeditorui_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_imageeditorui_menupane; 
+            txt = "ViewMenu"; 
+            }
+        };
+    }
+
+//=============================================================================
+//
+//	MAIN VIEW MENUPANE
+//
+//=============================================================================
+
+RESOURCE MENU_PANE r_imageeditorui_menupane
+{
+    items =
+	{
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdApplyEffect; 
+			txt = qtn_sie_options_apply_effect; 
+		},
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdUndo; 
+			txt = qtn_sie_options_undo; 
+		},
+
+#ifdef __FULLSCREEN_AVAILABLE__
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdFullScreen; 
+			txt = qtn_sie_options_full_screen; 
+		},
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdNormalScreen; 
+			txt = qtn_sie_options_normal_screen; 
+		},
+#endif // FULLSCREEN_AVAILABLE		
+
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdZoomIn; 
+			txt = qtn_sie_options_zoom_in; 
+		},
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdZoomOut; 
+			txt = qtn_sie_options_zoom_out; 
+		},
+		MENU_ITEM
+                { 
+	        	command = EImageEditorMenuCmdFitToScreen; 
+	        	txt = qtn_sie_options_fit_to_screen; 
+                },
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdSave; 
+			txt = qtn_sie_options_save; 
+		},
+		MENU_ITEM 
+		{
+			command = EImageEditorAiwCriteriaPrint;
+			txt = " "; // text string comes from provider
+#ifdef __AIW_PRINT_PROVIDER_USED__
+            // let AIW provider provides also text for the menu
+            // (that's why this is commented away)
+			// cascade = AIW_INTELLIGENT_CASCADE_ID | AIW_LOCK_SUBMENU_TITLE ;
+#endif
+		},
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdHelp; 
+			txt = qtn_options_help; 
+		},
+		MENU_ITEM 
+		{ 
+			command = EImageEditorMenuCmdExit;
+			txt = qtn_options_exit;
+		}
+	};
+}
+
+//=============================================================================
+//
+//  SOFTKEYS
+//
+//=============================================================================
+
+// MSK_PHASE_2
+RESOURCE CBA r_imageeditorui_sk_options_back_apply
+    {
+    buttons =
+        {
+        CBA_BUTTON
+            {
+			id = EAknSoftkeyOptions;
+            txt = qtn_sie_main_view_softkey_options;
+            },
+        CBA_BUTTON
+            {
+			id = EAknSoftkeyBack;
+            txt = qtn_sie_main_view_softkey_back;
+            },
+        CBA_BUTTON
+            {
+			id = EImageEditorMenuCmdApplyEffect;
+            txt = qtn_sie_msk_apply_effect;
+            }    
+        };
+    }
+    
+RESOURCE CBA r_imageeditorui_sk_options_cancel_zoomin
+    {
+    buttons =
+        {
+        CBA_BUTTON
+            {
+            id = EAknSoftkeyOptions;
+            txt = qtn_sie_main_view_softkey_options;
+            },
+        CBA_BUTTON
+            {
+            id = EImageEditorMenuCmdFitToScreen;
+            txt = qtn_sie_main_view_softkey_cancel;
+            },
+        CBA_BUTTON
+            {
+            id = EImageEditorMenuCmdZoomIn;
+            txt = qtn_sie_msk_zoom_in;
+            }    
+        };
+    }
+
+RESOURCE CBA r_imageeditorui_sk_options_cancel
+    {
+    buttons =
+        {
+        CBA_BUTTON
+            {
+            id = EAknSoftkeyOptions;
+            txt = qtn_sie_main_view_softkey_options;
+            },
+        CBA_BUTTON
+            {
+            id = EImageEditorMenuCmdFitToScreen;
+            txt = qtn_sie_main_view_softkey_cancel;
+            },
+        CBA_BUTTON
+            {
+            id = EAknSoftkeyOptions;
+            txt = qtn_sie_main_view_softkey_options;
+            }    
+        };
+    }
+        
+//=============================================================================
+//
+//  MAIN VIEW TITLE (displayed in navi pane)
+//
+//=============================================================================
+// Currently no text is shown in navipane
+RESOURCE TBUF r_main_view_title
+{
+    buf = qtn_sie_navi_edit;
+}
+
+//=============================================================================
+//
+//  LIST QUERY (contents updated dynamically)
+//
+//=============================================================================
+RESOURCE AVKON_LIST_QUERY r_image_editor_list_query
+{
+	items =
+	{
+		AVKON_LIST_QUERY_DLG_LINE
+		{
+			control = AVKON_LIST_QUERY_CONTROL
+			{
+				listtype = EAknCtSinglePopupMenuListBox;
+				heading = " ";
+				listbox = AVKON_LIST_QUERY_LIST
+				{
+					// array of items will be defined dynamically
+				};
+			};
+		}
+	};
+}
+
+//=============================================================================
+//
+//  TEXT DATA QUERY (contents updated dynamically)
+//
+//=============================================================================
+RESOURCE DIALOG r_image_editor_text_query
+{
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+    {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_DATA_QUERY
+            {
+                layout = EStaticSizeDataLayout;
+                label = " ";
+                control = EDWIN
+                {
+                    lines = 1;
+                    maxlength = 128;
+                };
+            };
+        }
+    };
+}
+
+// Image Editor specific softkeys for confirmation query
+RESOURCE CBA r_imageeditorui_sk_yes_no
+    {
+    buttons =
+        {
+        CBA_BUTTON
+            {
+            id = EImageEditorSoftkeyCmdYes;
+            txt = text_softkey_yes;
+            },
+        CBA_BUTTON
+            {
+            id = EImageEditorSoftkeyCmdNo;
+            txt = text_softkey_no;
+            } 
+        };
+    }
+    
+//=============================================================================
+//
+//  CONFIRMATION QUERY
+//
+//=============================================================================
+RESOURCE DIALOG r_image_editor_confirmation_query
+{
+    flags = EGeneralQueryFlags;
+    buttons = r_imageeditorui_sk_yes_no;
+    items =
+    {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+            {
+                layout = EConfirmationQueryLayout;
+                label = " ";
+            };
+        }
+    };
+}
+
+RESOURCE DIALOG r_image_editor_confirmation_query_ok_only
+{
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items =
+    {
+        DLG_LINE
+        {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+            {
+                layout = EConfirmationQueryLayout;
+                label = " ";
+            };
+        }
+    };
+}
+
+
+
+RESOURCE TBUF r_list_query_exit_without_saving_confirmation
+{
+    buf = qtn_sie_exit_without_saving_confirmation;
+}
+
+RESOURCE TBUF r_list_query_save_confirmation
+{
+    buf = qtn_sie_query_conf_save_changes;
+}
+
+RESOURCE TBUF r_list_query_cancel_text_input
+{
+    // If cancel text input is needed in the future, just a new string has to 
+    // be defined in ImageEditor.loc and append it here 
+    buf = " ";
+}
+
+//=============================================================================
+//
+//  WAIT DIALOGS
+//
+//=============================================================================
+RESOURCE DIALOG r_wait_dialog
+{
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_EMPTY;
+    items=
+    {
+        DLG_LINE
+        {
+            type = EAknCtNote;
+            id = 10;
+            control= AVKON_NOTE
+            {
+                layout = EWaitLayout;
+                singular_label = " ";
+                imagefile = AVKON_ICON_FILE;
+                imageid = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+            };
+        }
+    };
+}
+
+RESOURCE DIALOG r_progress_dialog
+{
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items=
+    {
+        DLG_LINE
+        {
+            type = EAknCtNote;
+            id = 10;
+            control= AVKON_NOTE
+            {
+                layout = EProgressLayout;
+                singular_label = " ";
+            };
+        }
+    };
+}
+
+RESOURCE TBUF r_wait_note_saving
+{
+    buf = qtn_gen_note_saving;
+}
+
+RESOURCE TBUF r_wait_note_saving_to
+{
+    buf = qtn_fldr_file_saving_wait;
+}
+
+RESOURCE TBUF r_wait_note_loading
+{
+    buf = qtn_gen_note_opening;
+}
+
+//=============================================================================
+//
+//  COLOR SELECTION GRID (NEW POPUP)
+//
+//=============================================================================
+RESOURCE DIALOG r_image_editor_color_dialog
+{
+    title = "";
+    flags = EEikDialogFlagWait |
+            EEikDialogFlagNoBackgroundFade |
+            EEikDialogFlagFillAppClientRect |
+            EEikDialogFlagNoBackup;
+    buttons = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+}
+
+//=============================================================================
+//
+//  COLOR SELECTION GRID CAPTION
+//
+//=============================================================================
+RESOURCE TBUF r_select_colour
+{
+    buf = qtn_sie_select_color_promt;
+}
+
+//=============================================================================
+//
+//  PLUG-IN SELECTION GRID
+//
+//=============================================================================
+RESOURCE DIALOG r_image_editor_plugin_dialog
+{
+    title = "";
+    flags = EEikDialogFlagWait |
+            EEikDialogFlagNoBackgroundFade |
+            EEikDialogFlagFillAppClientRect |
+            EEikDialogFlagNoBackup;
+    buttons = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+}
+
+//=============================================================================
+//
+//  PLUG-IN SELECTION GRID HEADING
+//
+//=============================================================================
+RESOURCE TBUF r_heading_apply_effect
+{
+    buf = qtn_sie_heading_apply_effect;
+}
+
+//=============================================================================
+//
+//  AIW INTEREST
+//
+//=============================================================================
+#ifdef __AIW_PRINT_PROVIDER_USED__
+RESOURCE AIW_INTEREST r_image_editor_interest
+{
+	items=
+	{
+		// This application is interested in printing jpeg images
+		// from menu.	
+		AIW_CRITERIA_ITEM      
+		{
+		id              = EImageEditorAiwCriteriaPrint;
+		serviceCmd      = KAiwCmdPrint;
+		serviceClass    = KAiwClassMenu;
+		contentType     = "image/jpeg";
+		maxProviders    = 4;
+		}
+	};
+}
+#endif
+
+//=============================================================================
+//
+//  SAVE IMAGE LIST QUERY STRINGS
+//
+//=============================================================================
+RESOURCE TBUF r_sie_list_query_heading_save
+{
+    buf = qtn_sie_heading_save;
+}
+
+RESOURCE TBUF r_sie_list_query_save_replace
+{
+//    command = EImageEditorCmdSaveReplace;
+    buf = qtn_sie_query_save_replace;
+}
+
+RESOURCE TBUF r_sie_list_query_save_new
+{
+//    command = EImageEditorCmdSaveNew;
+    buf = qtn_sie_query_save_new;
+}
+
+
+//=============================================================================
+//
+//  ZOOM TEXTS (There should be as many zoom texts as there are zoom states)
+//
+//=============================================================================
+RESOURCE TEXT_ARRAY r_zoom_texts
+    {
+    parameters=
+        {
+
+        " ", // EZoomNormal
+
+        qtn_sie_zoom_in2, // EZoomIn1
+
+        qtn_sie_zoom_in4, // EZoomIn2
+
+        qtn_sie_zoom_in8 // EZoomIn3
+
+        };
+    }
+    
+// End of File

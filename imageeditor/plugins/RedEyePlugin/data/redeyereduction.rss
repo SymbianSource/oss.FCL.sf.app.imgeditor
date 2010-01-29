@@ -1,0 +1,199 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for RedEyeReduction plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "redeyereduction.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "redeyereduction_gen.loc"
+#include <ImageEditor.loc>
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+    {
+    pluginuid           = UID_REDEYEREDUCTION_PLUGIN;
+    uitype              = EPluginUiTypeCustomized;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeMainEngine;
+    plugindisplayorder  = 12;
+    pluginname          = qtn_sie_plugin_name_redeye;
+    iconfile            = "RedEyeReduction.mif";
+    filterfile          = "FilterRedEye.dll";
+    }
+
+RESOURCE PARAMNAMES r_plugin_pars
+    {   
+	parameters=
+    	{
+		// Set croshair state navi pane text
+		qtn_sie_navi_edit_redeye,
+		
+		// Set the radius state navi pane text (N.B. same text in both)
+		qtn_sie_navi_edit_redeye
+    	};
+    }
+
+RESOURCE PGNUIITEMS r_sk1_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            }    
+        };
+    }
+
+RESOURCE PGNUIITEMS r_sk2_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdDone;
+            text=qtn_sie_pgn_sk2_done;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdDone;
+            text=qtn_sie_pgn_sk2_done;
+            },
+        PGNUIITEM 
+            {
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            }    
+        };
+    }
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {
+            id = EPgnSoftkeyIdSet;
+            text = qtn_sie_msk_set;
+            },
+        PGNUIITEM 
+            {
+            id = EPgnSoftkeyIdReduceRed;
+            text = qtn_sie_msk_reduce_red;
+            },
+        PGNUIITEM 
+            {
+            id = EPgnSoftkeyIdSet;
+            text = qtn_sie_msk_set;
+            },
+        PGNUIITEM 
+            {
+            id = EPgnSoftkeyIdReduceRed;
+            text = qtn_sie_msk_reduce_red;
+            }    
+        };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+    {
+    items=
+        {
+        // Set
+        PGNUIITEM
+            {
+            id=ERedEyeReductionPgnMenuCmdSet;
+            text=qtn_sie_options_set;
+            },
+        // Remove
+        PGNUIITEM
+            {
+            id=ERedEyeReductionPgnMenuCmdReduceRed;
+            text=qtn_sie_options_reduce_red;
+            },
+        // Undo
+        PGNUIITEM
+            {
+            id=ERedEyeReductionPgnMenuCmdUndo;
+            text=qtn_sie_options_undo;
+            },
+        // Cancel
+        PGNUIITEM
+            {
+            id=ERedEyeReductionPgnMenuCmdCancel;
+            text=qtn_sie_options_cancel_effect;
+            }
+        };
+    } 
+
+// Tooltip texts
+RESOURCE TBUF r_tooltip_redeye_locate { buf = qtn_sie_tooltip_redeye_locate; } 
+RESOURCE TBUF r_tooltip_redeye_outline { buf = qtn_sie_tooltip_redeye_outline; }
+
+// End of File

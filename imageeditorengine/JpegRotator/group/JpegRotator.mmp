@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+
+#if defined( __LOG_TIMING__ )
+MACRO           LOG_TIMING
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__) || defined(__LOG_TIMING__)
+LIBRARY         flogger.lib
+#endif
+
+TARGET          JpegRotator.dll
+TARGETTYPE      dll
+UID             0x1000008d 0xA00002F8
+
+VENDORID        0x101FB657          // VID_DEFAULT
+CAPABILITY      ALL -TCB
+
+SOURCEPATH			../src
+SOURCE				JpegRotator.cpp
+SOURCE				JpegRotatorImpl.cpp
+SOURCE        CJpRotate.cpp
+
+SOURCEPATH			../../src
+SOURCE              CExifParser.cpp
+
+USERINCLUDE			.
+USERINCLUDE			../inc
+USERINCLUDE			../../inc
+
+// Default system include paths for middleware layer modules.
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY				euser.lib
+LIBRARY				efsrv.lib
+LIBRARY				bafl.lib
+LIBRARY				imageconversion.lib
+LIBRARY				cone.lib
+LIBRARY				estlib.lib
+
+//#if defined( __EXPORT_UNFROZEN_FRAMEWORK__ )
+EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+SOURCEPATH		.
+
+
+// End of file

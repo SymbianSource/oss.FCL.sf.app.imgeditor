@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+
+#include <avkon.loc>
+#include "iepb_gen.loc"
+#include <ImageEditor.loc>
+
+// SOFTKEYS
+
+#define qtn_sie_pgn_sk1_set       	qtn_sie_softkey_set    
+#define qtn_sie_pgn_sk2_cancel		qtn_sie_iepb_softkey_cancel
+#define qtn_sie_pgn_sk2_back		qtn_sie_iepb_softkey_back
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

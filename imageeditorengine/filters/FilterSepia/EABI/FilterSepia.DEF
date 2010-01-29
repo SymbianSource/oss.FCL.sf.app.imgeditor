@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN12CFilterSepia6CreateEv @ 1 NONAME
+	_ZTI12CFilterSepia @ 2 NONAME ; #<TI>#
+	_ZTV12CFilterSepia @ 3 NONAME ; #<VT>#
+

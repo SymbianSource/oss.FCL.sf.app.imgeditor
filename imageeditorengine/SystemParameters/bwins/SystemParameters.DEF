@@ -1,0 +1,15 @@
+EXPORTS
+	??1CSystemParameters@@UAE@XZ @ 1 NONAME ; CSystemParameters::~CSystemParameters(void)
+	?RelScale@CSystemParameters@@QAEAANXZ @ 2 NONAME ; double & CSystemParameters::RelScale(void)
+	?RelScale@CSystemParameters@@QBEABNXZ @ 3 NONAME ; double const & CSystemParameters::RelScale(void) const
+	?Scale@CSystemParameters@@QAEAANXZ @ 4 NONAME ; double & CSystemParameters::Scale(void)
+	?Scale@CSystemParameters@@QBEABNXZ @ 5 NONAME ; double const & CSystemParameters::Scale(void) const
+	?SourceSize@CSystemParameters@@QAEAAVTSize@@XZ @ 6 NONAME ; class TSize & CSystemParameters::SourceSize(void)
+	?SourceSize@CSystemParameters@@QBEABVTSize@@XZ @ 7 NONAME ; class TSize const & CSystemParameters::SourceSize(void) const
+	?ViewPortRect@CSystemParameters@@QAEAAVTRect@@XZ @ 8 NONAME ; class TRect & CSystemParameters::ViewPortRect(void)
+	?ViewPortRect@CSystemParameters@@QBEABVTRect@@XZ @ 9 NONAME ; class TRect const & CSystemParameters::ViewPortRect(void) const
+	?VisibleImageRect@CSystemParameters@@QAEAAVTRect@@XZ @ 10 NONAME ; class TRect & CSystemParameters::VisibleImageRect(void)
+	?VisibleImageRect@CSystemParameters@@QBEABVTRect@@XZ @ 11 NONAME ; class TRect const & CSystemParameters::VisibleImageRect(void) const
+	?VisibleImageRectPrev@CSystemParameters@@QAEAAVTRect@@XZ @ 12 NONAME ; class TRect & CSystemParameters::VisibleImageRectPrev(void)
+	?VisibleImageRectPrev@CSystemParameters@@QBEABVTRect@@XZ @ 13 NONAME ; class TRect const & CSystemParameters::VisibleImageRectPrev(void) const
+

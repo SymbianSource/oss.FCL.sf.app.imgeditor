@@ -1,0 +1,7 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI23CImageEditorFramePlugin @ 2 NONAME ; #<TI>#
+	_ZTI24CImageEditorFrameControl @ 3 NONAME ; #<TI>#
+	_ZTV23CImageEditorFramePlugin @ 4 NONAME ; #<VT>#
+	_ZTV24CImageEditorFrameControl @ 5 NONAME ; #<VT>#
+

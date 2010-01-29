@@ -1,0 +1,178 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Frame plugin mmp file.
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+// to get icon & bmp locations
+#include <iconlocations.hrh>
+
+#include "../../../inc/imageeditoruids.hrh"
+#include "../../../inc/definitions.def"
+
+#if defined( __VERBOSE__ )
+MACRO           VERBOSE
+#endif
+
+#if defined(__IE_GLOBAL_DEBUGLOG__) || defined(__IE_DEBUGLOG__)
+MACRO           ENABLE_DEBUGLOG
+LIBRARY         flogger.lib
+#endif
+
+#if defined( __LANDSCAPE_ONLY__ )
+MACRO           LANDSCAPE_ONLY
+#endif
+
+#if defined(__LANDSCAPE_ROTATE_HOTKEYS__)
+MACRO           LANDSCAPE_ROTATE_HOTKEYS
+#endif
+
+#if defined(__LANDSCAPE_PAN_HOTKEYS__)
+MACRO           LANDSCAPE_PAN_HOTKEYS
+#endif
+
+TARGET          Frame.pgn
+TARGETTYPE      dll
+UID             UID_PLUGIN_INTERFACE UID_FRAME_PLUGIN
+
+TARGETPATH      SHARED_LIB_DIR
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+SOURCE	        ImageEditorFramePlugin.cpp
+SOURCE          ImageEditorFrameControl.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE   .
+
+START RESOURCE  ../data/frame.rss
+HEADER
+TARGETPATH      /private/101ffa91/plugins
+LANGUAGE_IDS
+END
+
+LIBRARY	        cone.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         fbscli.lib 
+
+LIBRARY	        imageeditorui.lib
+LIBRARY	        imageeditorutils.lib
+LIBRARY         iepb.lib
+LIBRARY         pb.lib
+LIBRARY         systemparameters.lib
+
+LIBRARY         CommonEngine.lib 
+LIBRARY         Avkon.lib
+LIBRARY         platformenv.lib
+
+#ifdef RD_TACTILE_FEEDBACK
+LIBRARY     	touchfeedback.lib
+#endif /* RD_TACTILE_FEEDBACK  */
+
+
+// Initial frames package
+START BITMAP frames01.mbm
+TARGETPATH 		/private/101ffa91/frames
+HEADER
+
+SOURCEPATH      S60_SRC_BITMAP_DIR
+
+SOURCE       	c24	qgn_prop_imed_frame_01.bmp
+SOURCE       	8	qgn_prop_imed_frame_01_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_02.bmp
+SOURCE       	8	qgn_prop_imed_frame_02_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_03.bmp
+SOURCE       	8	qgn_prop_imed_frame_03_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_04.bmp
+SOURCE       	8	qgn_prop_imed_frame_04_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_05.bmp
+SOURCE       	8	qgn_prop_imed_frame_05_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_06.bmp
+SOURCE       	8	qgn_prop_imed_frame_06_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_07.bmp
+SOURCE       	8	qgn_prop_imed_frame_07_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_08.bmp
+SOURCE       	8	qgn_prop_imed_frame_08_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_09.bmp
+SOURCE       	8	qgn_prop_imed_frame_09_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_10.bmp
+SOURCE       	8	qgn_prop_imed_frame_10_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_11.bmp
+SOURCE       	8	qgn_prop_imed_frame_11_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_12.bmp
+SOURCE       	8	qgn_prop_imed_frame_12_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_13.bmp
+SOURCE       	8	qgn_prop_imed_frame_13_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_14.bmp
+SOURCE       	8	qgn_prop_imed_frame_14_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_15.bmp
+SOURCE       	8	qgn_prop_imed_frame_15_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_16.bmp
+SOURCE       	8	qgn_prop_imed_frame_16_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_17.bmp
+SOURCE       	8	qgn_prop_imed_frame_17_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_18.bmp
+SOURCE       	8	qgn_prop_imed_frame_18_mask_soft.bmp
+
+SOURCE       	c24	qgn_prop_imed_frame_19.bmp
+SOURCE       	8	qgn_prop_imed_frame_19_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_20.bmp
+SOURCE       	8	qgn_prop_imed_frame_20_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_21.bmp
+SOURCE       	8	qgn_prop_imed_frame_21_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_22.bmp
+SOURCE       	8	qgn_prop_imed_frame_22_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_23.bmp
+SOURCE       	8	qgn_prop_imed_frame_23_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_24.bmp
+SOURCE       	8	qgn_prop_imed_frame_24_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_25.bmp
+SOURCE       	8	qgn_prop_imed_frame_25_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_26.bmp
+SOURCE       	8	qgn_prop_imed_frame_26_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_27.bmp
+SOURCE       	8	qgn_prop_imed_frame_27_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_28.bmp
+SOURCE       	8	qgn_prop_imed_frame_28_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_29.bmp
+SOURCE       	8	qgn_prop_imed_frame_29_mask_soft.bmp
+SOURCE       	c24	qgn_prop_imed_frame_30.bmp
+SOURCE       	8	qgn_prop_imed_frame_30_mask_soft.bmp
+
+END
+
+
+//#if defined(__EXPORT_UNFROZEN_PLUGINS__)
+//EXPORTUNFROZEN
+//#endif
+NOSTRICTDEF
+
+// End of File

@@ -1,0 +1,101 @@
+EXPORTS
+	??0TBitField@@QAE@ABV0@@Z @ 1 NONAME ; TBitField::TBitField(class TBitField const &)
+	??0TBitField@@QAE@XZ @ 2 NONAME ; TBitField::TBitField(void)
+	??1CLogFile@@UAE@XZ @ 3 NONAME ; CLogFile::~CLogFile(void)
+	??1CObCallback@@UAE@XZ @ 4 NONAME ; CObCallback::~CObCallback(void)
+	??1CPluginInfo@@UAE@XZ @ 5 NONAME ; CPluginInfo::~CPluginInfo(void)
+	??1CResolutionUtil@@UAE@XZ @ 6 NONAME ; CResolutionUtil::~CResolutionUtil(void)
+	??1TBitField@@QAE@XZ @ 7 NONAME ; TBitField::~TBitField(void)
+	??4TBitField@@QAEAAV0@ABV0@@Z @ 8 NONAME ; class TBitField & TBitField::operator=(class TBitField const &)
+	?AddImageFileToAlbumL@ImageEditorUtils@@SAXABVTDesC16@@H@Z @ 9 NONAME ; void ImageEditorUtils::AddImageFileToAlbumL(class TDesC16 const &, int)
+	?ComparePluginInfo@CPluginInfo@@SAHABV1@0@Z @ 10 NONAME ; int CPluginInfo::ComparePluginInfo(class CPluginInfo const &, class CPluginInfo const &)
+	?ComparePluginOrder@CPluginInfo@@SAHABV1@0@Z @ 11 NONAME ; int CPluginInfo::ComparePluginOrder(class CPluginInfo const &, class CPluginInfo const &)
+	?CopyFile@ImageEditorUtils@@SAHAAVRFs@@ABVTDesC16@@1H@Z @ 12 NONAME ; int ImageEditorUtils::CopyFile(class RFs &, class TDesC16 const &, class TDesC16 const &, int)
+	?DoCallback@CObCallback@@QAEXH@Z @ 13 NONAME ; void CObCallback::DoCallback(int)
+	?ExternalizeL@CPluginInfo@@QBEXAAVRWriteStream@@@Z @ 14 NONAME ; void CPluginInfo::ExternalizeL(class RWriteStream &) const
+	?FindAlbumsForImageFileL@ImageEditorUtils@@SAXAAV?$RArray@H@@ABVTDesC16@@@Z @ 15 NONAME ; void ImageEditorUtils::FindAlbumsForImageFileL(class RArray<int> &, class TDesC16 const &)
+	?GenerateFilePathL@ImageEditorUtils@@SAHAAVRFs@@ABVTDesC16@@AAVTDes16@@W4TMemorySelection@1@@Z @ 16 NONAME ; int ImageEditorUtils::GenerateFilePathL(class RFs &, class TDesC16 const &, class TDes16 &, enum ImageEditorUtils::TMemorySelection)
+	?GenerateNewDocumentNameL@ImageEditorUtils@@SAHAAVRFs@@ABVTDesC16@@AAVTDes16@@PAV?$RArray@H@@PBVCDesC16Array@@W4TMemorySelection@1@@Z @ 17 NONAME ; int ImageEditorUtils::GenerateNewDocumentNameL(class RFs &, class TDesC16 const &, class TDes16 &, class RArray<int> *, class CDesC16Array const *, enum ImageEditorUtils::TMemorySelection)
+	?GenerateNewFileNameL@ImageEditorUtils@@SAHAAVRFs@@ABVTDesC16@@AAVTDes16@@V?$TBuf@$0BAA@@@PBVCDesC16Array@@@Z @ 18 NONAME ; int ImageEditorUtils::GenerateNewFileNameL(class RFs &, class TDesC16 const &, class TDes16 &, class TBuf<256>, class CDesC16Array const *)
+	?GetBit@TBitField@@QBEHK@Z @ 19 NONAME ; int TBitField::GetBit(unsigned long) const
+	?GetClientRect@CResolutionUtil@@QBEXAAVTRect@@@Z @ 20 NONAME ; void CResolutionUtil::GetClientRect(class TRect &) const
+	?GetFullScreen@CResolutionUtil@@QBEHXZ @ 21 NONAME ; int CResolutionUtil::GetFullScreen(void) const
+	?GetLandscape@CResolutionUtil@@QBEHXZ @ 22 NONAME ; int CResolutionUtil::GetLandscape(void) const
+	?GetMakeAndModelL@ImageEditorUtils@@SAXAAVTDes8@@0@Z @ 23 NONAME ; void ImageEditorUtils::GetMakeAndModelL(class TDes8 &, class TDes8 &)
+	?GetScreenMode@CResolutionUtil@@QBEHXZ @ 24 NONAME ; int CResolutionUtil::GetScreenMode(void) const
+	?GetScreenRect@CResolutionUtil@@QBEXAAVTRect@@@Z @ 25 NONAME ; void CResolutionUtil::GetScreenRect(class TRect &) const
+	?Icon@CPluginInfo@@QAEAAPAVCFbsBitmap@@XZ @ 26 NONAME ; class CFbsBitmap * & CPluginInfo::Icon(void)
+	?Icon@CPluginInfo@@QBEPBVCFbsBitmap@@XZ @ 27 NONAME ; class CFbsBitmap const * CPluginInfo::Icon(void) const
+	?IconFile@CPluginInfo@@QAEAAPAVHBufC16@@XZ @ 28 NONAME ; class HBufC16 * & CPluginInfo::IconFile(void)
+	?IconFile@CPluginInfo@@QBEABVTDesC16@@XZ @ 29 NONAME ; class TDesC16 const & CPluginInfo::IconFile(void) const
+	?ImageFitsToDriveL@ImageEditorUtils@@SAHAAVRFs@@ABVTDesC16@@1@Z @ 30 NONAME ; int ImageEditorUtils::ImageFitsToDriveL(class RFs &, class TDesC16 const &, class TDesC16 const &)
+	?ImagesFitToDriveL@ImageEditorUtils@@SAHAAVRFs@@ABVCDesC16Array@@1@Z @ 31 NONAME ; int ImageEditorUtils::ImagesFitToDriveL(class RFs &, class CDesC16Array const &, class CDesC16Array const &)
+	?InitializeL@CResolutionUtil@@SAPAV1@XZ @ 32 NONAME ; class CResolutionUtil * CResolutionUtil::InitializeL(void)
+	?InternalizeL@CPluginInfo@@QAEXAAVRReadStream@@@Z @ 33 NONAME ; void CPluginInfo::InternalizeL(class RReadStream &)
+	?Log@CLogFile@@QAEXABVTDesC16@@@Z @ 34 NONAME ; void CLogFile::Log(class TDesC16 const &)
+	?Log@CLogFile@@QAEXABVTDesC8@@@Z @ 35 NONAME ; void CLogFile::Log(class TDesC8 const &)
+	?Log@CLogFile@@QAEXE@Z @ 36 NONAME ; void CLogFile::Log(unsigned char)
+	?Log@CLogFile@@QAEXI@Z @ 37 NONAME ; void CLogFile::Log(unsigned int)
+	?LogBytes@CLogFile@@QAEXABVTDesC8@@@Z @ 38 NONAME ; void CLogFile::LogBytes(class TDesC8 const &)
+	?LogNewline@CLogFile@@QAEXXZ @ 39 NONAME ; void CLogFile::LogNewline(void)
+	?LogTime@CLogFile@@QAEXXZ @ 40 NONAME ; void CLogFile::LogTime(void)
+	?MSKCmds@CPluginInfo@@QAEAAV?$CArrayFix@H@@XZ @ 41 NONAME ; class CArrayFix<int> & CPluginInfo::MSKCmds(void)
+	?MSKCmds@CPluginInfo@@QBEABV?$CArrayFix@H@@XZ @ 42 NONAME ; class CArrayFix<int> const & CPluginInfo::MSKCmds(void) const
+	?MSKTexts@CPluginInfo@@QAEAAVCDesC16Array@@XZ @ 43 NONAME ; class CDesC16Array & CPluginInfo::MSKTexts(void)
+	?MSKTexts@CPluginInfo@@QBEABVCDesC16Array@@XZ @ 44 NONAME ; class CDesC16Array const & CPluginInfo::MSKTexts(void) const
+	?Mask@CPluginInfo@@QAEAAPAVCFbsBitmap@@XZ @ 45 NONAME ; class CFbsBitmap * & CPluginInfo::Mask(void)
+	?Mask@CPluginInfo@@QBEPBVCFbsBitmap@@XZ @ 46 NONAME ; class CFbsBitmap const * CPluginInfo::Mask(void) const
+	?MenuItems@CPluginInfo@@QAEAAV?$CArrayFixSeg@USData@CEikMenuPaneItem@@@@XZ @ 47 NONAME ; class CArrayFixSeg<struct CEikMenuPaneItem::SData> & CPluginInfo::MenuItems(void)
+	?MenuItems@CPluginInfo@@QBEABV?$CArrayFixSeg@USData@CEikMenuPaneItem@@@@XZ @ 48 NONAME ; class CArrayFixSeg<struct CEikMenuPaneItem::SData> const & CPluginInfo::MenuItems(void) const
+	?NewL@CLogFile@@SAPAV1@ABVTDesC16@@H@Z @ 49 NONAME ; class CLogFile * CLogFile::NewL(class TDesC16 const &, int)
+	?NewL@CObCallback@@SAPAV1@PAVMObCallbackMethod@@@Z @ 50 NONAME ; class CObCallback * CObCallback::NewL(class MObCallbackMethod *)
+	?NewL@CPluginInfo@@SAPAV1@XZ @ 51 NONAME ; class CPluginInfo * CPluginInfo::NewL(void)
+	?NewLC@CLogFile@@SAPAV1@ABVTDesC16@@H@Z @ 52 NONAME ; class CLogFile * CLogFile::NewLC(class TDesC16 const &, int)
+	?NewLC@CPluginInfo@@SAPAV1@XZ @ 53 NONAME ; class CPluginInfo * CPluginInfo::NewLC(void)
+	?NotifyNewMediaDocumentL@ImageEditorUtils@@SAXAAVRFs@@ABVMDesC16Array@@@Z @ 54 NONAME ; void ImageEditorUtils::NotifyNewMediaDocumentL(class RFs &, class MDesC16Array const &)
+	?NotifyNewMediaDocumentL@ImageEditorUtils@@SAXAAVRFs@@ABVTDesC16@@@Z @ 55 NONAME ; void ImageEditorUtils::NotifyNewMediaDocumentL(class RFs &, class TDesC16 const &)
+	?Parameters@CPluginInfo@@QAEAAVCDesC16Array@@XZ @ 56 NONAME ; class CDesC16Array & CPluginInfo::Parameters(void)
+	?Parameters@CPluginInfo@@QBEABVCDesC16Array@@XZ @ 57 NONAME ; class CDesC16Array const & CPluginInfo::Parameters(void) const
+	?PluginDisplayOrder@CPluginInfo@@QAEAAHXZ @ 58 NONAME ; int & CPluginInfo::PluginDisplayOrder(void)
+	?PluginDisplayOrder@CPluginInfo@@QBEABHXZ @ 59 NONAME ; int const & CPluginInfo::PluginDisplayOrder(void) const
+	?PluginDll@CPluginInfo@@QAEAAPAVHBufC16@@XZ @ 60 NONAME ; class HBufC16 * & CPluginInfo::PluginDll(void)
+	?PluginDll@CPluginInfo@@QBEABVTDesC16@@XZ @ 61 NONAME ; class TDesC16 const & CPluginInfo::PluginDll(void) const
+	?PluginFilterType@CPluginInfo@@QAEAAHXZ @ 62 NONAME ; int & CPluginInfo::PluginFilterType(void)
+	?PluginFilterType@CPluginInfo@@QBEABHXZ @ 63 NONAME ; int const & CPluginInfo::PluginFilterType(void) const
+	?PluginName@CPluginInfo@@QAEAAPAVHBufC16@@XZ @ 64 NONAME ; class HBufC16 * & CPluginInfo::PluginName(void)
+	?PluginName@CPluginInfo@@QBEABVTDesC16@@XZ @ 65 NONAME ; class TDesC16 const & CPluginInfo::PluginName(void) const
+	?PluginRID@CPluginInfo@@QAEAAHXZ @ 66 NONAME ; int & CPluginInfo::PluginRID(void)
+	?PluginRID@CPluginInfo@@QBEABHXZ @ 67 NONAME ; int const & CPluginInfo::PluginRID(void) const
+	?PluginScope@CPluginInfo@@QAEAAHXZ @ 68 NONAME ; int & CPluginInfo::PluginScope(void)
+	?PluginScope@CPluginInfo@@QBEABHXZ @ 69 NONAME ; int const & CPluginInfo::PluginScope(void) const
+	?PluginUiType@CPluginInfo@@QAEAAHXZ @ 70 NONAME ; int & CPluginInfo::PluginUiType(void)
+	?PluginUiType@CPluginInfo@@QBEABHXZ @ 71 NONAME ; int const & CPluginInfo::PluginUiType(void) const
+	?Reset@TBitField@@QAEXXZ @ 72 NONAME ; void TBitField::Reset(void)
+	?ScreenMode@CResolutionUtil@@QBEHXZ @ 73 NONAME ; int CResolutionUtil::ScreenMode(void) const
+	?Self@CResolutionUtil@@SAPAV1@XZ @ 74 NONAME ; class CResolutionUtil * CResolutionUtil::Self(void)
+	?SetAutoFlush@CLogFile@@QAEXH@Z @ 75 NONAME ; void CLogFile::SetAutoFlush(int)
+	?SetAutoNewline@CLogFile@@QAEXH@Z @ 76 NONAME ; void CLogFile::SetAutoNewline(int)
+	?SetAutoTimeStamp@CLogFile@@QAEXH@Z @ 77 NONAME ; void CLogFile::SetAutoTimeStamp(int)
+	?SetBit@TBitField@@QAEXK@Z @ 78 NONAME ; void TBitField::SetBit(unsigned long)
+	?SetClientRect@CResolutionUtil@@QAEXABVTRect@@@Z @ 79 NONAME ; void CResolutionUtil::SetClientRect(class TRect const &)
+	?SetFullScreen@CResolutionUtil@@QAEXH@Z @ 80 NONAME ; void CResolutionUtil::SetFullScreen(int)
+	?SetLandscape@CResolutionUtil@@QAEXH@Z @ 81 NONAME ; void CResolutionUtil::SetLandscape(int)
+	?SetScreenRect@CResolutionUtil@@QAEXABVTRect@@@Z @ 82 NONAME ; void CResolutionUtil::SetScreenRect(class TRect const &)
+	?Sk1Cmds@CPluginInfo@@QAEAAV?$CArrayFix@H@@XZ @ 83 NONAME ; class CArrayFix<int> & CPluginInfo::Sk1Cmds(void)
+	?Sk1Cmds@CPluginInfo@@QBEABV?$CArrayFix@H@@XZ @ 84 NONAME ; class CArrayFix<int> const & CPluginInfo::Sk1Cmds(void) const
+	?Sk1Texts@CPluginInfo@@QAEAAVCDesC16Array@@XZ @ 85 NONAME ; class CDesC16Array & CPluginInfo::Sk1Texts(void)
+	?Sk1Texts@CPluginInfo@@QBEABVCDesC16Array@@XZ @ 86 NONAME ; class CDesC16Array const & CPluginInfo::Sk1Texts(void) const
+	?Sk2Cmds@CPluginInfo@@QAEAAV?$CArrayFix@H@@XZ @ 87 NONAME ; class CArrayFix<int> & CPluginInfo::Sk2Cmds(void)
+	?Sk2Cmds@CPluginInfo@@QBEABV?$CArrayFix@H@@XZ @ 88 NONAME ; class CArrayFix<int> const & CPluginInfo::Sk2Cmds(void) const
+	?Sk2Texts@CPluginInfo@@QAEAAVCDesC16Array@@XZ @ 89 NONAME ; class CDesC16Array & CPluginInfo::Sk2Texts(void)
+	?Sk2Texts@CPluginInfo@@QBEABVCDesC16Array@@XZ @ 90 NONAME ; class CDesC16Array const & CPluginInfo::Sk2Texts(void) const
+	?StaticLog@CLogFile@@SAXABVTDesC16@@0@Z @ 91 NONAME ; void CLogFile::StaticLog(class TDesC16 const &, class TDesC16 const &)
+	?StaticLog@CLogFile@@SAXABVTDesC16@@ABVTDesC8@@@Z @ 92 NONAME ; void CLogFile::StaticLog(class TDesC16 const &, class TDesC8 const &)
+	?StaticLogL@CLogFile@@SAXABVTDesC16@@0@Z @ 93 NONAME ; void CLogFile::StaticLogL(class TDesC16 const &, class TDesC16 const &)
+	?StaticLogL@CLogFile@@SAXABVTDesC16@@ABVTDesC8@@@Z @ 94 NONAME ; void CLogFile::StaticLogL(class TDesC16 const &, class TDesC8 const &)
+	?Uid2@CPluginInfo@@QAEAAVTUid@@XZ @ 95 NONAME ; class TUid & CPluginInfo::Uid2(void)
+	?Uid2@CPluginInfo@@QBEABVTUid@@XZ @ 96 NONAME ; class TUid const & CPluginInfo::Uid2(void) const
+	?Uid3@CPluginInfo@@QAEAAVTUid@@XZ @ 97 NONAME ; class TUid & CPluginInfo::Uid3(void)
+	?Uid3@CPluginInfo@@QBEABVTUid@@XZ @ 98 NONAME ; class TUid const & CPluginInfo::Uid3(void) const
+	?UpdateScreenMode@CResolutionUtil@@QAEXXZ @ 99 NONAME ; void CResolutionUtil::UpdateScreenMode(void)
+

@@ -1,0 +1,315 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definitions for Bubble plugin.
+*
+*/
+
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <PathConfiguration.hrh>
+#include <data_caging_paths_strings.hrh>
+
+#include "definitions.def"
+#include "ImageEditorPluginBase.hrh"
+#include "bubble.hrh"
+#include "ImageEditorPluginBase.rh"
+#include "ImageEditorUids.hrh"
+#include "bubble_gen.loc"
+#include <ImageEditor.loc>
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+    {
+    pluginuid           = UID_BUBBLE_PLUGIN;
+    uitype              = EPluginUiTypeCustomized;
+    plugintype          = EPluginFilterTypeABITO;
+    pluginscope         = EPluginScopeAdjustmentEngine;
+    plugindisplayorder  = 7;
+    pluginname          = qtn_sie_plugin_name_bubble;
+    iconfile            = "bubble.mif";
+    filterfile          = "FilterBubble.dll";
+    }
+
+RESOURCE PARAMNAMES r_plugin_pars
+    {
+    parameters=
+        {
+        // Select bubble
+        qtn_sie_heading_select_bubble,
+
+        // Plugin main
+        qtn_sie_navi_edit_bubble,
+
+        // Move bubble
+        qtn_sie_navi_edit_bubble,
+        
+        // Resize bubble
+        qtn_sie_navi_edit_bubble,
+        
+        // Rotate bubble
+        qtn_sie_navi_edit_bubble
+        };
+    }
+ 
+RESOURCE PGNUIITEMS r_sk1_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_sk1_ok;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOptions;
+            text=qtn_sie_pgn_sk1_options;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdEmpty;
+            text=" ";
+            } 
+        };
+    }
+
+RESOURCE PGNUIITEMS r_sk2_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdCancel;
+            text=qtn_sie_pgn_sk2_cancel;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdDone;
+            text=qtn_sie_pgn_sk2_done;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdEmpty;
+            text=" ";
+            }
+        };
+    }
+
+RESOURCE PGNUIITEMS r_msk_items
+    {
+    items=
+        {
+        PGNUIITEM 
+            {    
+            id = EAknSoftkeyContextOptions;
+            text = text_softkey_option;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdOk;
+            text=qtn_sie_pgn_sk1_ok;
+            },
+        PGNUIITEM 
+            {    
+            id = EAknSoftkeyContextOptions;
+            text = text_softkey_option;
+            },
+        PGNUIITEM 
+            {    
+            id=EPgnSoftkeyIdEmpty;
+            text=" ";
+            } 
+        };
+    }
+
+RESOURCE PGNUIITEMS r_menu_items
+    {
+    items=
+        {
+        // Move
+        PGNUIITEM 
+            {    
+            id=EBubblePgnMenuCmdMove;
+            text=qtn_sie_options_move_bubble;
+            },
+        // Resize
+        PGNUIITEM 
+            {    
+            id=EBubblePgnMenuCmdResize;
+            text=qtn_sie_options_resize_bubble;
+            },
+        // Rotate
+        PGNUIITEM 
+            {    
+            id=EBubblePgnMenuCmdRotate;
+            text=qtn_sie_options_rotate_bubble;
+            },
+        // Cancel
+        PGNUIITEM 
+            {    
+            id=EBubblePgnMenuCmdCancel;
+            text=qtn_sie_options_cancel_effect;
+            }
+        };
+    } 
+
+//=============================================================================
+//
+//    r_bubble_progress_note
+//    For progress note.
+//
+//=============================================================================
+//
+RESOURCE DIALOG r_bubble_progress_note
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = 11;
+            control = AVKON_NOTE
+                {
+                layout = EProgressLayout;
+                singular_label = qtn_sie_pgn_searching_bubbles;
+                };
+            }
+        };
+    }
+
+//=============================================================================
+//
+//    r_bubble_selection_dialog
+//    
+//
+//=============================================================================
+//
+RESOURCE DIALOG r_bubble_selection_dialog
+    {
+    flags = EEikDialogFlagCbaButtons | EEikDialogFlagWait| EEikDialogFlagFillAppClientRect;
+    buttons = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items = 
+    	{
+    	DLG_LINE
+			{
+	        type = EBubbleCustomControlType ; 
+    	    id = EBubbleSelectionGrid;
+        	control = GRID 
+         		{ 
+         		flags = EAknGridHorizontalOrientation|EAknGridFollowsItemsAndLoops;
+         		width = 0;
+         		height = 0;
+         		style = 0;         	
+         		};  
+       		}
+    	};
+    }
+
+
+// PATHS CANNOT EXCEED 256 CHARACTERS TOGETHER
+RESOURCE ARRAY r_bubble_dirs
+    {
+    items=
+        {
+        LBUF { txt = "c:\\private\101ffa91\\bubbles\\"; },
+        LBUF { txt = ""text_memory_card_root_path"private\101ffa91\\bubbles\\"; },
+        LBUF { txt = "z:\\private\101ffa91\\bubbles\\"; },
+        LBUF { txt = "c:\\data\\images\\bubbles\\"; },
+        LBUF { txt = ""text_memory_card_root_path"images\\bubbles\\"; }
+        };
+    }
+
+// Context specific MSK menu
+RESOURCE MENU_BAR r_bubble_context_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            { 
+            menu_pane = r_bubble_context_menupane; 
+            txt = " "; 
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_bubble_context_menupane
+    {
+    items =
+        {
+        MENU_ITEM 
+            { 
+            command = EBubblePgnMenuCmdMove; 
+            txt = qtn_sie_options_move_bubble; 
+            },    
+        MENU_ITEM 
+            { 
+            command = EBubblePgnMenuCmdResize; 
+            txt = qtn_sie_options_resize_bubble; 
+            },
+        MENU_ITEM 
+            { 
+            command = EBubblePgnMenuCmdRotate; 
+            txt = qtn_sie_options_rotate_bubble; 
+            }    
+        };
+    }
+    
+RESOURCE TBUF r_tooltip_bubble_resize { buf = qtn_sie_tooltip_resize; } 
+RESOURCE TBUF r_tooltip_bubble_move { buf = qtn_sie_tooltip_move; } 
+RESOURCE TBUF r_tooltip_bubble_rotate { buf = qtn_sie_tooltip_rotate; }
+
+
+
+// End of File

@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN16CFilterGrayScale6CreateEv @ 1 NONAME
+	_ZTI16CFilterGrayScale @ 2 NONAME ; #<TI>#
+	_ZTV16CFilterGrayScale @ 3 NONAME ; #<VT>#
+

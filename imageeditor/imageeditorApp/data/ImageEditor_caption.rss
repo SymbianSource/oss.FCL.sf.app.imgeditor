@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:
+* ImageEditor caption resource definitions.
+*
+*/
+
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <apcaptionfile.rh>
+
+//=============================================================================
+//  CAPTION
+//
+//  Because the editor is used only as an embedded application, these 
+//  captions are never shown to the user. The application status pane text
+//  is replaced with the name of the edited image.
+//
+//=============================================================================
+RESOURCE CAPTION_DATA
+{
+    caption = " ";
+    shortcaption = " ";
+}

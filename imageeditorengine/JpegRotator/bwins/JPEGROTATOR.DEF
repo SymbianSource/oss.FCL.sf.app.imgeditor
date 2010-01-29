@@ -1,0 +1,7 @@
+EXPORTS
+	??1CJpegRotator@@UAE@XZ @ 1 NONAME ; CJpegRotator::~CJpegRotator(void)
+	?NewL@CJpegRotator@@SAPAV1@AAVRFs@@@Z @ 2 NONAME ; class CJpegRotator * CJpegRotator::NewL(class RFs &)
+	?NewLC@CJpegRotator@@SAPAV1@AAVRFs@@@Z @ 3 NONAME ; class CJpegRotator * CJpegRotator::NewLC(class RFs &)
+	?RotateImageL@CJpegRotator@@QAEXAAVTRequestStatus@@ABVTDesC16@@1W4TRotationMode@1@HH@Z @ 4 NONAME ; void CJpegRotator::RotateImageL(class TRequestStatus &, class TDesC16 const &, class TDesC16 const &, enum CJpegRotator::TRotationMode, int, int)
+	?Cancel@CJpegRotator@@QAEXXZ @ 5 NONAME ; void CJpegRotator::Cancel(void)
+

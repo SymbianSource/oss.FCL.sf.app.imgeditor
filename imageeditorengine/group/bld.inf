@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+#include "definitions.def"
+
+/// Filter projects
+PRJ_MMPFILES
+#include "../filters/FilterBrightness/group/bld.inf"
+#include "../filters/FilterBubble/group/bld.inf"
+#include "../filters/FilterBuffer/group/bld.inf"
+#include "../filters/FilterCartoon/group/bld.inf"
+#include "../filters/FilterClipart/group/bld.inf"
+#include "../filters/FilterContrast/group/bld.inf"
+#include "../filters/FilterCrop/group/bld.inf"
+#include "../filters/FilterFrame/group/bld.inf"
+#include "../filters/FilterGrayScale/group/bld.inf"
+#include "../filters/FilterIclSource/group/bld.inf"
+#include "../filters/FilterJpegSource/group/bld.inf"
+#include "../filters/FilterJpegTarget/group/bld.inf"
+#include "../filters/FilterNegate/group/bld.inf"
+#include "../filters/FilterRedEye/group/bld.inf"
+#include "../filters/FilterRotate/group/bld.inf"
+#include "../filters/FilterScale/group/bld.inf"
+#include "../filters/FilterSepia/group/bld.inf"
+#include "../filters/FilterSharpness/group/bld.inf"
+#include "../filters/FilterText/group/bld.inf"
+#ifdef RD_IE_DRAW_PLUGIN
+#include "../filters/FilterDraw/group/bld.inf"
+#endif // RD_IE_DRAW_PLUGIN
+// Image Editor Utilitties
+#include "../ImageEditorUtils/group/bld.inf"
+
+
+// GONZALES engine components
+#include "../SystemParameters/group/bld.inf"
+#include "../EngineWrapper/group/bld.inf"
+
+// JpegRotator
+//#include "../JpegRotator/group/bld.inf"
+
+
+// JpegScaler
+//#include "../JpegScaler/group/bld.inf"
+
+
+// Exported files
+PRJ_EXPORTS
+
+// sis stub
+
+
+PRJ_TESTMMPFILES
+// #include "../internal/tsrc/group/bld.inf"
+
+// End of File
+
+

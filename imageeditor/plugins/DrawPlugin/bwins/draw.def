@@ -1,0 +1,3 @@
+EXPORTS
+	?CreateImageEditorPluginL@@YAPAVCImageEditorPluginBase@@XZ @ 1 NONAME ; class CImageEditorPluginBase * CreateImageEditorPlugin(void)
+

@@ -1,0 +1,79 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* ImageEditor bld.inf file.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/definitions.def"
+#include <data_caging_paths.hrh>
+
+// Erase temp files in WINS env
+PRJ_MMPFILES
+//gnumakefile erasetempfiles.mk
+
+/// Plugin framework
+#include "../PB/group/bld.inf"
+#include "../IEPB/group/bld.inf"
+
+/// Image Editor components
+#include "../ImageEditorUI/group/bld.inf"
+#include "../ImageEditorManager/group/bld.inf"
+
+/// Image editor application
+#include "../ImageEditorApp/group/bld.inf"
+
+/// Plugins
+#include "../plugins/BlackWhitePlugin/group/bld.inf"
+#include "../plugins/NegativePlugin/group/bld.inf"
+#include "../plugins/SepiaPlugin/group/bld.inf"
+#include "../plugins/BrightnessPlugin/group/bld.inf"
+#include "../plugins/BubblePlugin/group/bld.inf"
+#include "../plugins/ContrastPlugin/group/bld.inf"
+#include "../plugins/SharpnessPlugin/group/bld.inf"
+#include "../plugins/RedEyePlugin/group/bld.inf"
+#include "../plugins/CartoonizePlugin/group/bld.inf"
+#include "../plugins/FramePlugin/group/bld.inf"
+#include "../plugins/ClipartPlugin/group/bld.inf"
+#include "../plugins/CropPlugin/group/bld.inf"
+#include "../plugins/RotateLPlugin/group/bld.inf"
+#include "../plugins/RotateRPlugin/group/bld.inf"
+#include "../plugins/ResizePlugin/group/bld.inf"
+#include "../plugins/TextPlugin/group/bld.inf"
+#ifdef RD_IE_DRAW_PLUGIN
+#include "../plugins/DrawPlugin/group/bld.inf"
+#endif // RD_IE_DRAW_PLUGIN
+// Editor AIW Provider
+#include "../EditorProvider/group/bld.inf"
+
+// makefiles
+PRJ_MMPFILES
+//gnumakefile bldsis.mk
+
+// Exported files
+PRJ_EXPORTS
+../loc/ImageEditor.loc APP_LAYER_LOC_EXPORT_PATH(ImageEditor.loc)
+
+../data/ImageEditorStub.sis   /epoc32/data/z/system/install/ImageEditorStub.sis
+//../inc/imageeditordebugutils.h	/epoc32/include/imageeditordebugutils.h
+
+// ROM description
+../rom/ImageEditor_Resource.iby LANGUAGE_APP_LAYER_IBY_EXPORT_PATH(ImageEditor_Resource.iby)
+//
+//../inc/ImageEditorUids.hrh	/epoc32/include/ImageEditorUids.hrh
+
+// End of File

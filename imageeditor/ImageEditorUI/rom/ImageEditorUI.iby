@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+*
+*/
+
+//Disabled until wk21
+//#undef RD_S60_IMAGE_EDITOR
+
+#ifdef RD_S60_IMAGE_EDITOR
+
+#ifndef __IMAGEEDITORUI_IBY__
+#define __IMAGEEDITORUI_IBY__
+
+// DLL
+file=ABI_DIR\BUILD_DIR\ImageEditorUi.dll    SHARED_LIB_DIR\ImageEditorUi.dll
+
+// Resources
+data=DATAZ_\APP_BITMAP_DIR\ImageEditorUi.mif		APP_BITMAP_DIR\ImageEditorUi.mif
+
+#endif // __IMAGEEDITORUI_IBY__
+
+#endif
+//  End of File  

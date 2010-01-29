@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+#ifndef PLATFORM_SECURITY_STRINGS_HRH
+#define PLATFORM_SECURITY_STRINGS_HRH
+
+#include "../group/definitions.def"
+
+#if defined (__OEM_SDK__)
+
+#include <data_caging_paths_strings.hrh>
+
+#else
+
+#define   APP_BITMAP_DIR                    "\\resource\\apps"
+#define   APP_RESOURCE_DIR                  "\\resource\\apps"
+
+
+#endif //__OEM_SDK__
+
+#endif // PLATFORM_SECURITY_LITERALS_HRH
+
+// End of File

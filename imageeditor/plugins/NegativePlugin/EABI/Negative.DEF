@@ -1,0 +1,5 @@
+EXPORTS
+	_Z23CreateImageEditorPluginv @ 1 NONAME
+	_ZTI26CImageEditorNegativePlugin @ 2 NONAME ; #<TI>#
+	_ZTV26CImageEditorNegativePlugin @ 3 NONAME ; #<VT>#
+

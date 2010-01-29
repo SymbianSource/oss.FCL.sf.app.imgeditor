@@ -1,0 +1,197 @@
+;
+; Copyright (c) 2010 Ixonos Plc.
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - Initial contribution
+;
+; Contributors:
+; Ixonos Plc
+;
+; Description:
+;
+; Languages:
+&EN
+
+; Header
+#{"Image Editor"}, (0x101FFA91), 1, 0, 0, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+;Files
+
+;;=============================================================================
+;;	APPLICATION
+;;=============================================================================
+""-"z:\sys\bin\ImageEditor.exe"
+""-"z:\resource\apps\imageeditor.rsc"
+""-"z:\private\10003A3F\import\apps\ImageEditor_reg.rsc"
+
+;;=============================================================================
+;;	UI
+;;=============================================================================
+""-"z:\sys\bin\ImageEditorUi.dll"
+""-"z:\resource\apps\ImageEditorUi.rsc"
+""-"z:\resource\apps\ImageEditorUi.mif"
+
+;;=============================================================================
+;;	MANAGER
+;;=============================================================================
+""-"z:\sys\bin\ImageEditorManager.dll"
+
+;;=============================================================================
+;;	PLUG-IN FRAMEWORK
+;;=============================================================================
+""-"z:\sys\bin\pb.dll"
+""-"z:\sys\bin\iepb.dll"
+""-"z:\resource\apps\ImageEditorPluginBase.rsc"
+
+;;=============================================================================
+;;	AIW SERVICE PROVIDER
+;;=============================================================================
+""-"z:\sys\bin\ImageEditorProvider.dll"
+""-"z:\resource\plugins\ImageEditorProvider.rsc"
+""-"z:\resource\ImageEditorProviderInternal.rsc"
+
+;;=============================================================================
+;; 	BLACK & WHITE PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Blackwhite.pgn"
+""-"z:\private\101ffa91\plugins\Blackwhite.rsc"
+""-"z:\resource\apps\Blackwhite.mif"
+
+;;=============================================================================
+;;	BRIGHTNESS PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Brightness.pgn"
+""-"z:\private\101ffa91\plugins\brightness.rsc"
+""-"z:\resource\apps\brightness.mif"
+
+;;=============================================================================
+;; 	CARTOONIZE PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Cartoonize.pgn"
+""-"z:\private\101ffa91\plugins\Cartoonize.rsc"
+""-"z:\resource\apps\Cartoonize.mif"
+
+;;=============================================================================
+;; 	CLIPART PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Clipart.pgn"
+""-"z:\private\101ffa91\plugins\Clipart.rsc"
+""-"z:\resource\apps\Clipart.mif"
+
+""-"z:\private\101ffa91\cliparts\Cliparts01.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts02.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts03.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts04.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts05.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts06.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts07.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts08.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts09.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts10.mbm"
+""-"z:\private\101ffa91\cliparts\Cliparts11.mbm"
+
+;;=============================================================================
+;; 	BUBBLE PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Bubble.pgn"
+""-"z:\private\101ffa91\plugins\Bubble.rsc"
+""-"z:\resource\apps\Bubble.mif"
+
+""-"z:\private\101ffa91\bubbles\Bubbles01.mbm"
+""-"z:\private\101ffa91\bubbles\Bubbles02.mbm"
+""-"z:\private\101ffa91\bubbles\Bubbles03.mbm"
+
+
+;;=============================================================================
+;;	CONTRAST PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Contrast.pgn"
+""-"z:\private\101ffa91\plugins\Clipart.rsc"
+""-"z:\resource\apps\contrast.mif"
+
+;;=============================================================================
+;;	CROP PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Crop.pgn"
+""-"z:\private\101ffa91\plugins\crop.rsc"
+""-"z:\resource\apps\crop.mif"
+
+;;=============================================================================
+;; 	FRAME PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Frame.pgn"
+""-"z:\private\101ffa91\plugins\Frame.rsc"
+""-"z:\resource\apps\Frame.mif"
+
+""-"z:\private\101ffa91\frames\frames01.mbm"
+
+;;=============================================================================
+;; 	NEGATIVE PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Negative.pgn"
+""-"z:\private\101ffa91\plugins\Negative.rsc"
+""-"z:\resource\apps\Negative.mif"
+
+;;=============================================================================
+;; 	RED-EYE REDUCTION PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\RedEyeReduction.pgn"
+""-"z:\private\101ffa91\plugins\RedEyeReduction.rsc"
+""-"z:\resource\apps\RedEyeReduction.mif"
+
+;;=============================================================================
+;; 	RESIZE PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Resize.pgn"
+""-"z:\private\101ffa91\plugins\Resize.rsc"
+""-"z:\resource\apps\Resize.mif"
+
+;;=============================================================================
+;;	ROTATE LEFT PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\RotateLeft.pgn"
+""-"z:\private\101ffa91\plugins\RotateLeft.rsc"
+""-"z:\resource\apps\RotateLeft.mif"
+
+;;=============================================================================
+;;	ROTATE RIGHT PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\RotateRight.pgn"
+""-"z:\private\101ffa91\plugins\RotateRight.rsc"
+""-"z:\resource\apps\RotateRight.mif"
+
+;;=============================================================================
+;; 	SEPIA PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Sepia.pgn"
+""-"z:\private\101ffa91\plugins\Sepia.rsc"
+""-"z:\resource\apps\Sepia.mif"
+
+;;=============================================================================
+;;	SHARPNESS PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Sharpness.pgn"
+""-"z:\private\101ffa91\plugins\Sharpness.rsc"
+""-"z:\resource\apps\Sharpness.mif"
+
+;;=============================================================================
+;; 	TEXT PLUGIN
+;;=============================================================================
+""-"z:\sys\bin\Text.pgn"
+""-"z:\private\101ffa91\plugins\Text.rsc"
+""-"z:\resource\apps\Text.mif"
+
+
+
+

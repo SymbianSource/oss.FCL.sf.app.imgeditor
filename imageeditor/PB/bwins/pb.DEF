@@ -1,0 +1,10 @@
+EXPORTS
+	??0CPluginBase@@QAE@XZ @ 1 NONAME ; CPluginBase::CPluginBase(void)
+	??1CPluginBase@@UAE@XZ @ 2 NONAME ; CPluginBase::~CPluginBase(void)
+	?ConstructL@CPluginBase@@QAEXXZ @ 3 NONAME ; void CPluginBase::ConstructL(void)
+	?GetProperty@CPluginBase@@UAEHHAAVTDes16@@@Z @ 4 NONAME ; int CPluginBase::GetProperty(int, class TDes16 &)
+	?NewL@CPluginBase@@SAPAV1@XZ @ 5 NONAME ; class CPluginBase * CPluginBase::NewL(void)
+	?ReservedBaseMethod1@CPluginBase@@UAEXXZ @ 6 NONAME ; void CPluginBase::ReservedBaseMethod1(void)
+	?ReservedBaseMethod2@CPluginBase@@UAEXXZ @ 7 NONAME ; void CPluginBase::ReservedBaseMethod2(void)
+	?SetProperty@CPluginBase@@UAEHHAAVTDesC16@@@Z @ 8 NONAME ; int CPluginBase::SetProperty(int, class TDesC16 &)
+

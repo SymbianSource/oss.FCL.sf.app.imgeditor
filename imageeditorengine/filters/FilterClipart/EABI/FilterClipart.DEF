@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN14CFilterClipart6CreateEv @ 1 NONAME
+	_ZTI14CFilterClipart @ 2 NONAME ; #<TI>#
+	_ZTV14CFilterClipart @ 3 NONAME ; #<VT>#
+

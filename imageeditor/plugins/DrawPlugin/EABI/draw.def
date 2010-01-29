@@ -1,0 +1,9 @@
+EXPORTS
+	_Z24CreateImageEditorPluginLv @ 1 NONAME
+	_ZTI22CImageEditorDrawPlugin @ 2 NONAME ; #<TI>#
+	_ZTI23CImageEditorDrawControl @ 3 NONAME ; #<TI>#
+	_ZTI8CJPTimer @ 4 NONAME ; #<TI>#
+	_ZTV22CImageEditorDrawPlugin @ 5 NONAME ; #<VT>#
+	_ZTV23CImageEditorDrawControl @ 6 NONAME ; #<VT>#
+	_ZTV8CJPTimer @ 7 NONAME ; #<VT>#
+

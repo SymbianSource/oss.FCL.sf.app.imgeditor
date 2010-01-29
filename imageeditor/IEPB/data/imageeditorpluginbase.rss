@@ -1,0 +1,112 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+* Resource definition file for ImageEditorPluginBase.
+*
+*/
+
+
+//=============================================================================
+//  RESOURCE INDENTIFIER
+//=============================================================================
+NAME    PGN0
+
+
+//=============================================================================
+//  INCLUDES
+//=============================================================================
+#include <eikon.rh>
+
+#include "imageeditorpluginbase.hrh"
+#include "imageeditorpluginbase.rh"
+
+
+//=============================================================================
+//  CONSTANTS  
+//=============================================================================
+
+
+//=============================================================================
+//  MACROS
+//=============================================================================
+
+
+//=============================================================================
+//  RESOURCE DEFINITIONS 
+//=============================================================================
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE PGNINFO r_plugin_info
+{
+	pluginuid=0x00000000;
+	uitype=EPluginUiTypeMin;
+	plugintype=EPluginFilterTypeMin;
+	plugindisplayorder=0;
+	pluginname="NA";
+	iconfile="NA";    
+	filterfile="NA";    
+}
+
+RESOURCE PARAMNAMES r_plugin_pars
+{
+	parameters=
+	{
+
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk1_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdOk;
+			text=qtn_sie_pgn_sk1;
+		}
+	};
+}
+
+RESOURCE PGNUIITEMS r_sk2_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdCancel;
+			text=qtn_sie_pgn_sk2;
+		}
+	};
+}
+
+RESOURCE PGNUIITEMS r_msk_items
+{
+	items=
+	{
+		PGNUIITEM 
+		{	
+			id=EPgnSoftkeyIdOk;
+			text=qtn_sie_pgn_msk;
+		}
+	};
+}
+RESOURCE PGNUIITEMS r_menu_items
+{
+	items=
+	{
+
+	};
+}

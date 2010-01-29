@@ -1,0 +1,41 @@
+EXPORTS
+	_ZN14CEngineWrapper10AddFilterLERK7TDesC16 @ 1 NONAME
+	_ZN14CEngineWrapper10SetParamsLERK7TDesC16 @ 2 NONAME
+	_ZN14CEngineWrapper10StoreZoomLEv @ 3 NONAME
+	_ZN14CEngineWrapper11GetZoomModeEv @ 4 NONAME
+	_ZN14CEngineWrapper12InitUndoRedoEv @ 5 NONAME
+	_ZN14CEngineWrapper12RenderAbortLEv @ 6 NONAME
+	_ZN14CEngineWrapper12RenderBlockLEv @ 7 NONAME
+	_ZN14CEngineWrapper12RestoreZoomLEv @ 8 NONAME
+	_ZN14CEngineWrapper13GetSystemParsEv @ 9 NONAME
+	_ZN14CEngineWrapper14IsImageChangedEv @ 10 NONAME
+	_ZN14CEngineWrapper14SetScreenSizeLERK5TSize @ 11 NONAME
+	_ZN14CEngineWrapper15SetJpegCommentLERK6TDesC8 @ 12 NONAME
+	_ZN14CEngineWrapper16AddUndoRedoStepLEv @ 13 NONAME
+	_ZN14CEngineWrapper16CreateIclSourceLERK7TDesC16 @ 14 NONAME
+	_ZN14CEngineWrapper17CreateJpegSourceLERK7TDesC16 @ 15 NONAME
+	_ZN14CEngineWrapper17CreateJpegTargetLERK7TDesC16iPK5TSize @ 16 NONAME
+	_ZN14CEngineWrapper19CreateRGB888TargetLEv @ 17 NONAME
+	_ZN14CEngineWrapper20CreateExifThumbNailLEv @ 18 NONAME
+	_ZN14CEngineWrapper4NewLEv @ 19 NONAME
+	_ZN14CEngineWrapper4PanLE10TDirection @ 20 NONAME
+	_ZN14CEngineWrapper4PanLEii @ 21 NONAME
+	_ZN14CEngineWrapper5UndoLEv @ 22 NONAME
+	_ZN14CEngineWrapper5ZoomLE5TZoom @ 23 NONAME
+	_ZN14CEngineWrapper7CanUndoEv @ 24 NONAME
+	_ZN14CEngineWrapper7RenderLEPi @ 25 NONAME
+	_ZN14CEngineWrapper7RotateLE9TRotation @ 26 NONAME
+	_ZN14CEngineWrapper9SetBitmapEP10CFbsBitmap @ 27 NONAME
+	_ZN14CEngineWrapperD0Ev @ 28 NONAME
+	_ZN14CEngineWrapperD1Ev @ 29 NONAME
+	_ZN14CEngineWrapperD2Ev @ 30 NONAME
+	_ZNK14CEngineWrapper18GetOutputImageSizeERiS0_ @ 31 NONAME
+	_ZTI11CExifParser @ 32 NONAME ; #<TI>#
+	_ZTI12CFilterStack @ 33 NONAME ; #<TI>#
+	_ZTI14CEngineWrapper @ 34 NONAME ; #<TI>#
+	_ZTI9CJpegSave @ 35 NONAME ; #<TI>#
+	_ZTV11CExifParser @ 36 NONAME ; #<VT>#
+	_ZTV12CFilterStack @ 37 NONAME ; #<VT>#
+	_ZTV14CEngineWrapper @ 38 NONAME ; #<VT>#
+	_ZTV9CJpegSave @ 39 NONAME ; #<VT>#
+

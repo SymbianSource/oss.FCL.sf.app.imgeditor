@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN13CFilterRotate6CreateEv @ 1 NONAME
+	_ZTI13CFilterRotate @ 2 NONAME ; #<TI>#
+	_ZTV13CFilterRotate @ 3 NONAME ; #<VT>#
+

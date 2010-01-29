@@ -1,0 +1,102 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description:  
+*
+*/
+
+
+
+#ifndef IMAGEEDITORUI_HRH
+#define IMAGEEDITORUI_HRH
+
+enum TImageEditorUICommandIds
+{
+	//	MENU COMMANDS
+	EImageEditorCmdBase		=	10000,
+	EImageEditorMenuCmdApplyEffect,
+	EImageEditorMenuCmdUndo, 
+	EImageEditorMenuCmdFullScreen,
+	EImageEditorMenuCmdNormalScreen,
+	EImageEditorMenuCmdSave,
+	EImageEditorMenuCmdHelp,
+	EImageEditorMenuCmdExit,
+	EImageEditorMenuCmdZoomIn,
+	EImageEditorMenuCmdZoomOut,
+	EImageEditorMenuCmdFitToScreen,
+	// CSendAppUi commands are here
+	EImageEditorMenuCmdSend = 10020, 
+	EImageEditorMenuCmdSendLast = 10029, 
+	//  AIW Print commands are here
+	EImageEditorMenuAiwPrintBase    =   10030,
+	EImageEditorMenuAiwPrintLast    =   10033,
+	//  AIW MENU COMMANDS WILL BE BETWEEN THESE IDs
+	EImageEditorMenuAiwLast         =   10999,
+
+	//	SOFTKEYS
+	EImageEditorSoftkeyCmdOptions	=	11000,
+	EImageEditorSoftkeyCmdBack,
+	EImageEditorSoftkeyCmdOk,
+	EImageEditorSoftkeyCmdDone,
+	EImageEditorSoftkeyCmdYes,
+	EImageEditorSoftkeyCmdNo,
+
+	//	MISC COMMANDS
+	EImageEditorCmdSelectPlugin		=	15000,
+	EImageEditorCmdRender,
+	EImageEditorCmdViewReady,
+	EImageEditorApplyPlugin,
+	EImageEditorApplyPluginNoStorage,
+	EImageEditorCancelPlugin,
+	EImageEditorUpdateSoftkeys,
+	EImageEditorUpdateNavipane,
+	EImageEditorAddFilterToEngine,
+	EImageEditorFocusGained,
+	EImageEditorFocusLost,
+	EImageEditorUndoFilter,
+	EImageEditorTryDisplayMenuBar,
+	EImageEditorStoreParameters,
+	EImageEditorSaveAndPrint,
+	EImageEditorDoPrint,
+	EImageEditorResetZoom,
+	EImageEditorPreGlobalZoomChange,
+	EImageEditorGlobalZoomChanged,
+	EImageEditorGlobalCropChanged,
+	EImageEditorPreGlobalPanChange,
+	EImageEditorGlobalPanChanged,
+	EImageEditorGlobalRotationChanged,
+	EImageEditorPreScreenModeChange,
+	EImageEditorPostScreenModeChange,
+	EImageEditorCmdSaveReplace, 
+	EImageEditorCmdSaveNew, 
+    	EImageEditorCmdTouchPan,
+        EImageEditorOpenContextMenu,
+
+    
+	//	PLUG-IN COMMAND BASE
+	EImageEditorPgnCmdBase			=	100000,
+
+	//  AIW CRITERIAS
+	EImageEditorAiwCriteriaPrint    =   110000
+
+};
+
+// Location of the "Send" menu item in the menu
+#define SIE_SENDUI_MENU_ITEM_INDEX		2
+
+
+#endif
+
+// End of File
+

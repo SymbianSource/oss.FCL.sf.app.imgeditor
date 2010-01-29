@@ -1,0 +1,107 @@
+/*
+* Copyright (c) 2010 Ixonos Plc.
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - Initial contribution
+*
+* Contributors:
+* Ixonos Plc
+*
+* Description: 
+*
+*/
+
+
+#ifndef IMAGEEDITORPLUGINBASE_HRH
+#define IMAGEEDITORPLUGINBASE_HRH
+
+#include "avkon.hrh"
+
+enum TPluginUiType
+{
+	// Invalid
+	EPluginUiTypeMin = 0,
+
+	// No UI, only image processing functionality
+	EPluginUiTypeNone,
+
+	// Single parameter UI
+	EPluginUiTypeSingleParam,
+
+	// Triple parameter UI
+	EPluginUiTypeMultiParam,
+
+	// Customized UI
+	EPluginUiTypeCustomized,
+
+	// Invalid
+	EPluginUiTypeMax
+};
+
+enum TPluginFilterType
+{
+	// Invalid
+	EPluginFilterTypeMin = 0,
+
+	// ABITO filter
+	EPluginFilterTypeABITO,
+
+	// Customized filter
+	EPluginFilterTypeCustomized,
+
+	// System plugin
+	EPluginFilterTypeSystem,
+
+	// Invalid
+	EPluginFilterTypeMax
+};
+
+enum TPluginScope
+{
+	// Invalid
+	EPluginScopeMin = 0,
+
+	// Filter inserted to main engine
+	EPluginScopeMainEngine,
+
+	// Filter first inserted to adjustment engine
+	EPluginScopeAdjustmentEngine,
+
+	//	Plugin is a singleton, only top element survives
+	EPluginScopeSingletonTop,
+
+	// Invalid
+	EPluginScopeMax
+};
+
+enum TPgnCommandId
+{
+	// Use AVKON softkey commands where possible
+	EPgnSoftkeyIdOptions		= EAknSoftkeyOptions,
+	EPgnSoftkeyIdExit		= EAknSoftkeyExit,
+	EPgnSoftkeyIdOk			= EAknSoftkeyOk,
+	EPgnSoftkeyIdCancel		= EAknSoftkeyCancel,
+	EPgnSoftkeyIdBack		= EAknSoftkeyBack,
+	EPgnSoftkeyIdSelect		= EAknSoftkeySelect,
+	EPgnSoftkeyIdInsert		= EAknSoftkeyInsert,
+	EPgnSoftkeyIdYes		= EAknSoftkeyYes,
+	EPgnSoftkeyIdNo			= EAknSoftkeyNo,
+	EPgnSoftkeyIdDone		= EAknSoftkeyDone,
+	EPgnSoftkeyIdClose		= EAknSoftkeyClose,
+	EPgnSoftkeyIdClear		= EAknSoftkeyClear,
+	EPgnSoftkeyIdSave		= EAknSoftkeySave,
+	EPgnSoftkeyIdEmpty		= EAknSoftkeyEmpty,
+    
+	EPgnSoftkeyIdBase		= 100000,
+	EPgnSoftkeyIdSet		= 100001,
+	EPgnSoftkeyIdReduceRed	= 100002, // <RedEye MSK>
+
+	EPgnMenuCmdIdBase		= 200000
+};
+
+#endif

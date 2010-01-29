@@ -1,0 +1,3 @@
+EXPORTS
+	?Create@CFilterSepia@@SAHXZ @ 1 NONAME ; int CFilterSepia::Create(void)
+
