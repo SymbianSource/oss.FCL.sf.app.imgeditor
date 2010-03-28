@@ -48,7 +48,7 @@ class CFilterBubble
 		virtual const char* Type();
 
 	private: // New methods
-		void CFilterBubble::LoadImageL();
+		void LoadImageL();
 
 	private: // Data
 

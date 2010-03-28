@@ -414,10 +414,7 @@ private:
      * @param aString2 second string to be compared
      * @return ETrue if equal, EFalse otherwise
      */
-     TBool CEngineWrapper::IsSameString (
-                             const TUint8 *		aString1, 
-                             const TUint8 *		aString2
-                             );
+     TBool IsSameString (const TUint8 * aString1, const TUint8 * aString2);
                              
     /**
      * Updates scale and pan to crop rectangle.

@@ -48,7 +48,7 @@ class CFilterClipart
 		virtual const char* Type();
 
 	private: // New methods
-		void CFilterClipart::LoadImageL();
+		void LoadImageL();
 
 	private: // Data
 

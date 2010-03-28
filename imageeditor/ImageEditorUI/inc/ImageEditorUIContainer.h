@@ -116,8 +116,7 @@ public:
     *   @param aKeyEvent - the key event
     *   @return -
     */
-    virtual void CImageEditorUIContainer::HandlePointerEventL( 
-                                        const TPointerEvent &aPointerEvent );
+    virtual void HandlePointerEventL( const TPointerEvent &aPointerEvent );
     
 	/*	CountComponentControls
 	*
