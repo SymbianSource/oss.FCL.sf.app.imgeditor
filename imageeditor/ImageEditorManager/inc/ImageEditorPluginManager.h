@@ -179,7 +179,7 @@ public:
 	*	
 	*	@param - 
 	*/
-	EXPORT_C void SaveAbortL();
+	IMPORT_C void SaveAbortL();
 
 	/** FinishAsyncSave
 	*
