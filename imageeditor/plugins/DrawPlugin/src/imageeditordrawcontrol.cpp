@@ -260,14 +260,14 @@ void CImageEditorDrawControl::InitializeMainMenu(
 	iLabels[2]->SetImage(svgFile, EMbmIcons_doodleUndo);
 	iLabels[2]->SetTooltip(_L("Undo"));
 
-	iLabels[3]->SetImage(svgFile, EMbmIcons_doodleSave);
-	iLabels[3]->SetTooltip(_L("Save"));
+	iLabels[3]->SetImage(svgFile, EMbmIcons_doodlePalette);
+	iLabels[3]->SetTooltip(_L("Redo"));
 
-	iLabels[4]->SetImage(svgFile, EMbmIcons_doodleMenu);
-	iLabels[4]->SetTooltip(_L("About"));
+	iLabels[4]->SetImage(svgFile, EMbmIcons_doodleSave);
+	iLabels[4]->SetTooltip(_L("Save"));
 
-	iLabels[5]->SetImage(svgFile, EMbmIcons_doodlePalette);
-	iLabels[5]->SetTooltip(_L("Redo"));
+	iLabels[5]->SetImage(svgFile, EMbmIcons_doodleMenu);
+	iLabels[5]->SetTooltip(_L("About"));
 
 	iLabels[6]->SetImage(svgFile, EMbmIcons_doodlePensize);
 	iLabels[6]->SetTooltip(_L("Null"));
@@ -1331,24 +1331,25 @@ void CImageEditorDrawControl::HandlePointerNotify(CCoeControl* aComponent)
 		iEditorView->HandleCommandL(EImageEditorCmdRender);
 		iUndo = EFalse;
 		}
-	//save and quit
+	//redo
 	else if (iLabels[3] == dynamic_cast<CImageLabel*> (aComponent))
-		{
-		iPopupController->HideInfoPopupNote();
-		StoreParameters(EFalse, ETrue);
-		iEditorView->HandleCommandL(EImageEditorApplyPlugin);
-		}
-	else if (iLabels[4] == dynamic_cast<CImageLabel*> (aComponent))
-		{
-		
-		}
-	else if (iLabels[5] == dynamic_cast<CImageLabel*> (aComponent))
 		{
 		iRedo = ETrue;
 		RedoDrawPath();
 		StoreParameters(EFalse, EFalse);
 		iEditorView->HandleCommandL(EImageEditorCmdRender);
 		iRedo = EFalse;
+		}
+	//save and exit
+	else if (iLabels[4] == dynamic_cast<CImageLabel*> (aComponent))
+		{
+		iPopupController->HideInfoPopupNote();
+		StoreParameters(EFalse, ETrue);
+		iEditorView->HandleCommandL(EImageEditorApplyPlugin);
+		}
+	else if (iLabels[5] == dynamic_cast<CImageLabel*> (aComponent))
+		{
+
 		}
 	else if (iLabels[6] == dynamic_cast<CImageLabel*> (aComponent))
 		{
