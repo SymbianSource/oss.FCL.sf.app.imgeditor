@@ -264,8 +264,6 @@ void CColorSelectionPopup::Draw( const TRect& /*aRect*/ ) const
     
     CWindowGc& gc = SystemGc();
     
-    CPreviewControlBase::DrawPreviewImage (Rect());
-    
     // Change brush to null to enable transparent drawing
     gc.SetBrushStyle (CGraphicsContext::ENullBrush);
                 
@@ -904,7 +902,6 @@ void CColorSelectionDialog::HandlePointerEventL(
     {    
     if( AknLayoutUtils::PenEnabled() )
 	    {
-        TBool draw( EFalse );
         switch( aPointerEvent.iType )
 			{
 			case TPointerEvent::EButton1Down:
@@ -920,7 +917,6 @@ void CColorSelectionDialog::HandlePointerEventL(
 	                	}
 #endif /* RD_TACTILE_FEEDBACK  */			        	        
 			        iPopup->HandlePointerEventL( aPointerEvent );			        
-			        draw = ETrue;
 			        }    		        
 				break;
 				}
@@ -936,7 +932,6 @@ void CColorSelectionDialog::HandlePointerEventL(
 	                	}
 #endif /* RD_TACTILE_FEEDBACK  */
 			        iPopup->HandlePointerEventL( aPointerEvent );
-			        draw = ETrue;
 			        }
 				break;		
 				}
@@ -954,11 +949,6 @@ void CColorSelectionDialog::HandlePointerEventL(
 				break;	
 				}	
 			}
-			
-	    if ( draw )
-	        {
-		    DrawDeferred();    
-	        }	
         }
     }
     

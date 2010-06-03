@@ -55,6 +55,7 @@ enum TImageEditorUICommandIds
 	//	MISC COMMANDS
 	EImageEditorCmdSelectPlugin		=	15000,
 	EImageEditorCmdRender,
+	EImageEditorResetFullScreen,
 	EImageEditorCmdViewReady,
 	EImageEditorApplyPlugin,
 	EImageEditorApplyPluginNoStorage,

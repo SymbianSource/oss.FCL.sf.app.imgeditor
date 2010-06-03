@@ -189,13 +189,15 @@ public:
         
 protected:
 
-/** @name Methods:*/
-//@{
-//@}
+	/**	InitialHorizontalDrawPlugin 
+	*
+	*	Called when screen mode changes.
+	*
+	*	@param -
+	*	@return -
+	*/
+	void InitialHorizontalDrawPlugin();
 
-/** @name Members:*/
-//@{
-//@}
 
 private:
 
@@ -738,7 +740,11 @@ private:
 	CImageEditorRemConObserver*		iVolumeKeyObserver;
 	
 	TBool							iSavingQuery;
-      
+	//The pluginName is draw plug-ins
+	TBuf<32>						iPluginName;
+   //The phone is standby   
+	TBool                           iStandby;
+	
 #ifdef S60_31_VOLUME_KEYS
 	/// Remote connection API used to handle the volume keys
 	/// (implementation borrowed from Media gallery)

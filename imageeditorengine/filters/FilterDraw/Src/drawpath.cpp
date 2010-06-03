@@ -27,5 +27,6 @@
 //
 RDrawPath::RDrawPath():iColor(KRgbWhite)
     {
+    iBuf.Append(_L("UnInitialize"));
     }
 

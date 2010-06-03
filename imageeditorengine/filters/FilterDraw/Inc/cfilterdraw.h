@@ -58,14 +58,20 @@ class CFilterDraw: public CBase, public MImageFilter
 	    void RealToViewedFactories(TReal& aWidth, TReal& aHeight);
 	
 	private: // Data
-	    /// Data is ready to be rendered
+	    // Data is ready to be rendered
 	    TBool iReadyToRender;
+	    //If it can redo
+	    TBool iCanRedo;
 		/// Data buffer
-		TUint32* iData;
-		/// Drawed lines
+	    static	TUint32* iData;
+		// Drawed lines
 		RArray<RDrawPath> iPaths;	
-		/// Bitmap size 
-		TSize iBitmapSize;				
+		// Bitmap size 
+		TSize iBitmapSize;	
+		//Undo Path
+		RArray<RDrawPath> iUndoPaths;
+		CFbsBitmap* iBitmap;
+		CFbsBitmap* iMask;
     };
 
 #endif // __CFILTER_DRAW_H_

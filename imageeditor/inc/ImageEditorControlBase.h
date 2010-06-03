@@ -116,6 +116,7 @@ public:
 	*	@return -
 	*/
     IMPORT_C virtual void PrepareL ();
+    
 
     /*	OfferKeyEventL
     *
@@ -232,6 +233,7 @@ public:
 	*/
 	IMPORT_C virtual TBitField GetDimmedMenuItems ();
 
+	
 //@}
 
 protected:

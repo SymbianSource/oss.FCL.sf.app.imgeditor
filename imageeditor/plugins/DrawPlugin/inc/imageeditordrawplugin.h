@@ -28,7 +28,7 @@
 class CEditorImage;
 class CCoeControl;
 class CSystemParameters;
-
+class CDrawPath;
 
 /*	CLASS:	CImageEditorDrawPlugin
 *
@@ -90,7 +90,12 @@ public:
 	*	@see CImageEditorPluginBase
     */
 	virtual void ReleasePlugin ();    
-
+	
+	/**CalculatePositionOnView
+	 * 
+	 *  calculate the point on view when changing the screen mode 
+	 */
+	void CalculatePositionOnView();
 //@}
 
 private: // Data
@@ -98,12 +103,24 @@ private: // Data
 //@{
     /// Plug-in UI control
     CCoeControl* iControl;
-    /// System parameters
+    TBool iDiplayToolPluginParam;
+  /// System parameters
     const CSystemParameters* iSysPars;
     /// Is landscape enabled, Must be EFalse until text is set
     TBool iLandscapeEnabled;
 //@}
 
+private: // Data 
+	//for drawcontrol
+	//drawed lines in drawcontrol
+	RPointerArray<CDrawPath> iPaths;
+	//selected pencolor 
+	TRgb       iRgb;
+	//selected pensize
+	TSize      iSize;
+	//first image rect on preview
+	TRect      iVisibleImageRectPrevFirst;
+  
 };
 
 #endif // IMAGEEDITORDRAWPLUGIN_H

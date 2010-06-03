@@ -67,6 +67,12 @@ void CImageEditorUIContainer::ConstructL(const TRect & aRect)
 	ActivateL();
 	}
 
+//judge if it is draw plug-in
+EXPORT_C void CImageEditorUIContainer::IsDrawPlugin(TBool aFlag)
+	{
+	iIsDrawPlugin = aFlag;
+	}
+
 //=============================================================================
 CImageEditorUIContainer::~CImageEditorUIContainer()
 	{
@@ -95,7 +101,10 @@ void CImageEditorUIContainer::SetControl(CCoeControl * aControl)
 	if (iControl)
 		{
 		((CImageEditorControlBase *)iControl)->SetView(iEditorView);
-		iControl->SetRect(Rect() );
+		if(!iIsDrawPlugin)
+			{
+			iControl->SetRect(Rect() );
+			}		
 		}
 	DrawDeferred();
 	}
@@ -111,8 +120,7 @@ void CImageEditorUIContainer::SetView(CImageEditorUIView * aView)
 	}
 
 //=============================================================================
-TKeyResponse CImageEditorUIContainer::OfferKeyEventL(
-		const TKeyEvent & aKeyEvent, TEventCode aType)
+TKeyResponse CImageEditorUIContainer::OfferKeyEventL(const TKeyEvent & aKeyEvent, TEventCode aType)
 	{
 	if (Busy() )
 		{
@@ -123,8 +131,7 @@ TKeyResponse CImageEditorUIContainer::OfferKeyEventL(
 		TKeyResponse res = EKeyWasNotConsumed;
 		if (iControl)
 			{
-			res = ((CCoeControl*)iControl)->OfferKeyEventL(aKeyEvent,
-					aType);
+			res = ((CCoeControl*)iControl)->OfferKeyEventL(aKeyEvent,aType);
 			}
 		return res;
 		}
@@ -147,8 +154,7 @@ void CImageEditorUIContainer::SizeChanged()
 	}
 
 //=============================================================================
-void CImageEditorUIContainer::HandlePointerEventL(
-		const TPointerEvent &aPointerEvent)
+void CImageEditorUIContainer::HandlePointerEventL(const TPointerEvent &aPointerEvent)
 	{
 	if (Busy() )
 		{
@@ -162,12 +168,10 @@ void CImageEditorUIContainer::HandlePointerEventL(
 			}
 		else
 			{
-
 			switch (aPointerEvent.iType)
 				{
 				case TPointerEvent::EButton1Down:
-					{
-					
+					{					
 #ifdef RD_TACTILE_FEEDBACK
 						if ( iTouchFeedBack )
 							{
@@ -175,8 +179,7 @@ void CImageEditorUIContainer::HandlePointerEventL(
 							RDebug::Printf( "ImageEditor::ImageEditorUIContainer: ETouchFeedback" );
 							}
 #endif /* RD_TACTILE_FEEDBACK  */
-						
-					if ( !iEditorView->InZoomingState() )
+						if ( !iEditorView->InZoomingState() )
 						{
 						iEditorView->HandleCommandL(EImageEditorMenuCmdApplyEffect);
 						}
@@ -188,21 +191,17 @@ void CImageEditorUIContainer::HandlePointerEventL(
 					}
 				case TPointerEvent::EDrag:
 					{
-					iXDirChange = iTappedPosition.iX
-							- aPointerEvent.iPosition.iX;
-					iYDirChange = iTappedPosition.iY
-							- aPointerEvent.iPosition.iY;
+					iXDirChange = iTappedPosition.iX - aPointerEvent.iPosition.iX;
+					iYDirChange = iTappedPosition.iY - aPointerEvent.iPosition.iY;
 
 					// Compare total change in pixels (absolute value) to 
 					// threshold value. This is to prevent calling engine's 
 					// Pan-function in every minimal movement                                                         
-					if ( (Abs(iXDirChange) + Abs(iYDirChange) )
-							> KTouchPanTotalMoveThreshold)
+					if ( (Abs(iXDirChange) + Abs(iYDirChange) )	> KTouchPanTotalMoveThreshold )
 						{
 						iTappedPosition = aPointerEvent.iPosition;
 						iEditorView->HandleCommandL(EImageEditorCmdTouchPan);
 						}
-
 					break;
 					}
 				case TPointerEvent::EButton1Up:
@@ -216,11 +215,8 @@ void CImageEditorUIContainer::HandlePointerEventL(
 					break;
 					}
 				}
-
 			}
-
 		}
-
 	}
 
 //=============================================================================
@@ -314,17 +310,14 @@ void CImageEditorUIContainer::Draw(const TRect & /*aRect*/) const
 			MAknsControlContext* cc = AknsDrawUtils::ControlContext( this);
 			AknsDrawUtils::DrawBackground(skin, cc, this, gc, TPoint(0, 0),
 					Rect(), KAknsDrawParamDefault);
-
 			}
 		}
-
 	iWaitIndicator->DrawItem(gc);
 	}
 
 //=============================================================================
 void CImageEditorUIContainer::HandleControlEventL(CCoeControl * /*aControl*/,
-		TCoeEvent /*aEventType*/
-)
+		TCoeEvent /*aEventType*/)
 	{
 
 	}

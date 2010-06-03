@@ -60,9 +60,8 @@ SOURCE          JpTimer.cpp
 
 SOURCEPATH      ../src
 SOURCE          imageeditordrawplugin.cpp
-SOURCE          imageeditordrawcontrol.cpp
 SOURCE          drawpath.cpp
-SOURCE          selectionpopup.cpp
+SOURCE          selectionpopup.cpp imageeditordrawcontrol.cpp AnimationAO.cpp CImageLabel.cpp TimeAO.cpp CustomerComponet.cpp RollAO.cpp
 
 
 USERINCLUDE     .
@@ -101,10 +100,24 @@ LIBRARY         iepb.lib
 LIBRARY         pb.lib
 LIBRARY         systemparameters.lib
 LIBRARY         CommonEngine.lib
+LIBRARY        hlplch.lib eikcoctl.lib eikctl.lib bafl.lib fbscli.lib aknicon.lib egul.lib
+LIBRARY        imageconversion.lib  bitgdi.lib CommonDialogs.lib
+//LIBRARY        ImageEditorUI.LIB
 
 //#if defined (__EXPORT_UNFROZEN_PLUGINS__)
-//EXPORTUNFROZEN
+EXPORTUNFROZEN
 //#endif
 NOSTRICTDEF
 
 // End of File
+START BITMAP imageditorfilterdraw.mbm
+	TARGETPATH resource/apps
+	HEADER
+	SOURCEPATH ../gfx
+	SOURCE c24 top.bmp bottom.bmp
+	SOURCE c4 menumask.bmp
+	SOURCE c24 Right.bmp 15A.bmp
+	SOURCE 1 Leftmask.bmp rightmask.bmp
+	SOURCE c24 Left.bmp
+	SOURCE 1 topmask.bmp bottommask.bmp
+END

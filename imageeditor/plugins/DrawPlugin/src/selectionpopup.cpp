@@ -33,6 +33,7 @@
 #include <ImageEditorUi.mbg>
 #include <ImageEditorUI.rsg>
 #include <draw.rsg>
+#include <drawpath.h>
 
 #include "ResolutionUtil.h"
 #include "selectionpopup.h"
@@ -41,17 +42,23 @@
 // CONSTANTS
 const TInt KGridColumnCount = 5;
 const TInt KGridRowCount = 1;
+const TInt KPenSizeOffset = 153;
 
 
 //=============================================================================
-CSelectionPopup::CSelectionPopup()
+CSelectionPopup::CSelectionPopup(TRgb& aCurrentColor, const TRect& aImageRect)
     {    
     // Set values into an array
+    iItemArray.Append( 2 ); //default: 4
     iItemArray.Append( 4 );
     iItemArray.Append( 8 );
     iItemArray.Append( 16 );
     iItemArray.Append( 32 );
-    iItemArray.Append( 64 );
+    
+    //set defalut color
+    iCurrentColor = aCurrentColor;
+    
+    iImageRect = aImageRect;
     }
 
 //=============================================================================
@@ -87,6 +94,7 @@ void CSelectionPopup::ConstructL (	CCoeControl* aParent )
     {
 	// Set parent
 	SetContainerWindowL( *aParent );  
+
     TFileName iconFile( KImageEditorUiMifFile );
     
     // Create trans popup window graphics
@@ -134,25 +142,29 @@ void CSelectionPopup::ConstructL (	CCoeControl* aParent )
     AknIconUtils::CreateIconL( iPopupSideB, iPopupSideBMask, iconFile, 
             EMbmImageeditoruiQgn_graf_popup_trans_side_b, 
 			EMbmImageeditoruiQgn_graf_popup_trans_side_b_mask );						                                   
-                        					
+                   					
 	//	Activate control
     ActivateL();
     
     }
 
 //=============================================================================
-void CSelectionPopup::CreateColorBitmapsL( TSize aSize )
+void CSelectionPopup::CreateColorBitmapsL( TSize /* aSize */ )
     {    
+    //TODO: to set icon here
     // Generate color bitmaps    
-    iColorBitmapsArray.Reset();    
-    for( TInt i = 0; i < iItemArray.Count(); i++ )
+    iColorBitmapsArray.Reset(); 
+    
+    TSize size(2,2);
+    for( TInt i = iItemArray.Count(); i > 0 ; i-- )
         {
         CFbsBitmap* bitmap = new ( ELeave ) CFbsBitmap;
         CleanupStack::PushL( bitmap );
-        User::LeaveIfError ( bitmap->Create ( aSize, EColor64K ) );
-
+        User::LeaveIfError ( bitmap->Create ( size, EColor64K ) );
+        size.iHeight*=2;
+        size.iWidth*=2;
         //  Compute color for bitmap
-        TRgb color( KRgbBlack );//iRGBArray[i] );		
+        TRgb color( iCurrentColor );//iRGBArray[i] );		
          
     	//	Fill the bitmap with the correct color
     	TUint16 color_64k = ( TUint16 )
@@ -181,14 +193,12 @@ void CSelectionPopup::CreateColorBitmapsL( TSize aSize )
     }
     
 //=============================================================================
-void CSelectionPopup::Draw( const TRect& /*aRect*/ ) const
+void CSelectionPopup::Draw( const TRect& aRect ) const
     {
     const TRgb KHighlightCenterColor (229, 229, 229);
     
     CWindowGc& gc = SystemGc();
-    
-    CPreviewControlBase::DrawPreviewImage (Rect());
-    
+     
     // Change brush to null to enable transparent drawing
     gc.SetBrushStyle (CGraphicsContext::ENullBrush);
                 
@@ -237,6 +247,8 @@ void CSelectionPopup::Draw( const TRect& /*aRect*/ ) const
             
         // draw color bitmap    
         TRect currentRect = iGridRectsArray[index];
+        currentRect.iTl.iX = currentRect.iTl.iX + (currentRect.iBr.iX - currentRect.iTl.iX)/2 - iItemArray[index]/2;
+        currentRect.iTl.iY = currentRect.iTl.iY + (currentRect.iBr.iY - currentRect.iTl.iY)/2 - iItemArray[index]/2;
         gc.BitBlt(currentRect.iTl, iColorBitmapsArray[index]);
         }
                   
@@ -256,7 +268,7 @@ void CSelectionPopup::Draw( const TRect& /*aRect*/ ) const
          iHeadingRect.Width(),
          iHeadingRect.Width()
          );
-            
+        
      CleanupStack::PopAndDestroy( heading );
         
      gc.UseFont( font );
@@ -269,17 +281,13 @@ void CSelectionPopup::Draw( const TRect& /*aRect*/ ) const
      TBidiText::TDirectionality dir = TBidiText::ScriptDirectionality(User::Language());
      CGraphicsContext::TTextAlign align = CGraphicsContext::ELeft;
 
-     if( dir == TBidiText::ERightToLeft )
-        {
-        align = CGraphicsContext::ERight;
-        }
-        gc.SetPenColor(KRgbWhite);
-        gc.DrawText(
-            visual,
-            iHeadingRect,
-            baseline,
-            align,
-            0);
+     if (dir == TBidiText::ERightToLeft)
+		{
+		align = CGraphicsContext::ERight;
+		}
+	gc.SetPenColor(KRgbWhite);
+	gc.DrawText(visual, iHeadingRect, baseline, align, 0);
+
     }
     
 //=============================================================================    
@@ -289,7 +297,12 @@ void CSelectionPopup::SizeChanged()
     TAknLayoutRect layoutRect;
     layoutRect.LayoutRect( Rect(), AknLayoutScalable_Apps::popup_imed_trans_window(0) );
     TRect parentRect = layoutRect.Rect();
-            
+    
+    if(parentRect.iTl.iX > parentRect.iTl.iY)
+    	{
+    	 parentRect.SetRect(parentRect.iTl.iX-KPenSizeOffset,parentRect.iTl.iY,parentRect.iBr.iX-KPenSizeOffset,parentRect.iBr.iY);      
+    	}
+   
 	TAknLayoutRect iconLayout;
 	iconLayout.LayoutRect( parentRect, AknLayoutScalable_Avkon::bg_tb_trans_pane_g1());
 	iPopupCenterRect = iconLayout.Rect();
@@ -324,7 +337,6 @@ void CSelectionPopup::SizeChanged()
 	iconLayout.LayoutRect( listscrollPaneRect, AknLayoutScalable_Apps::grid_imed_colour_35_pane( 1 ));
 	TRect gridPaneRect = iconLayout.Rect();
 	
-	// Calculate grid's cell rects
 	iHighlightRectsArray.Reset();
 	iGridRectsArray.Reset();
 	for( TInt row = 0; row < KGridRowCount; row++ )
@@ -339,8 +351,7 @@ void CSelectionPopup::SizeChanged()
 	        iconLayout.LayoutRect( highlightRect, 
 	                               AknLayoutScalable_Apps::cell_imed_colour_pane_g1(0) );	       
 	        
-	        iGridRectsArray.Append( iconLayout.Rect() );
-	        
+	        iGridRectsArray.Append(iconLayout.Rect());
 	        }
 	    }	
 
@@ -608,18 +619,20 @@ TInt CSelectionPopup::GetSelectedValue() const
 //=============================================================================
 // DIALOG
 //=============================================================================
-TInt CSelectionDialog::RunDlgLD( const CFbsBitmap* aBitmap, 
+TInt CSelectionDialog::RunDlgLD( const CFbsBitmap* aBitmap,
                                       const TRect& aRect, 
-                                      TInt& aSelection )
+                                      TInt& aSelection,
+                                      TRgb& aCurrentColor,
+                                      const TRect& aImageRect)
     {
     CSelectionDialog* dialog = 
-        new (ELeave) CSelectionDialog ( aSelection );
-    dialog->ConstructL( aBitmap, aRect);
+        new (ELeave) CSelectionDialog ( aSelection);
+    dialog->ConstructL( aBitmap, aRect, aCurrentColor, aImageRect);
     return dialog->ExecuteLD( R_IMAGE_EDITOR_COLOR_DIALOG );
     }
 
 //=============================================================================
-CSelectionDialog::CSelectionDialog( TInt& aSelection )
+CSelectionDialog::CSelectionDialog( TInt& aSelection)
 : iCurrentValue( aSelection )
     {
     }
@@ -632,19 +645,21 @@ CSelectionDialog::~CSelectionDialog()
 
 //=============================================================================
 
-void CSelectionDialog::ConstructL( const CFbsBitmap* aBitmap,
-                                        const TRect& aRect )
+void CSelectionDialog::ConstructL( const CFbsBitmap* aBitmap,	
+                                        const TRect& aRect,
+                                        TRgb& aCurrentColor,
+                                        const TRect& aImageRect)
     {    
-    iPopup = new ( ELeave ) CSelectionPopup();
-    iPopup->SetSelectedValue( iCurrentValue);
-    iPopup->ConstructL( this );
+    iPopup = new ( ELeave ) CSelectionPopup(aCurrentColor, aImageRect);
+    iPopup->SetSelectedValue(iCurrentValue);
+    iPopup->ConstructL(this);
     
     SetRect(aRect);   
     
     // Not drawn correctly if calling SetRect()
     iPopup->SetSize(aRect.Size());
     iPopup->SetPosition(TPoint(0,0));
-    iPopup->SetImageL( aBitmap );
+    iPopup->SetImageL( aBitmap ); // set the image which we are editing
     }
 
 //=============================================================================
@@ -744,7 +759,6 @@ void CSelectionDialog::HandlePointerEventL(
     {    
     if( AknLayoutUtils::PenEnabled() )
 	    {
-        TBool draw( EFalse );
         switch( aPointerEvent.iType )
 			{
 			case TPointerEvent::EButton1Down:
@@ -752,8 +766,7 @@ void CSelectionDialog::HandlePointerEventL(
 			    // forward event only if grid area was pressed    
 			    if ( iPopup->GridRect().Contains( aPointerEvent.iPosition ) )
 			        {			        
-			        iPopup->HandlePointerEventL( aPointerEvent );			        
-			        draw = ETrue;
+			        iPopup->HandlePointerEventL( aPointerEvent );
 			        }    		        
 				break;
 				}
@@ -762,7 +775,6 @@ void CSelectionDialog::HandlePointerEventL(
 			    if ( iPopup->GridRect().Contains( aPointerEvent.iPosition ) )
 			        {
 			        iPopup->HandlePointerEventL( aPointerEvent );
-			        draw = ETrue;
 			        }
 				break;		
 				}
@@ -780,11 +792,6 @@ void CSelectionDialog::HandlePointerEventL(
 				break;	
 				}	
 			}
-			
-	    if ( draw )
-	        {
-		    DrawDeferred();    
-	        }	
         }
     }
     

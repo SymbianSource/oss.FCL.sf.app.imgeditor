@@ -20,9 +20,11 @@
 #include <platform_paths.hrh>
 
 #include "../imgeditor_plat/group/bld.inf" 
-#include "../imageeditor/group/bld.inf"
 #include "../imageeditorengine/group/bld.inf"
+#include "../imageeditor/group/bld.inf"
+
 
  
 PRJ_EXPORTS
  
+PRJ_MMPFILES

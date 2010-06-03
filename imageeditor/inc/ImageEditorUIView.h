@@ -522,6 +522,9 @@ public:
     */
     IMPORT_C TBool InZoomingState();
     IMPORT_C TBool IsMemoryInCriticalLevel();
+    
+   
+    
 //@}
 
 protected:
@@ -546,7 +549,6 @@ private:
 
 /** @name Methods:*/
 //@{
-
 	/*	DoActivateL
 	*
 	*	Called when view is activated.
@@ -717,6 +719,8 @@ private:
     CDesCArray*                         iZoomTexts;
     // Popup controller
 	CAknInfoPopupNoteController*        iPopupController;
+	
+
 	
 #ifdef AIW_SUPPORT
     /// AIW Service Handler

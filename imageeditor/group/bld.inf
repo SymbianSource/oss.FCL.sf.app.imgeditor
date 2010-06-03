@@ -38,6 +38,7 @@ PRJ_MMPFILES
 #include "../ImageEditorApp/group/bld.inf"
 
 /// Plugins
+//#ifdef RD_IE_DRAW_PLUGIN
 #include "../plugins/BlackWhitePlugin/group/bld.inf"
 #include "../plugins/NegativePlugin/group/bld.inf"
 #include "../plugins/SepiaPlugin/group/bld.inf"
@@ -54,9 +55,10 @@ PRJ_MMPFILES
 #include "../plugins/RotateRPlugin/group/bld.inf"
 #include "../plugins/ResizePlugin/group/bld.inf"
 #include "../plugins/TextPlugin/group/bld.inf"
-#ifdef RD_IE_DRAW_PLUGIN
+//#endif // RD_IE_DRAW_PLUGIN
+//
 #include "../plugins/DrawPlugin/group/bld.inf"
-#endif // RD_IE_DRAW_PLUGIN
+//
 // Editor AIW Provider
 #include "../EditorProvider/group/bld.inf"
 

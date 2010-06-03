@@ -24,7 +24,7 @@
 
 enum TDrawPgnCommandId
 {
-	EDrawPgnMenuCmdMin 		= EPgnMenuCmdIdBase,
+	EDrawPgnMenuCmdMin 		= EPgnMenuCmdIdBase, //200000
 	EDrawPgnMenuCmdDone,
 	EDrawPgnMenuCmdResize,
 	EDrawPgnMenuCmdColor,

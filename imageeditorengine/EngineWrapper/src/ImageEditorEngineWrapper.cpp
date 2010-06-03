@@ -1359,7 +1359,7 @@ void CEngineWrapper::CopyBufferL (TUint32 * aBuffer)
 {
     LOG( KEngineWrapperLogFile, "CEngineWrapper::CopyBufferL" );
     
-	iScreenBitmap->LockHeapLC();
+//	iScreenBitmap->LockHeapLC();
 
 	TSize size = iScreenBitmap->SizeInPixels();
 	TDisplayMode dmode = iScreenBitmap->DisplayMode();
@@ -1385,7 +1385,7 @@ void CEngineWrapper::CopyBufferL (TUint32 * aBuffer)
 		}
 	}
 
-	CleanupStack::PopAndDestroy(); // iScreenBitmap->LockHeapLC	
+//	CleanupStack::PopAndDestroy(); // iScreenBitmap->LockHeapLC	
 }
 
 //=============================================================================

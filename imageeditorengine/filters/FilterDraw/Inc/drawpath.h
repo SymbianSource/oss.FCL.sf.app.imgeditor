@@ -37,7 +37,8 @@ class RDrawPath : public RArray<TPoint>
 public:
 
     RDrawPath();
-
+	TBuf<20> iBuf;
+    
 public:
     /**
      * Color.
@@ -76,6 +77,7 @@ private: // data
     /**
      * Path color 
      */
+
     TRgb iColor;
 	TSize iSize;
     };

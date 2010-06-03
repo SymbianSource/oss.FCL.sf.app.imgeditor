@@ -69,7 +69,6 @@ SOURCEPATH			../src
 SOURCE				ImageEditorUIView.cpp
 SOURCE				ImageEditorUIContainer.cpp
 SOURCE				ImageEditorControlBase.cpp
-SOURCE				PreviewControlBase.cpp
 SOURCE				SingleParamControl.cpp
 SOURCE				ColorSelectionGrid.cpp
 SOURCE				DrawUtils.cpp
@@ -77,7 +76,7 @@ SOURCE 				PluginGrid.cpp
 SOURCE				WaitIndicator.cpp
 SOURCE				TControlItem.cpp
 SOURCE				ColorSelectionPopup.cpp 
-SOURCE				CMultiLineQueryDialog.cpp
+SOURCE				CMultiLineQueryDialog.cpp PreviewControlBase.cpp
 
 USERINCLUDE			.
 USERINCLUDE			../inc

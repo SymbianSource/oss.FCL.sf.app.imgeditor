@@ -115,6 +115,7 @@ protected:
 //@{
     /// Preview image
 	const CFbsBitmap *		        iPreview;
+	TInt                            iStatuspaneHeight;
 //@}
 
 private:

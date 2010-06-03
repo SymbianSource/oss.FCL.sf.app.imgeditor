@@ -178,7 +178,7 @@ TBool CPluginScanner::PluginStorageNeedsUpdateL () const
     if( scanCount == matchCount && matchCount == iStorage->CountPlugins() )
     {
         LOG(KImageEditorLogFile, "CPluginScanner: plug-in storage up to date");
-        return EFalse; // no update needed
+        return ETrue; // no update needed
     }
     else
     {

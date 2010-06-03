@@ -40,9 +40,7 @@ PRJ_MMPFILES
 #include "../filters/FilterSepia/group/bld.inf"
 #include "../filters/FilterSharpness/group/bld.inf"
 #include "../filters/FilterText/group/bld.inf"
-#ifdef RD_IE_DRAW_PLUGIN
 #include "../filters/FilterDraw/group/bld.inf"
-#endif // RD_IE_DRAW_PLUGIN
 // Image Editor Utilitties
 #include "../ImageEditorUtils/group/bld.inf"
 

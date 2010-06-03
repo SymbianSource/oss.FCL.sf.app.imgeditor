@@ -32,6 +32,7 @@ PRJ_EXPORTS
 //	mmp files
 PRJ_MMPFILES
 drawplugin.mmp
+gnumakefile icons_doodle.mk
 
 PRJ_EXTENSIONS
 START EXTENSION s60/mifconv

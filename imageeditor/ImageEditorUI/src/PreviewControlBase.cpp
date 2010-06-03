@@ -19,6 +19,7 @@
 
 
 #include "PreviewControlBase.h"
+#include <AknUtils.h>
 
 //=============================================================================
 EXPORT_C CPreviewControlBase * CPreviewControlBase::NewL (
@@ -45,6 +46,7 @@ EXPORT_C void CPreviewControlBase::ConstructL (
 	//	Set extent
     SetRect (aRect);
 
+    iStatuspaneHeight = aRect.iBr.iY;
     //  Activate
     ActivateL();
 }
@@ -78,11 +80,15 @@ EXPORT_C void CPreviewControlBase::DrawPreviewImage (const TRect & aRect) const
 	gc.SetPenColor (KRgbBlack);
     gc.SetBrushStyle (CGraphicsContext::ESolidBrush);
 	gc.SetBrushColor (KRgbBlack);
-
+//	TRect rect;
+//	AknLayoutUtils::LayoutMetricsRect( AknLayoutUtils::EApplicationWindow,rect );
+//	TRect ImageRect(iSysPars->VisibleImageRectPrev());
+//
+//	TInt ImageStartPosition = (rect.Height() - aRect.Height())/2;
 	//	Draw preview image if found
 	if ( iPreview && iPreview->Handle() )
 	{
-		gc.BitBlt (TPoint(0,0), iPreview);
+		gc.BitBlt (TPoint(0,iStatuspaneHeight), iPreview);
 	}
     else
     {

@@ -54,11 +54,17 @@ public:
 /** @name Methods:*/
 //@{
 
+	/*	IsDrawPlugin
+	*
+	*	Judge if it is draw plug-in.
+	*   @return - 
+	*/
+	IMPORT_C void IsDrawPlugin(TBool aFlag);
 	/*	Second phase constructor
 	*
 	*   @param aRect - frame rectangle for container
 	*   @return
-	*/
+	*/		
     void ConstructL (const TRect & aRect);
 
 	/*	Destructor
@@ -116,8 +122,7 @@ public:
     *   @param aKeyEvent - the key event
     *   @return -
     */
-    virtual void CImageEditorUIContainer::HandlePointerEventL( 
-                                        const TPointerEvent &aPointerEvent );
+    virtual void CImageEditorUIContainer::HandlePointerEventL(const TPointerEvent &aPointerEvent);
     
 	/*	CountComponentControls
 	*
@@ -246,11 +251,6 @@ protected:
 	*/
 	virtual TTypeUid::Ptr MopSupplyObject( TTypeUid aId );
 
-
-//@}
-
-/** @name Members:*/
-//@{
 //@}
 
 private:
@@ -308,6 +308,8 @@ private:
     TInt                        iXDirChange;
     TInt                        iYDirChange;
     
+    //for draw plguin
+    TBool iIsDrawPlugin;
     // Wait indicator (own)
     CWaitIndicator* iWaitIndicator;
     
