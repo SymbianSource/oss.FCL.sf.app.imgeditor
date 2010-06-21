@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="text/ecmascript" zoomAndPan="magnify" baseProfile="tiny" contentStyleType="text/css" version="1.1" width="57px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 57 49" height="49px" x="0px" y="0px">
-    <path d="M 36.642 42.702 C 36.642 42.702 36.958 46.047 32.48 46.047 L 22.581 46.047 C 18.106998 46.047 18.412998 42.702 18.412998 42.702 L 18.426998 25.809 L 8.207 25.809 L 27.351 3.9 L 46.849 25.813 L 36.634 25.813 L 36.642 42.702 z " fill-opacity="0.2"/>
-    <path d="M 35.424 41.203 C 35.424 41.203 35.714 44.313 31.626999 44.313 L 22.591 44.313 C 18.51 44.313 18.786999 41.203 18.786999 41.203 L 18.8 25.496 L 9.474 25.496 L 26.945 5.12 L 44.739 25.495998 L 35.419 25.495998 L 35.424 41.203 z " fill-opacity="0.5"/>
-    <g>
-        <linearGradient x1="2267.2646" gradientTransform="matrix(-1 0 0 -1 2294.793 2999.7793)" y1="2987.833" x2="2267.2646" gradientUnits="userSpaceOnUse" y2="2917.8977" xlink:type="simple" xlink:actuate="onLoad" id="SVGID_1_" xlink:show="other">
-            <stop stop-color="#3687ff" offset="0"/>
-            <stop stop-color="#051f7d" offset="1"/>
-        </linearGradient>
-        <path fill="url(#SVGID_1_)" d="M 36.003 42.15 C 36.003 42.15 36.299 45.260002 32.133 45.260002 L 22.926998 45.260002 C 18.769999 45.260002 19.051998 42.15 19.051998 42.15 L 19.063997 26.441002 L 9.562 26.441002 L 27.362 6.066002 L 45.496002 26.441002 L 35.997 26.441002 L 36.003 42.15 z "/>
-        <path fill="#ffffff" d="M 27.367 8.685 L 13.234 24.878 L 20.923 24.878 L 20.913 42.251 C 20.909 42.262 20.879 42.908 21.313 43.294 L 20.021 44.389 C 18.955 43.469 19.043 42.154 19.043 42.154 L 19.056 26.444 L 9.553 26.444 L 27.361 6.067 L 27.367 8.685 z " fill-opacity="0.3"/>
-        <path d="M 27.361 6.064 L 45.495003 26.441002 L 35.995003 26.441002 L 36.009003 42.15 C 36.009003 42.15 36.299004 45.260002 32.132004 45.260002 L 22.93 45.260002 C 21.482 45.260002 20.6 44.875004 20.027 44.392002 L 21.328001 43.291 C 21.635 43.562 22.165 43.697 22.93 43.697 L 32.132 43.697 C 33.557 43.697 34.153 43.234997 34.153 42.152 L 34.134 24.877 L 41.781998 24.877 L 27.38 8.688 L 27.361 6.064 z " fill-opacity="0.2"/>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 13.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="41.208px" height="49.406px" viewBox="0 0 41.208 49.406" xml:space="preserve">
+<path fill="none" stroke="#FFFFFF" d="M25.296,8.304"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="22.4443" y1="-0.8784" x2="21.7779" y2="48.455">
+	<stop  offset="0.0165" style="stop-color:#999999"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" stroke="#FFFFFF" stroke-width="2" d="M30.5,5.125L30.5,5.125l-3.414,6.199
+	C59.667,29.792,23.75,67.375,3.75,36.875l4.583-9.416c13.334,23.666,32.334,1.666,12.811-8.704l0,0L17.29,24.42l0,0L14.161,8.307
+	L30.5,5.125z"/>
+<g>
+	<line fill="none" stroke="#CCCCCC" stroke-width="2" x1="6.125" y1="0" x2="6.125" y2="13"/>
+	<line fill="none" stroke="#CCCCCC" stroke-width="2" x1="0" y1="6.625" x2="12.5" y2="6.625"/>
+	<line fill="none" stroke="#CCCCCC" stroke-width="2" x1="10.125" y1="2.5" x2="1.875" y2="10.75"/>
+	<line fill="none" stroke="#CCCCCC" stroke-width="2" x1="10.125" y1="10.75" x2="1.875" y2="2.5"/>
+</g>
 </svg>

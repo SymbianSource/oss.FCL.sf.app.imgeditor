@@ -54,17 +54,16 @@ _LIT(KDrawPluginLogFile,"drawplugin.log");
 //  CONSTANTS
 const TInt KWait = 1;
 const TInt KMainTextIndex = 0;
-//#define HORIZ TPoint(0,72),TPoint(502,360)
-//#define VERTICAL TPoint(0,92),TPoint(360,579)
+
 // ---------------------------------------------------------------------------
 // NewL
 // ---------------------------------------------------------------------------
-//
+
 CImageEditorDrawControl* CImageEditorDrawControl::NewL(const TRect& aRect,
 		CCoeControl* aParent, RPointerArray<CDrawPath>& aPaths, TRgb& aRgb,
 		TSize& aSize, TBool &aDisplayTool)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NewL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NewL()");
 
 	CImageEditorDrawControl * self = new (ELeave) CImageEditorDrawControl(
 			aPaths, aRgb, aSize, aDisplayTool);
@@ -77,7 +76,6 @@ CImageEditorDrawControl* CImageEditorDrawControl::NewL(const TRect& aRect,
 // ---------------------------------------------------------------------------
 // CImageEditorDrawControl
 // ---------------------------------------------------------------------------
-//
 CImageEditorDrawControl::CImageEditorDrawControl(
 		RPointerArray<CDrawPath>& aPaths, TRgb& aRgb, TSize& aSize,
 		TBool& aDisplayTool) :
@@ -92,11 +90,11 @@ CImageEditorDrawControl::CImageEditorDrawControl(
 // ---------------------------------------------------------------------------
 // ~CImageEditorDrawControl()
 // ---------------------------------------------------------------------------
-//
+
 CImageEditorDrawControl::~CImageEditorDrawControl()
 	{
-	LOG(KDrawPluginLogFile,
-			"CImageEditorDrawControl::~CImageEditorDrawControl()");
+		LOG(KDrawPluginLogFile,
+				"CImageEditorDrawControl::~CImageEditorDrawControl()");
 	delete iCustomComponet;
 	delete iTimer;
 	delete iIndicator;
@@ -108,10 +106,10 @@ CImageEditorDrawControl::~CImageEditorDrawControl()
 	delete iGc;
 	delete iBitmapDev;
 	delete iAnimationAO;
-	
+
 	iUndoPaths.ResetAndDestroy();
 	iResLoader.Close();
-	
+
 	for (int i = 0; i < iTotalComponent; i++)
 		{
 		CImageLabel* &temp = iLabels[i];
@@ -123,26 +121,23 @@ CImageEditorDrawControl::~CImageEditorDrawControl()
 		}
 	iLabels.ResetAndDestroy();
 
-
 	}
 
 // ---------------------------------------------------------------------------
 // ConstructL
 // ---------------------------------------------------------------------------
-//
 void CImageEditorDrawControl::ConstructL(const TRect& aRect,
 		CCoeControl* aParent)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::ConstructL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::ConstructL()");
 
 	CreateWindowL();
 	EnableDragEvents();
-	//iRollDirection = EFalse;
+	
 	iStatuspaneHeight = aRect.iTl.iY;
 	iUndo = EFalse;
 	iRedo = EFalse;
 	iCanRedo = EFalse;
-	//iRollDirection = ETrue;
 	//  Create resource utility
 	TFileName resFile;
 	// resource file name
@@ -162,20 +157,17 @@ void CImageEditorDrawControl::ConstructL(const TRect& aRect,
 	iTooltipResize = ControlEnv()->AllocReadResourceL(R_TOOLTIP_TEXT_RESIZE);
 
 	SetExtentToWholeScreen();
-	//	TRect a(HORIZ);
-	//	iClientRectH = a;
-	//	TRect b(VERTICAL);
-	//	iClientRectV = b;
+	
 	iCustomComponetClick = EFalse;
 	TRect rect = Rect();
-	//iDisplayTool=ETrue;
+	//judge the current screen status.
 	if (rect.Width() < rect.Height())
 		{
-		InitializeMainMenu(EMainMenuHorizontal);
+		InitializeMainMenu(EMainMenuVertical);
 		}
 	else if (rect.Width() > rect.Height())
 		{
-		InitializeMainMenu(EMainMenuVertical);
+		InitializeMainMenu(EMainMenuHorizontal);
 		}
 
 	TRect Trect(TPoint(0, 0), TPoint(50, 50));
@@ -187,7 +179,10 @@ void CImageEditorDrawControl::ConstructL(const TRect& aRect,
 	ActivateL();
 
 	}
-
+// ---------------------------------------------------------------------------
+// CImageEditorDrawControl::InitializeMainMenu£¨£©
+// initialize tool bar component.
+// ---------------------------------------------------------------------------
 void CImageEditorDrawControl::InitializeMainMenu(
 		TMainMenuLayout aMainMenuLayout)
 	{
@@ -197,7 +192,7 @@ void CImageEditorDrawControl::InitializeMainMenu(
 	User::LeaveIfError(CompleteWithAppPath(svgFile));
 	iTotalComponent = 7;
 	TRect clipRect;
-	if (iMainMenuLayout == EMainMenuHorizontal)
+	if (iMainMenuLayout == EMainMenuVertical)
 		{
 		iLoopMenuRect = TRect(TPoint(0, Rect().iBr.iY - 87), TSize(360, 87));
 
@@ -219,12 +214,12 @@ void CImageEditorDrawControl::InitializeMainMenu(
 				}
 
 			CImageLabel* label = CImageLabel::NewL(this, clipRect,
-					CImageLabel::ELabelHorizontal);
+					CImageLabel::ELabelVertical);
 			label->SetHandlePointerObserver(this);
 			iLabels.Append(label);
 			}
 		}
-	else if (iMainMenuLayout == EMainMenuVertical)
+	else if (iMainMenuLayout ==EMainMenuHorizontal )
 		{
 		iLoopMenuRect = TRect(TPoint(Rect().iBr.iX - 87, 0), TSize(87, 360));
 
@@ -245,31 +240,31 @@ void CImageEditorDrawControl::InitializeMainMenu(
 				}
 
 			CImageLabel* label = CImageLabel::NewL(this, clipRect,
-					CImageLabel::ELabelVertical);
+					CImageLabel::ELabelHorizontal);
 			label->SetHandlePointerObserver(this);
 			iLabels.Append(label);
 			}
 		}
 
-	iLabels[0]->SetImage(svgFile, EMbmIcons_doodlePensize);
+	iLabels[0]->SetImage(svgFile, EMbmIcons_doodlePen);
 	iLabels[0]->SetTooltip(_L("Pensize"));
 
-	iLabels[1]->SetImage(svgFile, EMbmIcons_doodlePalette);
+	iLabels[1]->SetImage(svgFile, EMbmIcons_doodlePalette_colored);
 	iLabels[1]->SetTooltip(_L("Palette"));
 
 	iLabels[2]->SetImage(svgFile, EMbmIcons_doodleUndo);
 	iLabels[2]->SetTooltip(_L("Undo"));
 
-	iLabels[3]->SetImage(svgFile, EMbmIcons_doodlePalette);
+	iLabels[3]->SetImage(svgFile, EMbmIcons_doodleRedo);
 	iLabels[3]->SetTooltip(_L("Redo"));
-
-	iLabels[4]->SetImage(svgFile, EMbmIcons_doodleSave);
+	
+	iLabels[4]->SetImage(svgFile, EMbmIcons_doodleSave1);
 	iLabels[4]->SetTooltip(_L("Save"));
 
-	iLabels[5]->SetImage(svgFile, EMbmIcons_doodleMenu);
+	iLabels[5]->SetImage(svgFile, EMbmIcons_doodleInfo);
 	iLabels[5]->SetTooltip(_L("About"));
 
-	iLabels[6]->SetImage(svgFile, EMbmIcons_doodlePensize);
+	iLabels[6]->SetImage(svgFile, EMbmIcons_doodleSave2);
 	iLabels[6]->SetTooltip(_L("Null"));
 
 	iAnimationAO = CAnimationAO::NewL();
@@ -284,7 +279,6 @@ void CImageEditorDrawControl::InitializeMainMenu(
 
 	iPointStartInLoopRect = EFalse;
 	iDragIsStart = EFalse;
-	iEnableAnimationEffect = EFalse;
 	iDragOffset = 0;
 
 	}
@@ -295,7 +289,7 @@ void CImageEditorDrawControl::InitializeMainMenu(
 //
 void CImageEditorDrawControl::SetView(CAknView* aView)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SetView()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SetView()");
 	ASSERT(aView);
 	iEditorView = aView;
 	}
@@ -306,7 +300,7 @@ void CImageEditorDrawControl::SetView(CAknView* aView)
 //
 void CImageEditorDrawControl::SetSelectedUiItemL(CPluginInfo* aItem)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SetSelectedUiItemL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SetSelectedUiItemL()");
 	ASSERT(aItem);
 	iItem = aItem;
 	delete iNaviPaneText;
@@ -322,7 +316,7 @@ void CImageEditorDrawControl::SetSelectedUiItemL(CPluginInfo* aItem)
 TKeyResponse CImageEditorDrawControl::OfferKeyEventL(
 		const TKeyEvent& aKeyEvent, TEventCode aType)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::OfferKeyEventL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::OfferKeyEventL()");
 
 	TKeyResponse response = EKeyWasNotConsumed;
 
@@ -459,7 +453,7 @@ void CImageEditorDrawControl::SizeChanged()
 		}
 	if (iDragIsStart)
 		{
-		if (iMainMenuLayout == EMainMenuHorizontal)
+		if (iMainMenuLayout == EMainMenuVertical)
 			{
 			for (TInt i = 0; i < iTotalComponent; i++)
 				{
@@ -472,7 +466,7 @@ void CImageEditorDrawControl::SizeChanged()
 					}
 				}
 			}
-		else if (iMainMenuLayout == EMainMenuVertical)
+		else if (iMainMenuLayout ==EMainMenuHorizontal )
 			{
 			for (TInt i = 0; i < iTotalComponent; i++)
 				{
@@ -488,11 +482,19 @@ void CImageEditorDrawControl::SizeChanged()
 		DrawNow();
 		}
 	}
-
+// ---------------------------------------------------------------------------
+// CImageEditorDrawControl::SetToolBarStatus()
+// Set and get current status : display or hidden.
+// ---------------------------------------------------------------------------
+//
 void CImageEditorDrawControl::SetToolBarStatus()
 	{
-
-	if (iMainMenuLayout == EMainMenuHorizontal)
+	if (iFlagDragToolBar)
+		{
+		iDisplayTool = ETrue;
+		iFlagDragToolBar = EFalse;
+		}
+	if (iMainMenuLayout == EMainMenuVertical)
 		{
 		TInt leftX = iLabels[0]->Rect().iTl.iX;
 		TInt rightX = iLabels[iTotalComponent - 1]->Rect().iBr.iX;
@@ -501,7 +503,7 @@ void CImageEditorDrawControl::SetToolBarStatus()
 		else if (rightX == 0)
 			iDisplayTool = EFalse;
 		}
-	else if (iMainMenuLayout == EMainMenuVertical)
+	else if (iMainMenuLayout ==EMainMenuHorizontal )
 		{
 		TInt topY = iLabels[0]->Rect().iTl.iY;
 		TInt bottomY = iLabels[iTotalComponent - 1]->Rect().iBr.iY;
@@ -519,8 +521,8 @@ void CImageEditorDrawControl::SetToolBarStatus()
 //
 TDesC& CImageEditorDrawControl::GetParam()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetParam()");
-	LOGDES(KDrawPluginLogFile, iParam);
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetParam()");
+		LOGDES(KDrawPluginLogFile, iParam);
 	return iParam;
 	}
 
@@ -531,7 +533,7 @@ TDesC& CImageEditorDrawControl::GetParam()
 void CImageEditorDrawControl::SetSystemParameters(
 		const CSystemParameters* aPars)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SetSystemParameters()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SetSystemParameters()");
 	ASSERT(aPars);
 	iSysPars = aPars;
 	}
@@ -542,7 +544,7 @@ void CImageEditorDrawControl::SetSystemParameters(
 //
 void CImageEditorDrawControl::HandlePluginCommandL(const TInt aCommand)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::HandlePluginCommandL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::HandlePluginCommandL()");
 
 	switch (aCommand)
 		{
@@ -633,7 +635,7 @@ void CImageEditorDrawControl::HandlePluginCommandL(const TInt aCommand)
 //
 TInt CImageEditorDrawControl::GetSoftkeyIndexL()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetSoftkeyIndexL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetSoftkeyIndexL()");
 	// : Check needed states
 	TInt state(2);
 	return state;
@@ -654,7 +656,7 @@ TInt CImageEditorDrawControl::GetContextMenuResourceId()
 //
 TBitField CImageEditorDrawControl::GetDimmedMenuItems()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetDimmedMenuItems()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetDimmedMenuItems()");
 
 	TBitField dimmedMenuItems;
 	TInt count = iItem->MenuItems().Count();
@@ -694,7 +696,7 @@ TPtrC CImageEditorDrawControl::GetNaviPaneTextL(
 		TBool& aLeftNaviPaneScrollButtonVisibile,
 		TBool& aRightNaviPaneScrollButtonVisible)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetNaviPaneTextL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetNaviPaneTextL()");
 
 	aLeftNaviPaneScrollButtonVisibile = EFalse;
 	aRightNaviPaneScrollButtonVisible = EFalse;
@@ -738,7 +740,7 @@ void CImageEditorDrawControl::Draw(const TRect& aRect) const
 //
 void CImageEditorDrawControl::NaviDown()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviDown()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviDown()");
 	}
 
 // ---------------------------------------------------------------------------
@@ -747,7 +749,7 @@ void CImageEditorDrawControl::NaviDown()
 //
 void CImageEditorDrawControl::NaviUp()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviUp()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviUp()");
 	}
 
 // ---------------------------------------------------------------------------
@@ -756,7 +758,7 @@ void CImageEditorDrawControl::NaviUp()
 //
 void CImageEditorDrawControl::NaviRight()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviRight()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviRight()");
 	}
 
 // ---------------------------------------------------------------------------
@@ -765,7 +767,7 @@ void CImageEditorDrawControl::NaviRight()
 //
 void CImageEditorDrawControl::NaviLeft()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviLeft()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::NaviLeft()");
 	}
 
 // ---------------------------------------------------------------------------
@@ -774,7 +776,7 @@ void CImageEditorDrawControl::NaviLeft()
 //
 void CImageEditorDrawControl::SelectSizeL()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SelectSizeL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::SelectSizeL()");
 	// Symmetric line width / height
 	TInt size(iSize.iWidth);
 	CSelectionDialog::RunDlgLD(iPreview, Rect(), size, iRgb,
@@ -788,9 +790,9 @@ void CImageEditorDrawControl::SelectSizeL()
 //
 void CImageEditorDrawControl::StoreTempParams()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::StoreTempParams("
-			""
-			")");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::StoreTempParams("
+				""
+				")");
 	}
 
 // ---------------------------------------------------------------------------
@@ -799,7 +801,7 @@ void CImageEditorDrawControl::StoreTempParams()
 //
 void CImageEditorDrawControl::RestoreTempParams()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::RestoreTempParams()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::RestoreTempParams()");
 	}
 
 // ---------------------------------------------------------------------------
@@ -808,10 +810,10 @@ void CImageEditorDrawControl::RestoreTempParams()
 //
 void CImageEditorDrawControl::GetHelpContext(TCoeHelpContext& aContext) const
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetHelpContext()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::GetHelpContext()");
 
 	aContext.iMajor = TUid::Uid(UID_IMAGE_EDITOR);
-	aContext.iContext = KSIE_HLP_EDIT_TEXT;
+	aContext.iContext = KSIE_HLP_EDIT_DRAW;
 	}
 
 // ---------------------------------------------------------------------------
@@ -820,7 +822,7 @@ void CImageEditorDrawControl::GetHelpContext(TCoeHelpContext& aContext) const
 //
 void CImageEditorDrawControl::PrepareL()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::PrepareL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::PrepareL()");
 
 	//	Get current view port
 	TRect rect = iSysPars->VisibleImageRectPrev();
@@ -836,7 +838,7 @@ void CImageEditorDrawControl::PrepareL()
 //
 void CImageEditorDrawControl::LoadIndicatorL(TInt aBitmapInd, TInt aMaskInd)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::LoadIndicatorL()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::LoadIndicatorL()");
 
 	//  Delete old indicator
 	delete iIndicator;
@@ -881,7 +883,7 @@ TPoint CImageEditorDrawControl::ComputeIndicatorPosition() const
 //
 TBool CImageEditorDrawControl::IsReadyToRender() const
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::IsReadyToRender()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::IsReadyToRender()");
 	return iReadyToRender;
 	}
 
@@ -891,9 +893,9 @@ TBool CImageEditorDrawControl::IsReadyToRender() const
 //
 void CImageEditorDrawControl::StoreParameters(TBool aLastItem, TBool aDone)
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::StoreParameters()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::StoreParameters()");
 	RDebug::Print(_L("CImageEditorDrawControl::StoreParameters color[%d]"),
-			iRgb.Internal());
+	iRgb.Internal());
 
 	iParam.Copy(_L("x "));
 	iParam.AppendNum(iX);
@@ -931,7 +933,7 @@ void CImageEditorDrawControl::StoreParameters(TBool aLastItem, TBool aDone)
 //
 void CImageEditorDrawControl::TimerCallBack()
 	{
-	LOG(KDrawPluginLogFile, "CImageEditorDrawControl::TimerCallBack()");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::TimerCallBack()");
 
 	if (iTickCount > KDefaultFastKeyTimerMultiplyThresholdInTicks)
 		{
@@ -970,8 +972,8 @@ void CImageEditorDrawControl::TimerCallBack()
 			default:
 				break;
 			}
-		//StoreParameters();
-		TRAP_IGNORE(iEditorView->HandleCommandL(EImageEditorCmdRender));
+			//StoreParameters();
+			TRAP_IGNORE(iEditorView->HandleCommandL(EImageEditorCmdRender));
 		iTimer->Call(KWait);
 		}
 	}
@@ -982,8 +984,8 @@ void CImageEditorDrawControl::TimerCallBack()
 //
 void CImageEditorDrawControl::StorePosAndScaleRelScreen()
 	{
-	LOG(KDrawPluginLogFile,
-			"CImageEditorClipartControl::StorePosAndScaleRelScreen()");
+		LOG(KDrawPluginLogFile,
+				"CImageEditorClipartControl::StorePosAndScaleRelScreen()");
 	iParam.Copy(_L("nop"));
 	}
 
@@ -993,8 +995,8 @@ void CImageEditorDrawControl::StorePosAndScaleRelScreen()
 //
 void CImageEditorDrawControl::RestorePosAndScaleRelScreen()
 	{
-	LOG(KDrawPluginLogFile,
-			"CImageEditorClipartControl::RestorePosAndScaleRelScreen()");
+		LOG(KDrawPluginLogFile,
+				"CImageEditorClipartControl::RestorePosAndScaleRelScreen()");
 	}
 
 // ---------------------------------------------------------------------------
@@ -1004,9 +1006,9 @@ void CImageEditorDrawControl::RestorePosAndScaleRelScreen()
 void CImageEditorDrawControl::StorePosAndScaleRelImage()
 	{
 	TReal relscale = iSysPars->RelScale();
-	LOGFMT(KDrawPluginLogFile,
-			"CImageEditorClipartControl::StorePosAndScaleRelImage():%g",
-			relscale);
+		LOGFMT(KDrawPluginLogFile,
+				"CImageEditorClipartControl::StorePosAndScaleRelImage():%g",
+				relscale);
 	}
 
 // ---------------------------------------------------------------------------
@@ -1016,9 +1018,9 @@ void CImageEditorDrawControl::StorePosAndScaleRelImage()
 void CImageEditorDrawControl::RestorePosAndScaleRelImage()
 	{
 	TReal relscale = iSysPars->RelScale();
-	LOGFMT(KDrawPluginLogFile,
-			"CImageEditorClipartControl::RestorePosAndScaleRelImage():%g",
-			relscale);
+		LOGFMT(KDrawPluginLogFile,
+				"CImageEditorClipartControl::RestorePosAndScaleRelImage():%g",
+				relscale);
 	}
 
 // ---------------------------------------------------------------------------
@@ -1055,13 +1057,13 @@ void CImageEditorDrawControl::HandlePointerEventL(
 	{
 	SetToolBarStatus();
 	RDebug::Print(_L("CImageEditorDrawControl::HandlePointerEventL pen[%d]"),
-			AknLayoutUtils::PenEnabled());
+	AknLayoutUtils::PenEnabled());
 	if (iRollflag)
 		return;
 	if (AknLayoutUtils::PenEnabled() && !Busy())
 		{
 		RDebug::Print(_L("CImageEditorDrawControl::iType [%d]"),
-				aPointerEvent.iType);
+		aPointerEvent.iType);
 		TBool lastItem(EFalse);
 		TPoint point = aPointerEvent.iPosition;
 
@@ -1073,7 +1075,7 @@ void CImageEditorDrawControl::HandlePointerEventL(
 				iButtonDownPoint = point;
 				iLastPointEventType = EFalse;
 				CCoeControl::HandlePointerEventL(aPointerEvent);
-
+                 //Handle Drag tool bar event.
 				if (iLoopMenuRect.Contains(point) && !iCustomComponetClick
 						&& iDisplayTool)
 
@@ -1086,13 +1088,14 @@ void CImageEditorDrawControl::HandlePointerEventL(
 						}
 
 					}
+				//Doodle event.
 				else if ((!iLoopMenuRect.Contains(point)
 						&& !iCustomComponetClick && iDisplayTool)
 						|| (!iDisplayTool && !iCustomComponetClick))
 					{
 					iPointStartInLoopRect = EFalse;
 					//System dispose
-					iReadyToRender = EFalse;					
+					iReadyToRender = EFalse;
 					CDrawPath* lastPath = CDrawPath::NewL();
 					CleanupStack::PushL(lastPath);
 					lastPath->SetColor(iRgb);
@@ -1112,16 +1115,16 @@ void CImageEditorDrawControl::HandlePointerEventL(
 				iReadyToRender = ETrue;
 				iCustomComponetClick = EFalse;
 				lastItem = ETrue;
-				HandleMainMenuButtonUp(point);
 				CCoeControl::HandlePointerEventL(aPointerEvent);
+				HandleMainMenuButtonUp(point);
 				DrawNow();
-		
+
 				}
 				break;
 			case TPointerEvent::EDrag:
 				{
 				CCoeControl::HandlePointerEventL(aPointerEvent);
-				//System dispose		
+			    //Mark last event use for custompoent.	
 				iLastPointEventType = ETrue;
 
 				if ((iDisplayTool && iPaths.Count() && !iCustomComponetClick
@@ -1136,7 +1139,7 @@ void CImageEditorDrawControl::HandlePointerEventL(
 					SetPositionOnImage(aPointerEvent.iPosition);
 					path->AddItemL(aPointerEvent.iPosition);
 					}
-				//Self dispose
+				//Drag customcomponent event
 				if (iCustomComponetClick)
 					{
 					TPoint con(aPointerEvent.iPosition.iX - 25,
@@ -1144,10 +1147,11 @@ void CImageEditorDrawControl::HandlePointerEventL(
 					iCustomComponet->SetExtent(con, TSize(50, 50));
 					DrawNow();
 					}
-
+                //Drag tool bar event
 				if (iDisplayTool && iPointStartInLoopRect)
 
 					{
+					iFlagDragToolBar = ETrue;
 					HandleMainMenuButtonDrag(point);
 					}
 				}
@@ -1172,12 +1176,13 @@ void CImageEditorDrawControl::HandlePointerEventL(
 	}
 
 // ---------------------------------------------------------------------------
-// HandleMainMenuButtonUp
+// CImageEditorDrawControl::HandleMainMenuButtonUp()
+//
 // ---------------------------------------------------------------------------
 //
 void CImageEditorDrawControl::HandleMainMenuButtonUp(TPoint aPoint)
 	{
-	if (iMainMenuLayout == EMainMenuHorizontal)
+	if (iMainMenuLayout == EMainMenuVertical)
 		{
 		if (iDragIsStart)
 			{
@@ -1193,7 +1198,7 @@ void CImageEditorDrawControl::HandleMainMenuButtonUp(TPoint aPoint)
 				}
 			}
 		}
-	else if (iMainMenuLayout == EMainMenuVertical)
+	else if (iMainMenuLayout ==EMainMenuHorizontal )
 		{
 		if (iDragIsStart)
 			{
@@ -1217,14 +1222,14 @@ void CImageEditorDrawControl::HandleMainMenuButtonUp(TPoint aPoint)
 //
 void CImageEditorDrawControl::HandleMainMenuButtonDrag(TPoint aPoint)
 	{
-	if (iMainMenuLayout == EMainMenuHorizontal)
+	if (iMainMenuLayout == EMainMenuVertical)
 		{
 		if (iPointStartInLoopRect && !iDragIsStart && Abs(aPoint.iX
 				- iButtonDownPoint.iX) >= DRAG_LENGTH)
 			{
 			iDragIsStart = ETrue;
 			iDragStartPoint = aPoint;
-	
+
 			for (TInt i = 0; i < iTotalComponent; i++)
 				{
 				if (iLabels[i]->Rect().Contains(iButtonDownPoint))
@@ -1240,19 +1245,19 @@ void CImageEditorDrawControl::HandleMainMenuButtonDrag(TPoint aPoint)
 			iDragUpPoint = aPoint;
 			iDragOffset = aPoint.iX - iDragStartPoint.iX;
 			iDragStartPoint = aPoint;
-			
+
 			CalculateEffectiveOffset();
 			SizeChanged();
 			}
 		}
-	else if (iMainMenuLayout == EMainMenuVertical)
+	else if (iMainMenuLayout ==EMainMenuHorizontal )
 		{
 		if (iPointStartInLoopRect && !iDragIsStart && Abs(aPoint.iY
 				- iButtonDownPoint.iY) >= DRAG_LENGTH)
 			{
 			iDragIsStart = ETrue;
 			iDragStartPoint = aPoint;
-		
+
 			for (TInt i = 0; i < iTotalComponent; i++)
 				{
 				if (iLabels[i]->Rect().Contains(iButtonDownPoint))
@@ -1268,7 +1273,7 @@ void CImageEditorDrawControl::HandleMainMenuButtonDrag(TPoint aPoint)
 			iDragUpPoint = aPoint;
 			iDragOffset = aPoint.iY - iDragStartPoint.iY;
 			iDragStartPoint = aPoint;
-			
+
 			CalculateEffectiveOffset();
 			SizeChanged();
 			}
@@ -1331,7 +1336,7 @@ void CImageEditorDrawControl::HandlePointerNotify(CCoeControl* aComponent)
 		iEditorView->HandleCommandL(EImageEditorCmdRender);
 		iUndo = EFalse;
 		}
-	//redo
+	//save and quit
 	else if (iLabels[3] == dynamic_cast<CImageLabel*> (aComponent))
 		{
 		iRedo = ETrue;
@@ -1340,7 +1345,6 @@ void CImageEditorDrawControl::HandlePointerNotify(CCoeControl* aComponent)
 		iEditorView->HandleCommandL(EImageEditorCmdRender);
 		iRedo = EFalse;
 		}
-	//save and exit
 	else if (iLabels[4] == dynamic_cast<CImageLabel*> (aComponent))
 		{
 		iPopupController->HideInfoPopupNote();
@@ -1349,7 +1353,7 @@ void CImageEditorDrawControl::HandlePointerNotify(CCoeControl* aComponent)
 		}
 	else if (iLabels[5] == dynamic_cast<CImageLabel*> (aComponent))
 		{
-
+        iEditorView->HandleCommandL(EImageEditorMenuCmdHelp);
 		}
 	else if (iLabels[6] == dynamic_cast<CImageLabel*> (aComponent))
 		{
@@ -1361,7 +1365,7 @@ void CImageEditorDrawControl::HandlePointerNotify(CCoeControl* aComponent)
 			{
 			iCustomComponetClick = ETrue;
 			}
-		
+
 		if ((!iCustomComponet->GetButtonType()) && (!iLastPointEventType))
 			{
 			StartTheAnimation();
@@ -1385,10 +1389,10 @@ void CImageEditorDrawControl::SetPositionOnImage(TPoint aPointedPosition)
 	TInt xPosFactorDivider(visibleImageRectPrev.Width());
 	TInt yPosFactorDivider(visibleImageRectPrev.Height());
 
-	LOGFMT2(KDrawPluginLogFile, "CImageEditorDrawControl::vir w:%d h:%d",
-			visibleImageRect.Width(), visibleImageRect.Height());
-	LOGFMT2(KDrawPluginLogFile, "CImageEditorDrawControl::virp w:%d h:%d",
-			visibleImageRectPrev.Width(), visibleImageRectPrev.Height());
+		LOGFMT2(KDrawPluginLogFile, "CImageEditorDrawControl::vir w:%d h:%d",
+				visibleImageRect.Width(), visibleImageRect.Height());
+		LOGFMT2(KDrawPluginLogFile, "CImageEditorDrawControl::virp w:%d h:%d",
+				visibleImageRectPrev.Width(), visibleImageRectPrev.Height());
 
 	// Dividing by zero will cause panic -> check
 	if (xPosFactorDivider == 0 || yPosFactorDivider == 0)
@@ -1407,8 +1411,8 @@ void CImageEditorDrawControl::SetPositionOnImage(TPoint aPointedPosition)
 		//				- visibleImageRectPrev.iTl.iY) / yPosFactorDivider);
 		TReal yPositionFactor(TReal(aPointedPosition.iY
 				- visibleImageRectPrev.iTl.iY) / yPosFactorDivider);
-		LOGFMT2(KDrawPluginLogFile, "CImageEditorDrawControl::pfx:%g pfy:%g",
-				xPositionFactor, yPositionFactor);
+			LOGFMT2(KDrawPluginLogFile, "CImageEditorDrawControl::pfx:%g pfy:%g",
+					xPositionFactor, yPositionFactor);
 		// Calculate position on visible image		
 
 		iX = visibleImageRect.iTl.iX + visibleImageRect.Width()
@@ -1418,9 +1422,9 @@ void CImageEditorDrawControl::SetPositionOnImage(TPoint aPointedPosition)
 				* yPositionFactor + 0.5;
 		}
 
-	LOGFMT4(KDrawPluginLogFile,
-			"CImageEditorDrawControl::Draw x:%d iX:%d y:%d iY:%d",
-			aPointedPosition.iX, iX, aPointedPosition.iY, iY);
+		LOGFMT4(KDrawPluginLogFile,
+				"CImageEditorDrawControl::Draw x:%d iX:%d y:%d iY:%d",
+				aPointedPosition.iX, iX, aPointedPosition.iY, iY);
 	// Check that not out of bounds    
 	//ClipPosition();          
 	}
@@ -1446,23 +1450,23 @@ TPoint CImageEditorDrawControl::GetPositionOnView()
 	TReal yPositionFactor(TReal(iY + visibleImageRectPrev.iTl.iY)
 			/ yPosFactorDivider);
 
-	LOGFMT2(KDrawPluginLogFile,
-			"CImageEditorDrawControl::GetPositionOnView xf:%g yf:%g",
-			xPositionFactor, yPositionFactor);
+		LOGFMT2(KDrawPluginLogFile,
+				"CImageEditorDrawControl::GetPositionOnView xf:%g yf:%g",
+				xPositionFactor, yPositionFactor);
 
-	LOGFMT2(KDrawPluginLogFile,
-			"CImageEditorDrawControl::GetPositionOnView xf:%d yf:%d",
-			xPosFactorDivider, yPosFactorDivider);
+		LOGFMT2(KDrawPluginLogFile,
+				"CImageEditorDrawControl::GetPositionOnView xf:%d yf:%d",
+				xPosFactorDivider, yPosFactorDivider);
 
-	LOGFMT2(KDrawPluginLogFile,
-			"CImageEditorDrawControl::GetPositionOnView w:%d h:%d", iX, iY);
+		LOGFMT2(KDrawPluginLogFile,
+				"CImageEditorDrawControl::GetPositionOnView w:%d h:%d", iX, iY);
 
 	TInt xPosition(iX + visibleImageRectPrev.iTl.iX);
 	TInt yPosition(iY + visibleImageRectPrev.iTl.iY);
 
-	LOGFMT3(KDrawPluginLogFile,
-			"CImageEditorDrawControl::GetPositionOnView w:%d h:%d S:%g",
-			xPosition, yPosition, iSysPars->RelScale());
+		LOGFMT3(KDrawPluginLogFile,
+				"CImageEditorDrawControl::GetPositionOnView w:%d h:%d S:%g",
+				xPosition, yPosition, iSysPars->RelScale());
 
 	return TPoint(xPosition, yPosition);
 	}
@@ -1478,14 +1482,6 @@ void CImageEditorDrawControl::ShowTooltip()
 	TPoint iconPosition = ComputeIndicatorPosition();
 	TRect iconRect(iconPosition.iX, iconPosition.iY, iconPosition.iX,
 			iconPosition.iY);
-
-	/*SDrawUtils::ShowToolTip( iPopupController,
-	 this,
-	 iconPosition,
-	 EHRightVTop, 
-	 *iTooltipResize );                                 
-	 */
-
 	}
 
 // ---------------------------------------------------------------------------
@@ -1505,9 +1501,9 @@ TSize CImageEditorDrawControl::ScaledLineSize(TSize aOriginalSize) const
 		sizeh++;
 		}
 
-	LOGFMT3(KDrawPluginLogFile,
-			"CImageEditorDrawControl::ScaledLineSize w:%d h:%d S:%g", sizew,
-			sizeh, iSysPars->RelScale());
+		LOGFMT3(KDrawPluginLogFile,
+				"CImageEditorDrawControl::ScaledLineSize w:%d h:%d S:%g", sizew,
+				sizeh, iSysPars->RelScale());
 	return TSize(sizew, sizeh);
 	}
 
@@ -1594,15 +1590,13 @@ void CImageEditorDrawControl::Notify()
 void CImageEditorDrawControl::Roll()
 	{
 	SetToolBarStatus();
-	//TInt leftX = iLabels[0]->Rect().iTl.iX;
-	//TInt rightX = iLabels[iTotalComponent - 1]->Rect().iBr.iX;
+
 	TInt offset = 0;
 	iRollflag = ETrue;
 	if (iDisplayTool)
 		iRollDirection = EFalse;
 	else
 		iRollDirection = ETrue;
-
 
 	if (iRollDirection)
 		{
@@ -1612,8 +1606,8 @@ void CImageEditorDrawControl::Roll()
 		{
 		offset = -4;
 		}
-	
-	if (iMainMenuLayout == EMainMenuHorizontal)
+
+	if (iMainMenuLayout == EMainMenuVertical)
 		{
 		for (TInt i = 0; i < iLabels.Count(); i++)
 			{
@@ -1625,7 +1619,7 @@ void CImageEditorDrawControl::Roll()
 				|| iLabels[iLabels.Count() - 1]->Rect().iBr.iX == 0)
 			iRollflag = EFalse;
 		}
-	else if (iMainMenuLayout == EMainMenuVertical)
+	else if (iMainMenuLayout == EMainMenuHorizontal)
 		{
 		for (TInt i = 0; i < iLabels.Count(); i++)
 			{
@@ -1637,12 +1631,11 @@ void CImageEditorDrawControl::Roll()
 				|| iLabels[iLabels.Count() - 1]->Rect().iBr.iY == 0)
 			iRollflag = EFalse;
 		}
-	
+
 	DrawNow();
-	
+
 	if (!iRollflag)
 		{
-		//iRollDirection = !iRollDirection;
 		iRollAo->Cancel();
 		}
 	}
@@ -1653,7 +1646,7 @@ void CImageEditorDrawControl::Roll()
 //  
 void CImageEditorDrawControl::CalculateEffectiveOffset()
 	{
-	if (iMainMenuLayout == EMainMenuHorizontal)
+	if (iMainMenuLayout == EMainMenuVertical)
 		{
 		TInt leftX = iLabels[0]->Rect().iTl.iX;
 		TInt rightX = iLabels[iTotalComponent - 1]->Rect().iBr.iX;
@@ -1668,7 +1661,7 @@ void CImageEditorDrawControl::CalculateEffectiveOffset()
 			iDragOffset = -(rightX - 360);
 			}
 		}
-	else if (iMainMenuLayout == EMainMenuVertical)
+	else if (iMainMenuLayout ==EMainMenuHorizontal )
 		{
 		TInt topY = iLabels[0]->Rect().iTl.iY;
 		TInt bottomY = iLabels[iTotalComponent - 1]->Rect().iBr.iY;

@@ -34,6 +34,10 @@ PRJ_MMPFILES
 drawplugin.mmp
 gnumakefile icons_doodle.mk
 
+
+PRJ_EXPORTS 
+../data/qgn_indi_ai_nt_erotic.svg  \epoc32\s60\icons\qgn_indi_ai_nt_erotic.svg
+
 PRJ_EXTENSIONS
 START EXTENSION s60/mifconv
 OPTION TARGETFILE draw.mif

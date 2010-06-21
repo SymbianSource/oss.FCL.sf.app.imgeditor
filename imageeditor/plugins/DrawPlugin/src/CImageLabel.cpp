@@ -274,14 +274,14 @@ void CImageLabel::ResetControl()
 void CImageLabel::CalculateImagePoint()
 	{
 	// landscape 
-	if (iLabelLayout == ELabelHorizontal)
+	if (iLabelLayout == ELabelVertical)
 		{
 		iImageStartPoint.iX = Rect().iTl.iX + 2;
 		iImageStartPoint.iY = Rect().iBr.iY - (Rect().iBr.iX - Rect().iTl.iX)
 				+ 2;
 		}
 	//portrait
-	else if (iLabelLayout == ELabelVertical)
+	else if (iLabelLayout ==ELabelHorizontal )
 		{
 		iImageStartPoint.iX = Rect().iBr.iX - (Rect().iBr.iY - Rect().iTl.iY)
 				+ 2;
@@ -296,14 +296,14 @@ void CImageLabel::CalculateImagePoint()
 void CImageLabel::CalculateBoundingRectStartPoint()
 	{
 	// landscape 
-	if (iLabelLayout == ELabelHorizontal)
+	if (iLabelLayout == ELabelVertical)
 		{
 		iBoundingRectStartPoint.iX = Rect().iTl.iX + 1;
 		iBoundingRectStartPoint.iY = Rect().iBr.iY - (Rect().iBr.iX
 				- Rect().iTl.iX) + 1;
 		}
 	//portrait
-	else if (iLabelLayout == ELabelVertical)
+	else if (iLabelLayout == ELabelHorizontal)
 		{
 		iBoundingRectStartPoint.iX = Rect().iBr.iX - (Rect().iBr.iY
 				- Rect().iTl.iY) + 1;
@@ -319,7 +319,7 @@ void CImageLabel::CalculateBoundingRectStartPoint()
 void CImageLabel::CalculateTooltipPoint()
 	{
 	// landscape 
-	if (iLabelLayout == ELabelHorizontal)
+	if (iLabelLayout == ELabelVertical)
 		{
 		CFont* pFont = NULL;
 		TFontSpec fontSpec = iEikonEnv->TitleFont()->FontSpecInTwips();
@@ -331,9 +331,9 @@ void CImageLabel::CalculateTooltipPoint()
 		iTooltipStartPoint.iX = Rect().iTl.iX
 				+ (Rect().Width() - tooltipLength) / 2;
 		iTooltipStartPoint.iY = Rect().iBr.iY - (Rect().iBr.iX - Rect().iTl.iX);
-		}
+		} 
 	//portrait
-	else if (iLabelLayout == ELabelVertical)
+	else if (iLabelLayout ==ELabelHorizontal )
 		{
 		CFont* pFont = NULL;
 		TFontSpec fontSpec = iEikonEnv->TitleFont()->FontSpecInTwips();
@@ -357,7 +357,7 @@ void CImageLabel::CalculateTooltipPoint()
 void CImageLabel::CalculateZones()
 	{
 	// landscape 
-	if (iLabelLayout == ELabelHorizontal)
+	if (iLabelLayout == ELabelVertical)
 		{
 		iBoundingSize.iHeight = Rect().iBr.iX - Rect().iTl.iX - 2;
 		iBoundingSize.iWidth = iBoundingSize.iHeight - 2;
@@ -366,7 +366,7 @@ void CImageLabel::CalculateZones()
 		iImageSize.iWidth = iBoundingSize.iWidth - 4;
 		}
 	//portrait
-	else if (iLabelLayout == ELabelVertical)
+	else if (iLabelLayout ==ELabelHorizontal)
 		{
 		iBoundingSize.iHeight = Rect().iBr.iY - Rect().iTl.iY - 2;
 		iBoundingSize.iWidth = iBoundingSize.iHeight - 2;

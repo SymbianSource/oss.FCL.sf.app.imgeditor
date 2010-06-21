@@ -24,11 +24,14 @@ CLEANLIN : do_nothing
 
 RESOURCE :
 	mifconv $(ICONTARGETFILENAME) /h$(HEADERFILENAME) \
-	/c32,8  ..\data\pensize.svg\
-	/c32,8  ..\data\palette.svg\
+	/c32,8  ..\data\palette_colored.svg\
 	/c32,8  ..\data\undo.svg\
-	/c32,8  ..\data\save.svg\
-	/c32,8  ..\data\menu.svg
+	/c32,8  ..\data\redo.svg\
+	/c32,8  ..\data\exit.svg\
+	/c32,8  ..\data\info.svg\
+	/c32,8  ..\data\pen.svg\
+	/c32,8  ..\data\save1.svg\
+	/c32,8  ..\data\save2.svg
 FREEZE : do_nothing
 
 SAVESPACE : do_nothing

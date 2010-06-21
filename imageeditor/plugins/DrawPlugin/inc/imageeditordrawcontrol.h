@@ -320,52 +320,50 @@ private:
 	
 private:
 	
-	//@}
-
 	/** @name Members:*/
-	//@{
 
-	/// Ref: to Editor view
+
+	// Ref: to Editor view
 	CAknView* iEditorView;
 
-	/// Source image size
+	//Source image size
 	const CSystemParameters* iSysPars;
 
-	/// Ref: to Plug-in info
+	// Ref: to Plug-in info
 	CPluginInfo* iItem;
 
-	/// Own: Navigation pane text
+	//Own: Navigation pane text
 	HBufC* iNaviPaneText;
 
-	/// X position
+	// X position
 	TInt iX;
-	/// Y position
+	// Y position
 	TInt iY;
 
-	/// Timer for fast key events
+	// Timer for fast key events
 	CJPTimer* iTimer;
 	TUint32 iKeyCode;
 
-	/// Pressed key event code
+	// Pressed key event code
 	TInt iPressedKeyScanCode;
 
-	/// Number of ticks since timer start
+	// Number of ticks since timer start
 	TInt iTickCount;
 
-	/// Multiplier to control the navigation movement speed
+	// Multiplier to control the navigation movement speed
 	TInt iNaviStepMultiplier;
 
-	/// Showing Ok options menu, where some items are dimmed
+	// Showing Ok options menu, where some items are dimmed
 	TBool iDisplayingOkOptionsMenu;
 
-	/// Own: State indicator glyph
+	// Own: State indicator glyph
 	CFbsBitmap* iIndicator;
 	CFbsBitmap* iIndicatorMask;
 
-	/// Ready to render
+	// Ready to render
 	TBool iReadyToRender;
 
-	/// Parameter
+	// Parameter
 	TBuf<256> iParam;
 
 	// Popup controller
@@ -378,42 +376,51 @@ private:
 	// Multiplier to control the rotating speed by touch
 	TInt iTouchAngleMultiplier;
 
-	/// Resource reader
+	// Resource reader
 	RConeResourceLoader iResLoader;
-	/// Line size
+	// Line size
 	TSize& iSize;
-	/// Color
+	// Color
 	TRgb& iRgb;
-	/// Own: drawn paths
+	// Own: drawn paths
 	RPointerArray<CDrawPath> &iPaths;
 	//bitmap device
 	CFbsBitmapDevice* iBitmapDev;
 	CGraphicsContext* iGc;
-	//@}
+
 
 private:
-	
+	//Get and set tool bar status display or hidden
     void SetToolBarStatus();
+    //The self define component array for tool bar.
 	RPointerArray<CImageLabel> iLabels;
-
+    //The tool bar area.
 	TRect iLoopMenuRect;
+	//Mark the button down event
 	TPoint iButtonDownPoint;
+	//Mark the tool bar start drag point.
 	TPoint iDragStartPoint;
+	//Prepare drag point.
 	TPoint iDragPrePoint;
+	//Mark Button up point for stop drag event.
 	TPoint iDragUpPoint;
-
+    //The total of tool bar compoent 
 	TInt iTotalComponent;
+	//The param for drag tool bar event.
 	TInt iDragOffset;
+	//The param for drag tool bar event.
 	TInt iStartSpeed;
-
+    //The Active Object for  drag tool bar.
 	CAnimationAO* iAnimationAO;
+	//The Active object for tool bar Automatic moving.
 	CRollAO* iRollAo;
-
+    //whether the button down point in the tool bar area.
 	TBool iPointStartInLoopRect;
+	//Mark for iAnimationAO;
 	TBool iDragIsStart;
-	TBool iEnableAnimationEffect;
+	//Current screen layout.
 	TMainMenuLayout iMainMenuLayout;
-	///implement undo and redo functions.
+
 
 private:
 	
@@ -421,17 +428,23 @@ private:
 	TBool iUndo;
 	TBool iRedo;
 	TBool iCanRedo;
-	//ETrue: roll in
-	//EFalse:roll out
+    //The tool bar Automatic moving direction.
 	TBool iRollDirection;
 private:
-	
+	//The compoent use for display and hidden tool bar.
 	CCustomerComponet *iCustomComponet;
+	//whether the customer compoent was clicked. 
 	TBool iCustomComponetClick;
+	//Mark the customr compoent last pointer event.
 	TBool iLastPointEventType;
+	//Mark the tool bar Automatic moving.
 	TBool iRollflag;
+	//Mark the tool bar status display or hidden.
 	TBool &iDisplayTool;
+	//Mark in the sizechanged function.
 	TBool iSizeChangeFlag;
+	//Mark last tool bar event.
+	TBool iFlagDragToolBar;
 	};
 
 #endif
