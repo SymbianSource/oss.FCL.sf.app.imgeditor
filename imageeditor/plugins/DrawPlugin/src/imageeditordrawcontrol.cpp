@@ -790,9 +790,7 @@ void CImageEditorDrawControl::SelectSizeL()
 //
 void CImageEditorDrawControl::StoreTempParams()
 	{
-		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::StoreTempParams("
-				""
-				")");
+		LOG(KDrawPluginLogFile, "CImageEditorDrawControl::StoreTempParams()");
 	}
 
 // ---------------------------------------------------------------------------

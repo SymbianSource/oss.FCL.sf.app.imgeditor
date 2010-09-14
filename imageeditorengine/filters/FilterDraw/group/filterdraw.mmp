@@ -57,3 +57,5 @@ OPTION ARMCC -O3 -Otime
 EXPORTUNFROZEN
 #endif
 NOSTRICTDEF
+
+epocallowdlldata

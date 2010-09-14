@@ -105,7 +105,7 @@ LIBRARY        imageconversion.lib  bitgdi.lib CommonDialogs.lib
 //LIBRARY        ImageEditorUI.LIB
 
 //#if defined (__EXPORT_UNFROZEN_PLUGINS__)
-EXPORTUNFROZEN
+//EXPORTUNFROZEN
 //#endif
 NOSTRICTDEF
 
