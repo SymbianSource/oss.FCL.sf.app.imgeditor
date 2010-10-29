@@ -167,5 +167,5 @@ EXPORTS
 	_ZThn12_N18CImageEditorUIView16DynInitMenuPaneLEiP12CEikMenuPane @ 166 NONAME
 	_ZThn4_N18CImageEditorUIView24ViewScreenModeCompatibleEi @ 167 NONAME
 	_ZN18CImageEditorUIView23IsMemoryInCriticalLevelEv @ 168 NONAME
-
+	_ZN23CImageEditorUIContainer12IsDrawPluginEi @ 169 NONAME
 
