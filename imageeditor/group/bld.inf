@@ -22,10 +22,6 @@
 #include "../inc/definitions.def"
 #include <data_caging_paths.hrh>
 
-// Erase temp files in WINS env
-PRJ_MMPFILES
-//gnumakefile erasetempfiles.mk
-
 /// Plugin framework
 #include "../PB/group/bld.inf"
 #include "../IEPB/group/bld.inf"
@@ -62,20 +58,6 @@ PRJ_MMPFILES
 // Editor AIW Provider
 #include "../EditorProvider/group/bld.inf"
 
-// makefiles
-PRJ_MMPFILES
-//gnumakefile bldsis.mk
-
-// Exported files
-PRJ_EXPORTS
-../loc/ImageEditor.loc APP_LAYER_LOC_EXPORT_PATH(ImageEditor.loc)
-
-../data/ImageEditorStub.sis   /epoc32/data/z/system/install/ImageEditorStub.sis
-//../inc/imageeditordebugutils.h	/epoc32/include/imageeditordebugutils.h
-
-// ROM description
-../rom/ImageEditor_Resource.iby LANGUAGE_APP_LAYER_IBY_EXPORT_PATH(ImageEditor_Resource.iby)
-//
-//../inc/ImageEditorUids.hrh	/epoc32/include/ImageEditorUids.hrh
+#include "../exports/bld.inf"
 
 // End of File
