@@ -17,6 +17,9 @@
 *
 */
 
+#include <platform_paths.hrh>
+#include "../inc/definitions.def"
+#include <data_caging_paths.hrh>
 
 PRJ_EXPORTS
 ../loc/ImageEditor.loc APP_LAYER_LOC_EXPORT_PATH(ImageEditor.loc)
